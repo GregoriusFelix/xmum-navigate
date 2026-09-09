@@ -1,6 +1,6 @@
 # XMUM Navigate
 
-Web-based campus companion directory for Xiamen University Malaysia — navigation, venue recommendation, and canteen directory.
+Web-based campus companion directory for Xiamen University Malaysia to help in navigation, venue recommendation, and canteen directory.
 
 FYP by Erawan Gregorius Felix Caton (SWE2309430), supervised by Dr. Subashini Raghavan.
 
