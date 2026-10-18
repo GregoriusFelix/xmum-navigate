@@ -1,10 +1,7 @@
+import Home from './Home.jsx'
+
 function App() {
-  return (
-    <div>
-      <h1>XMUM Navigate</h1>
-      <p>Frontend skeleton — pages not built yet.</p>
-    </div>
-  )
+  return <Home />
 }
 
 export default App
