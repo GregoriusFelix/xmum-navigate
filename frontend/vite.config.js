@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    port: 5173
-  }
+  // Keep this plain-CSS homepage independent of the unused Next.js scaffold.
+  css: { postcss: { plugins: [] } },
+  server: { port: 5173 },
 })

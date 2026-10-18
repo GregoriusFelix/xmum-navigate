@@ -15,12 +15,13 @@ xmum-navigate/
 
 ## Local setup
 
-**Frontend**
+**Frontend** (React + Vite)
 ```
 cd frontend
 npm install
 npm run dev
 ```
+Open http://localhost:5173
 
 **Backend**
 ```

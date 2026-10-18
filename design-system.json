@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "name": "Immersive Editorial Landing Page Design System",
+    "version": "1.0.0",
+    "purpose": "Context for AI code generators (Cursor, etc.) to reproduce a consistent, photo-driven, premium landing page style for any travel/lifestyle/outdoor/hospitality-type brand. Content-agnostic: swap copy, imagery and brand colors, keep structure, spacing, radii, hierarchy and mood.",
+    "stack_recommendation": ["React or Next.js", "Tailwind CSS (extend theme with tokens below)", "next/image or <img> with object-fit: cover", "lucide-react for icons"],
+    "design_style_keywords": [
+      "immersive", "editorial", "photo-first", "layered", "floating-cards", "soft-organic", "premium-calm", "nature-inspired", "warm-minimal", "rounded-everything"
+    ],
+    "mood": "Calm, aspirational, warm, trustworthy. Large cinematic photography balanced by generous cream whitespace and restrained UI chrome."
+  },
+
+  "design_principles": [
+    "Photography is the hero. The page background itself is a full-bleed photograph; UI sits on top as floating layers.",
+    "Layering creates depth: background photo > floating cream content panel > inset hero image > floating search bar > cards.",
+    "Everything is rounded. No sharp corners on containers, images, inputs or buttons.",
+    "Restrained palette: one warm neutral surface, one deep dark accent (primary action), one warm highlight accent (marketing CTA). Imagery supplies all other color.",
+    "Text over images is always white, bold, and sits on a darkened area or gradient scrim for legibility.",
+    "Large bold tight-tracked headlines, small quiet supporting copy.",
+    "Generous padding and breathing room; low information density.",
+    "Soft, diffuse shadows only. No hard borders except 1px hairlines on ghost elements."
+  ],
+
+  "tokens": {
+    "color": {
+      "note": "Approximate values sampled from the reference. Replace brand colors while preserving roles and contrast relationships.",
+      "surface": {
+        "page_background": "Full-bleed photographic image (landscape/nature, cool greens and blues), fixed or cover-sized",
+        "panel": "#F7F3EA",
+        "panel_alt": "#FFFFFF",
+        "dark_footer_overlay": "rgba(14, 52, 44, 0.85)"
+      },
+      "brand": {
+        "primary_dark": "#173F35",
+        "primary_dark_hover": "#0F2E26",
+        "accent_warm": "#C4684A",
+        "accent_warm_hover": "#AE5739"
+      },
+      "text": {
+        "on_light_primary": "#111111",
+        "on_light_secondary": "#5F5F5F",
+        "on_light_muted": "#8A8A8A",
+        "on_dark_primary": "#FFFFFF",
+        "on_dark_secondary": "rgba(255,255,255,0.85)",
+        "on_accent": "#FFFFFF"
+      },
+      "border": {
+        "hairline_on_light": "rgba(0,0,0,0.12)",
+        "hairline_on_dark": "rgba(255,255,255,0.7)"
+      },
+      "overlay": {
+        "image_scrim_bottom": "linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 100%)",
+        "hero_scrim_left": "linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 60%)",
+        "glass_chip": "rgba(255,255,255,0.75)"
+      },
+      "partner_logo_tint": "#8C8C84 (monochrome gray, ~70% opacity)"
+    },
+
+    "typography": {
+      "font_family": {
+        "primary": "'Plus Jakarta Sans', 'Manrope', 'Inter', system-ui, sans-serif",
+        "display_script": "'Caveat', 'Homemade Apple', cursive",
+        "character": "Modern geometric/neo-grotesque sans, friendly and slightly rounded, strong at heavy weights"
+      },
+      "scale": {
+        "hero_headline": { "size": "clamp(48px, 7vw, 84px)", "weight": 800, "line_height": 0.95, "letter_spacing": "-0.03em", "color": "on_dark_primary" },
+        "section_heading": { "size": "clamp(32px, 3.5vw, 44px)", "weight": 800, "line_height": 1.05, "letter_spacing": "-0.02em", "color": "on_light_primary" },
+        "card_title": { "size": "18px", "weight": 700, "line_height": 1.2, "letter_spacing": "-0.01em", "color": "on_dark_primary" },
+        "subhead": { "size": "18px", "weight": 400, "line_height": 1.5, "color": "on_dark_secondary (on hero) / on_light_secondary (on panel)" },
+        "body": { "size": "16px", "weight": 400, "line_height": 1.6 },
+        "caption": { "size": "14px", "weight": 400, "line_height": 1.4, "color": "on_dark_secondary" },
+        "field_label": { "size": "12px", "weight": 500, "line_height": 1.2, "color": "on_light_primary" },
+        "field_value": { "size": "13px", "weight": 400, "line_height": 1.2, "color": "on_light_secondary" },
+        "nav_link": { "size": "14px", "weight": 500, "color": "on_dark_primary" },
+        "button": { "size": "15px", "weight": 600 },
+        "wordmark": { "size": "20px", "weight": 500, "letter_spacing": "0.2em", "text_transform": "uppercase" },
+        "footer_tagline": { "size": "14px", "weight": 400, "letter_spacing": "0.25em", "text_transform": "none" },
+        "script_accent": { "family": "display_script", "size": "28px", "weight": 400, "rotation": "-8deg", "line_height": 1.1, "color": "on_dark_primary" },
+        "micro_logo_label": { "size": "9px", "letter_spacing": "0.25em", "text_transform": "uppercase" }
+      }
+    },
+
+    "spacing": {
+      "base_unit": "4px",
+      "scale": ["4", "8", "12", "16", "20", "24", "32", "40", "48", "64", "80", "96"],
+      "page_outer_gutter": "24px (mobile) / 24-32px (desktop) between viewport edge and floating panel",
+      "panel_inner_padding": "32px (mobile) / 40px (desktop)",
+      "section_vertical_gap": "48px–64px",
+      "card_gap": "16px"
+    },
+
+    "radius": {
+      "panel": "28px",
+      "hero_image": "24px",
+      "card": "20px",
+      "input_bar": "9999px",
+      "button": "9999px",
+      "icon_button": "9999px",
+      "icon_chip": "9999px",
+      "badge_circle": "9999px"
+    },
+
+    "shadow": {
+      "panel": "0 20px 60px rgba(0,0,0,0.25)",
+      "floating_search": "0 12px 32px rgba(0,0,0,0.18)",
+      "card": "0 8px 24px rgba(0,0,0,0.15)",
+      "button": "0 4px 12px rgba(0,0,0,0.15)"
+    },
+
+    "border": {
+      "panel_outline": "2px solid rgba(255,255,255,0.9) (thin light outline around the main floating panel)",
+      "ghost_button": "1px solid rgba(255,255,255,0.8)",
+      "ghost_icon_button": "1px solid rgba(0,0,0,0.15)"
+    },
+
+    "motion": {
+      "duration_fast": "150ms",
+      "duration_base": "250ms",
+      "duration_slow": "500ms",
+      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "hover_card": "translateY(-4px) and image scale(1.05) over 500ms",
+      "hover_button": "background darken one step + translateY(-1px)",
+      "carousel": "scroll-snap-x, smooth, or translateX transition 400ms",
+      "reveal_on_scroll": "fade-up 24px, 600ms, staggered 80ms"
+    },
+
+    "breakpoints": { "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px" },
+
+    "iconography": {
+      "library": "lucide-react (or equivalent outline icon set)",
+      "style": "outline, 1.5px stroke, rounded caps and joins",
+      "sizes": { "inline": "16px", "button": "18px", "field": "20px", "nav": "20px" },
+      "arrow_icons": "Right arrow inside buttons; diagonal up-right arrow inside circular card chips"
+    }
+  },
+
+  "layout": {
+    "overall_structure": "Single long vertical page composed of a full-bleed photo background, with a large rounded cream panel floating inside it (inset from viewport edges). Header sits above the panel on the photo. Footer/outro sits below the panel on the photo with a dark green tinted overlay.",
+    "max_content_width": "1200px (panel can span nearly full width with 24px outer margin on desktop up to ~1400px)",
+    "z_order": [
+      "0: full-bleed background photo",
+      "1: dark gradient tint over lower portion of background for footer legibility",
+      "2: floating cream panel",
+      "3: inset hero image (inside panel top, bleeds to panel edges with matching rounded top corners)",
+      "4: floating search bar overlapping bottom edge of hero image",
+      "5: header/nav (absolute over background photo, above panel)"
+    ],
+    "vertical_order": [
+      "Header / navigation (transparent, on photo)",
+      "Floating panel begins",
+      "  Hero image with overlaid headline, subtext, primary CTA",
+      "  Search bar overlapping hero bottom edge",
+      "  Partner/logo strip",
+      "  Featured collection section (heading column + horizontal card row)",
+      "Floating panel ends",
+      "Outro / footer on photo (centered logo, tagline, decorative badge, script accent)"
+    ]
+  },
+
+  "components": {
+    "header": {
+      "position": "absolute top, full width, z-index above panel",
+      "height": "~72px",
+      "padding": "0 32px",
+      "layout": "flex, space-between, align-center",
+      "background": "transparent (no bar, text sits directly on photo)",
+      "left": "Logo mark (simple geometric outline icon) + uppercase wide-tracked wordmark in white",
+      "center": "Horizontal nav links, gap 24-28px, white 14px medium",
+      "right": "Ghost pill button (outline white, transparent fill, 'Sign In') + solid warm-accent pill button ('Join')",
+      "button_size": "height 40px, padding 0 20px",
+      "mobile": "Collapse nav into hamburger; keep logo left, primary CTA right"
+    },
+
+    "main_panel": {
+      "background": "tokens.color.surface.panel",
+      "border_radius": "28px",
+      "outline": "tokens.border.panel_outline",
+      "shadow": "tokens.shadow.panel",
+      "overflow": "hidden",
+      "margin": "0 24px",
+      "padding_top": "0 (hero image is flush to panel top and sides, inset ~6px with its own radius)"
+    },
+
+    "hero": {
+      "container": "Rounded image block inside panel, height ~480px desktop / 420px mobile, border-radius 24px, overflow hidden",
+      "image": "Wide cinematic landscape photo, object-fit cover, subject placed right of center so left side stays calm for text",
+      "scrim": "tokens.color.overlay.hero_scrim_left",
+      "text_block": {
+        "position": "absolute left 40px, vertically around 40-55% of hero height",
+        "max_width": "520px",
+        "stack_gap": "16px",
+        "elements": [
+          "H1: two lines, hero_headline style, white",
+          "Subtext: 1-2 lines, subhead style, white 85%",
+          "Primary CTA: warm-accent pill with trailing arrow icon"
+        ]
+      }
+    },
+
+    "search_bar": {
+      "role": "Primary conversion component. Floats over the seam between hero image and panel body.",
+      "position": "absolute, centered horizontally, bottom: -32px relative to hero (overlaps hero and panel)",
+      "width": "calc(100% - 64px), max 920px",
+      "height": "~72px",
+      "background": "#FFFFFF",
+      "border_radius": "9999px",
+      "shadow": "tokens.shadow.floating_search",
+      "padding": "8px 8px 8px 20px",
+      "layout": "flex row, align-center, 3 field groups separated by 1px vertical dividers (height 32px, rgba(0,0,0,0.12)), then a dark pill submit button",
+      "field_group": {
+        "structure": "[icon chip] + [stack: small label above, muted placeholder/value below]",
+        "icon_chip": "40px circle, background #F2EEE6, centered 20px outline icon",
+        "gap": "12px",
+        "padding": "0 20px",
+        "flex": "1 for first two groups, auto for guest group"
+      },
+      "fields": ["Location (text input)", "Date range (date picker trigger)", "Guests (select with chevron-down)"],
+      "submit_button": {
+        "background": "tokens.color.brand.primary_dark",
+        "text": "white, 15px semibold",
+        "icon": "search icon left of label",
+        "height": "56px",
+        "padding": "0 28px",
+        "radius": "9999px"
+      },
+      "mobile": "Stack fields vertically inside a rounded-3xl white card; full-width submit button"
+    },
+
+    "logo_strip": {
+      "purpose": "Social proof / partner row",
+      "layout": "flex row, justify-between (or space-around), align-center, wraps on mobile",
+      "padding": "56px 40px 24px (top padding accounts for overlapping search bar)",
+      "item": "Simple outline icon + uppercase wide-tracked name with a tiny sub-label beneath",
+      "style": "Monochrome gray (partner_logo_tint), no color, ~70% opacity",
+      "count": "5 items"
+    },
+
+    "section_with_card_carousel": {
+      "layout": "CSS grid, 2 columns: left text column ~ 280px, right card row fills remainder. Collapses to stacked on mobile.",
+      "padding": "24px 24px 40px 40px",
+      "gap": "32px",
+      "left_column": {
+        "elements": [
+          "Short accent line: 48px wide, 2px tall, warm accent color, above heading",
+          "Section heading (section_heading style)",
+          "One-line supporting text in on_light_secondary",
+          "Carousel controls pinned to the bottom of the column"
+        ],
+        "alignment": "heading block vertically centered/upper, controls at bottom"
+      },
+      "carousel_controls": {
+        "layout": "two circular 48px buttons, gap 16px",
+        "prev": "ghost circle: transparent, 1px hairline border, muted gray arrow (disabled-looking state)",
+        "next": "solid circle: primary_dark background, white arrow"
+      },
+      "card_row": {
+        "layout": "flex row, gap 16px, overflow-x auto with scroll-snap, hide scrollbar",
+        "visible_cards": "3 on desktop, 1.2 on mobile (peek next card)"
+      }
+    },
+
+    "image_card": {
+      "dimensions": "width ~ 165px–260px (flex: 1), aspect ratio ~ 3:4 to 4:5, min-height 250px",
+      "radius": "20px",
+      "overflow": "hidden",
+      "shadow": "tokens.shadow.card",
+      "image": "object-fit cover, fills card",
+      "scrim": "tokens.color.overlay.image_scrim_bottom",
+      "top_right_chip": {
+        "shape": "36px circle",
+        "background": "tokens.color.overlay.glass_chip with backdrop-filter blur(6px)",
+        "icon": "diagonal up-right arrow, 16px, dark",
+        "offset": "top 12px, right 12px"
+      },
+      "bottom_text": {
+        "position": "absolute bottom 16px left 16px right 16px",
+        "title": "card_title style, white",
+        "subtitle": "caption style, white 85%, format: 'Keyword & Keyword'"
+      },
+      "hover": "tokens.motion.hover_card"
+    },
+
+    "buttons": {
+      "primary_accent": {
+        "background": "tokens.color.brand.accent_warm",
+        "text": "white",
+        "height": "44px (hero CTA 48px)",
+        "padding": "0 24px",
+        "radius": "9999px",
+        "icon": "optional trailing arrow, gap 8px",
+        "hover": "accent_warm_hover"
+      },
+      "primary_dark": {
+        "background": "tokens.color.brand.primary_dark",
+        "text": "white",
+        "radius": "9999px",
+        "hover": "primary_dark_hover"
+      },
+      "ghost_on_dark": {
+        "background": "transparent",
+        "border": "1px solid rgba(255,255,255,0.8)",
+        "text": "white",
+        "radius": "9999px",
+        "hover": "background rgba(255,255,255,0.15)"
+      },
+      "icon_circle_solid": { "size": "48px", "background": "primary_dark", "icon_color": "white" },
+      "icon_circle_ghost": { "size": "48px", "border": "1px solid rgba(0,0,0,0.15)", "icon_color": "#9A9A9A" },
+      "focus": "2px offset ring using accent_warm at 60% opacity"
+    },
+
+    "footer_outro": {
+      "background": "Continuation of the background photo with a dark green gradient tint (transparent at top to ~85% opaque at bottom)",
+      "height": "~200px+",
+      "layout": "centered column, text-align center, padding-top 40px",
+      "elements": [
+        "Logo mark (white outline icon, ~28px)",
+        "Large wordmark: uppercase, 0.2em tracking, ~32px, white",
+        "Tagline: 14px, 0.25em tracking, white 85%",
+        "Decorative circular text badge at bottom-left: ~84px circle, 1px white border, repeating uppercase micro-text on a circular path, small icon in center, ~90% white",
+        "Handwritten script accent at bottom-right: 3-4 short words stacked, rotated about -8deg, display_script font, white, with a short underline stroke beneath"
+      ]
+    }
+  },
+
+  "imagery_guidelines": {
+    "style": "High-resolution, cinematic, warm natural light, rich saturated greens and blues, shallow atmospheric depth, golden-hour feel",
+    "hero_composition": "Wide landscape; main subject offset to one side; calm negative space on the opposite side for text",
+    "card_composition": "Portrait crops, subject centered or lower-center, bottom 40% tolerant of dark gradient overlay",
+    "background_composition": "Vertical full-bleed scene with sky at top fading into foliage/water/rock textures toward bottom; bottom region must darken well for footer text",
+    "consistency_rules": [
+      "Keep a warm, natural color grade across all images",
+      "Avoid people looking at camera; prefer scenery and environment",
+      "All images cropped with object-fit: cover, never stretched"
+    ]
+  },
+
+  "responsive_behavior": {
+    "desktop": "Floating panel with 24-32px outer gutter; search bar horizontal; 3 cards visible; heading column left of cards.",
+    "tablet": "Heading column stacks above card row; 2 cards visible plus peek; logo strip may wrap to 3+2.",
+    "mobile": "Panel margin 12px; hero headline scales down to ~44px; search bar becomes stacked card; logo strip becomes horizontal scroll; cards 1.2 visible; nav collapses to hamburger."
+  },
+
+  "accessibility": {
+    "contrast": "White text on images requires scrim reaching at least 4.5:1; verify over lightest image regions",
+    "focus": "Visible focus ring on all pills, inputs and icon buttons",
+    "targets": "Minimum 44x44px interactive size",
+    "motion": "Respect prefers-reduced-motion by disabling parallax, hover scale and reveal animations",
+    "semantics": "Use header/nav/main/section/footer landmarks; carousel buttons with aria-labels; images with descriptive alt text; search as role=search form"
+  },
+
+  "tailwind_theme_extension": {
+    "colors": {
+      "panel": "#F7F3EA",
+      "brand-dark": "#173F35",
+      "brand-dark-hover": "#0F2E26",
+      "accent": "#C4684A",
+      "accent-hover": "#AE5739",
+      "ink": "#111111",
+      "ink-soft": "#5F5F5F",
+      "ink-muted": "#8A8A8A"
+    },
+    "borderRadius": { "panel": "28px", "hero": "24px", "card": "20px" },
+    "boxShadow": {
+      "panel": "0 20px 60px rgba(0,0,0,0.25)",
+      "float": "0 12px 32px rgba(0,0,0,0.18)",
+      "card": "0 8px 24px rgba(0,0,0,0.15)"
+    },
+    "fontFamily": {
+      "sans": ["Plus Jakarta Sans", "Manrope", "Inter", "system-ui", "sans-serif"],
+      "script": ["Caveat", "cursive"]
+    }
+  },
+
+  "ai_generation_instructions": {
+    "do": [
+      "Always start with a full-bleed photographic background and place a rounded cream panel on top of it.",
+      "Make the hero an inset rounded image with left-aligned white bold headline, short subtext and one pill CTA.",
+      "Overlap a white pill-shaped search/booking bar across the bottom edge of the hero.",
+      "Use pill shapes for all buttons and inputs; use 20-28px radii for cards and panels.",
+      "Use exactly one dark accent (primary actions) and one warm accent (marketing CTAs, small accent rules).",
+      "Overlay text on images only with a gradient scrim.",
+      "Use uppercase, widely tracked text for logos and wordmarks.",
+      "Include a single handwritten script accent and a circular badge as decorative flourishes in the footer.",
+      "Keep sections sparse: one clear heading, one line of copy, one visual row."
+    ],
+    "dont": [
+      "Do not use hard borders, sharp corners, heavy drop shadows or gradients on buttons.",
+      "Do not introduce additional accent colors or colorful UI illustrations.",
+      "Do not use dense text blocks, tables or multi-column body copy.",
+      "Do not place text over images without a scrim.",
+      "Do not use stock-icon fills; stay with thin outline icons."
+    ],
+    "adaptation_rules": [
+      "To retheme: change the background photo, primary_dark, accent_warm and panel colors. Keep the lightness relationships (panel very light, primary_dark very dark, accent mid-tone).",
+      "To change industry (e.g. real estate, wellness, restaurants, events): keep layout and component anatomy, swap search fields and card content.",
+      "Search bar fields are configurable: 2-4 fields, each with icon chip + label + value, then a dark submit pill.",
+      "Card carousels may show 3-4 items; always keep image-first cards with bottom-left text and top-right circular action chip."
+    ],
+    "section_recipes": {
+      "hero_plus_search": "panel > hero(image, scrim, text-left, CTA) + search_bar(overlap bottom)",
+      "social_proof": "logo_strip with 4-6 monochrome logos, uppercase wordmarks",
+      "featured_collection": "grid[heading_column(accent_rule, h2, subtext, circular prev/next), card_row(3x image_card)]",
+      "outro": "centered wordmark + tagline + circular badge (left) + script accent (right) over darkened photo"
+    }
+  },
+
+  "example_prompt_for_cursor": "Using the attached design-system.json, build a [PAGE TYPE] for [BRAND] in Next.js + Tailwind. Follow layout.vertical_order and the components specs exactly. Use my brand colors in place of tokens.color.brand and my own imagery. Keep all radii, spacing, typography scale and the layered floating-panel composition unchanged."
+}
