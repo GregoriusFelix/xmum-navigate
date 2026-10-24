@@ -1,208 +1,524 @@
 {
+  "date": "2026-10-24",
   "checks": [
     {
-      "name": "One headline and four feature cards",
+      "name": "System light theme follows OS preference",
       "passed": true
     },
     {
-      "name": "Navigation anchors exist",
+      "name": "Semantic page: one h1, labelled controls, real anchor targets",
       "passed": true
     },
     {
-      "name": "Map water stays distinct from the blue route",
+      "name": "Responsive layout at 320px",
+      "passed": true,
+      "details": {
+        "page": 320,
+        "viewport": 320,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 360px",
+      "passed": true,
+      "details": {
+        "page": 360,
+        "viewport": 360,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 375px",
+      "passed": true,
+      "details": {
+        "page": 375,
+        "viewport": 375,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 414px",
+      "passed": true,
+      "details": {
+        "page": 414,
+        "viewport": 414,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 560px",
+      "passed": true,
+      "details": {
+        "page": 560,
+        "viewport": 560,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 640px",
+      "passed": true,
+      "details": {
+        "page": 640,
+        "viewport": 640,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 768px",
+      "passed": true,
+      "details": {
+        "page": 768,
+        "viewport": 768,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 800px",
+      "passed": true,
+      "details": {
+        "page": 800,
+        "viewport": 800,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 1024px",
+      "passed": true,
+      "details": {
+        "page": 1024,
+        "viewport": 1024,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 1280px",
+      "passed": true,
+      "details": {
+        "page": 1280,
+        "viewport": 1280,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 1440px",
+      "passed": true,
+      "details": {
+        "page": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Responsive layout at 1920px",
+      "passed": true,
+      "details": {
+        "page": 1920,
+        "viewport": 1920,
+        "offenders": []
+      }
+    },
+    {
+      "name": "Headline, sentence and primary action fit 1280x800",
       "passed": true
     },
     {
-      "name": "No page overflow at 320px",
+      "name": "light: theme toggle updates the root",
       "passed": true
     },
     {
-      "name": "Closing action fits on one line at 320px",
+      "name": "light: Find an office focuses filtered search",
       "passed": true
     },
     {
-      "name": "Readable feature cards at 320px",
+      "name": "light: keyboard selection updates route and office details",
       "passed": true
     },
     {
-      "name": "No page overflow at 360px",
+      "name": "light: reset clears route and search",
       "passed": true
     },
     {
-      "name": "Readable feature cards at 360px",
+      "name": "light: empty search gives a recovery hint",
       "passed": true
     },
     {
-      "name": "No page overflow at 375px",
+      "name": "light: Escape closes autocomplete",
       "passed": true
     },
     {
-      "name": "Readable feature cards at 375px",
+      "name": "light: quick destination 1 selects a sample route",
       "passed": true
     },
     {
-      "name": "No page overflow at 560px",
+      "name": "light: quick destination 2 selects a sample route",
       "passed": true
     },
     {
-      "name": "Readable feature cards at 560px",
+      "name": "light: quick destination 3 selects a sample route",
       "passed": true
     },
     {
-      "name": "No page overflow at 768px",
+      "name": "light: map marker 1 works from keyboard",
       "passed": true
     },
     {
-      "name": "No page overflow at 900px",
+      "name": "light: map marker 2 works from keyboard",
       "passed": true
     },
     {
-      "name": "No page overflow at 1024px",
+      "name": "light: map marker 3 works from keyboard",
       "passed": true
     },
     {
-      "name": "No page overflow at 1280px",
+      "name": "light: map marker 4 works from keyboard",
       "passed": true
     },
     {
-      "name": "No page overflow at 1440px",
+      "name": "light: map marker 5 works from keyboard",
       "passed": true
     },
     {
-      "name": "No page overflow at 1920px",
+      "name": "light: zoom reaches maximum and disables plus",
       "passed": true
     },
     {
-      "name": "Hero action visible at 1280x800",
+      "name": "light: zoom reaches minimum and disables minus",
       "passed": true
     },
     {
-      "name": "Sample marker 1 selects a route",
+      "name": "light: office o1 updates floor plan and route",
       "passed": true
     },
     {
-      "name": "Sample marker 2 selects a route",
+      "name": "light: office o2 updates floor plan and route",
       "passed": true
     },
     {
-      "name": "Sample marker 3 selects a route",
+      "name": "light: office o3 updates floor plan and route",
       "passed": true
     },
     {
-      "name": "Sample marker 4 selects a route",
+      "name": "light: office o4 updates floor plan and route",
       "passed": true
     },
     {
-      "name": "Sample marker 5 selects a route",
+      "name": "light: office route action focuses map result",
       "passed": true
     },
     {
-      "name": "Zoom upper limit disables control",
+      "name": "light: venue choice Presentation updates recommendation",
       "passed": true
     },
     {
-      "name": "Reset clears route and zoom",
+      "name": "light: venue choice Study group updates recommendation",
       "passed": true
     },
     {
-      "name": "Office shortcut focuses search",
+      "name": "light: venue choice Student gathering updates recommendation",
       "passed": true
     },
     {
-      "name": "Keyboard office selection shows floor directions",
+      "name": "light: venue location draws the selected sample route",
       "passed": true
     },
     {
-      "name": "Empty search explains recovery",
+      "name": "light: canteen location draws sample route",
       "passed": true
     },
     {
-      "name": "Escape closes search",
+      "name": "light: all rendered interface text passes WCAG AA contrast",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "dark: theme toggle updates the root",
       "passed": true
     },
     {
-      "name": "Feature 1 opens sample search",
+      "name": "dark: Find an office focuses filtered search",
       "passed": true
     },
     {
-      "name": "Tab dismisses feature 1 suggestions",
+      "name": "dark: keyboard selection updates route and office details",
       "passed": true
     },
     {
-      "name": "Feature 2 opens sample search",
+      "name": "dark: reset clears route and search",
       "passed": true
     },
     {
-      "name": "Tab dismisses feature 2 suggestions",
+      "name": "dark: empty search gives a recovery hint",
       "passed": true
     },
     {
-      "name": "Feature 3 opens sample search",
+      "name": "dark: Escape closes autocomplete",
       "passed": true
     },
     {
-      "name": "Tab dismisses feature 3 suggestions",
+      "name": "dark: quick destination 1 selects a sample route",
       "passed": true
     },
     {
-      "name": "Feature 4 opens sample search",
+      "name": "dark: quick destination 2 selects a sample route",
       "passed": true
     },
     {
-      "name": "Tab dismisses feature 4 suggestions",
+      "name": "dark: quick destination 3 selects a sample route",
       "passed": true
     },
     {
-      "name": "dark mode toggle",
+      "name": "dark: map marker 1 works from keyboard",
       "passed": true
     },
     {
-      "name": "dark mode has no mobile overflow",
+      "name": "dark: map marker 2 works from keyboard",
       "passed": true
     },
     {
-      "name": "light mode toggle",
+      "name": "dark: map marker 3 works from keyboard",
       "passed": true
     },
     {
-      "name": "light mode has no mobile overflow",
+      "name": "dark: map marker 4 works from keyboard",
       "passed": true
+    },
+    {
+      "name": "dark: map marker 5 works from keyboard",
+      "passed": true
+    },
+    {
+      "name": "dark: zoom reaches maximum and disables plus",
+      "passed": true
+    },
+    {
+      "name": "dark: zoom reaches minimum and disables minus",
+      "passed": true
+    },
+    {
+      "name": "dark: office o1 updates floor plan and route",
+      "passed": true
+    },
+    {
+      "name": "dark: office o2 updates floor plan and route",
+      "passed": true
+    },
+    {
+      "name": "dark: office o3 updates floor plan and route",
+      "passed": true
+    },
+    {
+      "name": "dark: office o4 updates floor plan and route",
+      "passed": true
+    },
+    {
+      "name": "dark: office route action focuses map result",
+      "passed": true
+    },
+    {
+      "name": "dark: venue choice Presentation updates recommendation",
+      "passed": true
+    },
+    {
+      "name": "dark: venue choice Study group updates recommendation",
+      "passed": true
+    },
+    {
+      "name": "dark: venue choice Student gathering updates recommendation",
+      "passed": true
+    },
+    {
+      "name": "dark: venue location draws the selected sample route",
+      "passed": true
+    },
+    {
+      "name": "dark: canteen location draws sample route",
+      "passed": true
+    },
+    {
+      "name": "dark: all rendered interface text passes WCAG AA contrast",
+      "passed": true,
+      "details": []
     },
     {
       "name": "Mobile menu opens",
       "passed": true
     },
     {
-      "name": "Escape closes menu and restores focus",
+      "name": "Escape closes mobile menu and restores focus",
       "passed": true
     },
     {
-      "name": "Menu link closes menu",
+      "name": "Mobile navigation reaches office lookup and closes",
       "passed": true
     },
     {
-      "name": "Carousel advances",
+      "name": "Mobile route sheet collapses",
       "passed": true
     },
     {
-      "name": "Carousel returns and disables previous arrow",
+      "name": "Mobile route sheet expands",
       "passed": true
     },
     {
-      "name": "Clipboard failure offers visible copy field",
+      "name": "Mobile interactive targets are at least 48px",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Copy page link copies the current page URL",
       "passed": true
     },
     {
-      "name": "Copy success is announced",
+      "name": "Blocked clipboard reveals and selects a visible link",
       "passed": true
     },
     {
-      "name": "Reduced motion disables smooth scrolling",
+      "name": "Skip link shows an immediate visible focus outline",
       "passed": true
     },
     {
-      "name": "No JavaScript exceptions",
+      "name": "Skip link targets the main content",
       "passed": true
+    },
+    {
+      "name": "Reduced motion disables transitions",
+      "passed": true
+    },
+    {
+      "name": "Open the map moves keyboard focus to the map result",
+      "passed": true
+    },
+    {
+      "name": "Anchor .main-nav a 1 reaches #try-it",
+      "passed": true
+    },
+    {
+      "name": "Anchor .main-nav a 2 reaches #offices",
+      "passed": true
+    },
+    {
+      "name": "Anchor .main-nav a 3 reaches #campus-life",
+      "passed": true
+    },
+    {
+      "name": "Anchor .main-nav a 4 reaches #visitors",
+      "passed": true
+    },
+    {
+      "name": "Anchor .feature-index a 1 reaches #try-it",
+      "passed": true
+    },
+    {
+      "name": "Anchor .feature-index a 2 reaches #offices",
+      "passed": true
+    },
+    {
+      "name": "Anchor .feature-index a 3 reaches #venues",
+      "passed": true
+    },
+    {
+      "name": "Anchor .feature-index a 4 reaches #canteens",
+      "passed": true
+    },
+    {
+      "name": "Anchor .footer-details a[href^=\"#\"] 1 reaches #how-it-works",
+      "passed": true
+    },
+    {
+      "name": "Anchor .wordmark 1 reaches #main",
+      "passed": true
+    },
+    {
+      "name": "Anchor .wordmark 2 reaches #main",
+      "passed": true
+    },
+    {
+      "name": "Clicking an autocomplete option selects its sample route",
+      "passed": true
+    },
+    {
+      "name": "Keyboard Tab walkthrough reaches footer without a trap",
+      "passed": true,
+      "details": {
+        "visited": [
+          "XMUM Navigate",
+          "Campus map",
+          "Office lookup",
+          "Campus life",
+          "For visitors",
+          "Switch to light theme",
+          "Open the map",
+          "Find an office",
+          "All places",
+          "Offices",
+          "destination",
+          "Clear search and sample route",
+          "Library",
+          "Canteen",
+          "Event Hall",
+          "Sample campus map. Search and destination buttons provide a text alternative.",
+          "Show sample route to Sample Building A",
+          "Show sample route to Sample Building B",
+          "Show sample route to Sample Library",
+          "Show sample route to Sample Canteen",
+          "Show sample route to Sample Event Hall",
+          "OpenStreetMap contributors",
+          "Reset map view",
+          "Zoom in",
+          "Reset",
+          "Campus navigationOutdoor walki",
+          "Find an officeThe building, fl",
+          "Venue finderSpace suggestions ",
+          "Canteen directoryStalls, menus",
+          "office-select",
+          "Show outdoor sample route",
+          "event-type",
+          "See sample location",
+          "See sample location",
+          "Copy page link",
+          "Page link to copy",
+          "XMUM Navigate"
+        ],
+        "focusFailures": []
+      }
+    },
+    {
+      "name": "Every keyboard-focused control has a visible outline",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Dark theme has no overflow with selected office at 360px",
+      "passed": true
+    },
+    {
+      "name": "Dark theme has no overflow with selected office at 768px",
+      "passed": true
+    },
+    {
+      "name": "Dark theme has no overflow with selected office at 1280px",
+      "passed": true
+    },
+    {
+      "name": "200% zoom equivalent has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Map script failure shows a useful fallback",
+      "passed": true
+    },
+    {
+      "name": "Destination lookup still works when map fails",
+      "passed": true
+    },
+    {
+      "name": "Failed map tiles show fallback while keeping destinations usable",
+      "passed": true
+    },
+    {
+      "name": "No runtime errors in primary or fallback flows",
+      "passed": true,
+      "details": []
     }
   ],
   "errors": []

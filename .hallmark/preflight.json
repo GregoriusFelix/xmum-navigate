@@ -1,22 +1,32 @@
 {
   "scanned": "2026-10-24",
-  "visual_system": "C:/Users/gfcat/Downloads/design-map.md",
+  "visual_system": "C:/Users/gfcat/Downloads/design.md",
   "content_source": "D:/Felix/University/@FYP/.MD File/XMUM-Navigate-Landing-Page-Prompt.md",
   "framework": "React 18 / Vite 5",
-  "scope": "Restyle while preserving page layout and functionality",
-  "palette": "Reference A olive / cream; blue route; brown destinations",
-  "responsive": "Reference B sheet structure, same palette",
+  "scope": "Full redesign, new composition, preserving product scope and sample interactions",
+  "palette": "Navy #171F32, white surfaces, orange #FF5421 route emphasis, gold #C48F1E floor-plan emphasis",
+  "responsive": "Search-led desktop workbench, stacked mobile map and expandable route sheet",
   "dials": {
     "energy": 2,
-    "rhythm": 2,
+    "rhythm": 3,
     "motion": 1
   },
-  "browser_checks": 51,
+  "browser_checks": "See browser-checks.json for current results",
+  "sources": {
+    "typography": "design.md:97, Figtree",
+    "colors": "design.md:25, supplied palette",
+    "surfaces": "design.md:185, radius and elevation",
+    "framework": "frontend/package.json:1, existing React/Vite setup"
+  },
   "preserve": [
-    "section order",
-    "anchor IDs",
+    "React and Vite project structure",
+    "text-only product wordmark",
     "all sample interactions",
     "no real-location request",
-    "sample-data labels"
-  ]
+    "sample-data labels",
+    "outdoor routes, indoor plans and written directions only",
+    "venue recommendations and browse-only canteen content"
+  ],
+  "introduce": ["new page composition", "Leaflet/OpenStreetMap preview", "shared design tokens", "interactive office floor plans", "keyboard and error-state validation"],
+  "document_boundary": "design.md supplies visual data; the landing-page prompt supplies product content and scope. Embedded standalone-file and alternate styling instructions do not replace the user's existing framework or chosen visual system."
 }

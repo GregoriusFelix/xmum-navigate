@@ -1,89 +1,42 @@
 [
-  {
-    "date": "2026-10-24",
-    "mode": "redesign",
-    "depth": "restyle",
-    "scope": "page",
-    "theme": "user design-map.md",
-    "changed": [
-      "frontend/src/Home.jsx",
-      "frontend/src/Home.css",
-      "frontend/index.html"
-    ],
-    "checks": {
-      "fails": 1,
-      "reflex": 20,
-      "warns": 5,
-      "waived": 0,
-      "rejected": 0,
-      "answered": 0,
-      "dismissed": 0,
-      "notes": 3,
-      "files": 2,
-      "render": "ran"
-    },
-    "browser_checks": 51,
-    "browser_errors": [],
-    "build": "passed",
-    "review": "in-thread; map colour and mobile action-wrap fixed",
-    "material": "Existing sample data and diagrams; no real campus geometry invented"
+ {
+  "date": "2026-10-24",
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Campus workbench",
+  "theme": "brand",
+  "axes": "light/grotesk-heavy/warm",
+  "hero": "Counter",
+  "nav": "quiet three-part bar",
+  "footer": "project colophon",
+  "imagery": "working Leaflet campus map and labelled sample floor plan",
+  "photos": [],
+  "entry": "frontend/src/Home.jsx",
+  "fingerprint": {
+   "opening": "search and live map",
+   "flow": "office detail then campus directories",
+   "navigation": "anchor bar",
+   "closing": "visitor sharing",
+   "density": "tool-led",
+   "surface": "white and navy"
   },
-  {
-    "date": "2026-10-24",
-    "mode": "redesign",
-    "depth": "polish",
-    "scope": "page",
-    "theme": "locked user design.md",
-    "changed": [
-      "frontend/src/Home.jsx",
-      "frontend/src/Home.css"
-    ],
-    "checks": {
-      "fails": 13,
-      "reflex": 20,
-      "warns": 6,
-      "waived": 0,
-      "rejected": 0,
-      "answered": 0,
-      "dismissed": 0,
-      "notes": 153,
-      "files": 2,
-      "render": "ran"
-    },
-    "browser_checks": 49,
-    "browser_errors": [],
-    "build": "passed",
-    "review": "in-thread desktop/mobile; three issues fixed",
-    "user_overrides": [
-      "eyebrow labels",
-      "uppercase navigation",
-      "white canvas",
-      "reference layout and retained illustrations"
-    ]
-  },
-  {
-    "date": "2026-10-24",
-    "mode": "redesign",
-    "depth": "polish",
-    "scope": "page",
-    "theme": "locked user design.md",
-    "changed": [
-      "frontend/src/Home.css"
-    ],
-    "checks": {
-      "fails": 17,
-      "reflex": 17,
-      "warns": 6,
-      "waived": 0,
-      "rejected": 0,
-      "answered": 0,
-      "dismissed": 0,
-      "notes": 140,
-      "files": 2,
-      "render": "not run: no puppeteer-core found locally, globally or via HALLMARK_PUPPETEER"
-    },
-    "build": "passed",
-    "review": "in-thread source inspection; visual review unavailable",
-    "overrides": "User design takes precedence over conflicting Hallmark house style"
-  }
+  "sections": [
+   "working map and search",
+   "feature index",
+   "office lookup and plan",
+   "venue and canteen directories",
+   "walking instructions",
+   "visitor sharing",
+   "project colophon"
+  ],
+  "signature": "Office lookup connects an outdoor route to a sample floor plan and written directions",
+  "waived": [
+   "7b",
+   "44c",
+   "59",
+   "77"
+  ],
+  "prompt": "Full redesign of XMUM Navigate using design.md for visual tokens and the landing-page brief for product scope."
+ }
 ]

@@ -1,0 +1,187 @@
+﻿{
+  "summary": {
+    "fails": 0,
+    "reflex": 0,
+    "warns": 0,
+    "waived": 13,
+    "rejected": 0,
+    "answered": 4,
+    "dismissed": 0,
+    "notes": 2,
+    "files": 5,
+    "render": "ran"
+  },
+  "findings": [
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 52,
+      "evidence": "pure #fff: color: var(--color-white) (.primary:hover)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 142,
+      "evidence": "pure #fff: color: var(--color-dark-ink) (.campus-life-section)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 153,
+      "evidence": "pure #fff: color: var(--color-dark-ink) (.life-module select)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 207,
+      "evidence": "pure #fff: background: var(--map-label-paper) (.leaflet-control-attribution)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 213,
+      "evidence": "pure #fff: color: var(--map-marker-ink) (.map-pin)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 216,
+      "evidence": "pure #fff: background: var(--map-label-paper) (.pin-label)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 219,
+      "evidence": "pure #fff: background: var(--map-marker-ink) (.sample-start > span)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\Home.css",
+      "line": 220,
+      "evidence": "pure #fff: background: var(--map-label-paper) (.sample-start strong)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\tokens.css",
+      "line": 7,
+      "evidence": "pure #fff: --color-white: #fff (:root)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\tokens.css",
+      "line": 8,
+      "evidence": "pure #fff: --color-paper: #fff (:root)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\tokens.css",
+      "line": 20,
+      "evidence": "pure #fff: --color-action-ink: #fff (:root)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "7b",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "frontend\\src\\tokens.css",
+      "line": 22,
+      "evidence": "pure #fff: --color-dark-ink: #fff (:root)",
+      "fix": "Tint the base toward the anchor hue"
+    },
+    {
+      "gate": "77",
+      "grade": "WAIVED",
+      "tier": "reflex",
+      "file": "http://127.0.0.1:5173/",
+      "line": 1,
+      "evidence": "[1440px] 1 thin section: \"From search\nto your next sto\" (99% wide, no mass)",
+      "fix": "Widen the body to ten of twelve columns and give it mass: a visual 300px tall or more, a set of three across, rows, or a statement (layout.md § 4 and § 5)"
+    },
+    {
+      "gate": "F5",
+      "grade": "ANSWERED",
+      "tier": "finish",
+      "file": "frontend\\src\\Home.css",
+      "line": 42,
+      "evidence": "icon-in-coloured-circle coin: .icon-button",
+      "fix": "Drop the tinted coin; set the icon at text size in currentColor"
+    },
+    {
+      "gate": "F6",
+      "grade": "ANSWERED",
+      "tier": "finish",
+      "file": "frontend\\src\\Home.css",
+      "line": 86,
+      "evidence": "numeric selector .map-status at display size without tabular figures",
+      "fix": "Add font-variant-numeric: tabular-nums"
+    },
+    {
+      "gate": "F6",
+      "grade": "ANSWERED",
+      "tier": "finish",
+      "file": "frontend\\src\\Home.css",
+      "line": 101,
+      "evidence": "numeric selector .route-stats strong at display size without tabular figures",
+      "fix": "Add font-variant-numeric: tabular-nums"
+    },
+    {
+      "gate": "F6",
+      "grade": "ANSWERED",
+      "tier": "finish",
+      "file": "frontend\\src\\Home.css",
+      "line": 103,
+      "evidence": "numeric selector .route-stats > div > span at display size without tabular figures",
+      "fix": "Add font-variant-numeric: tabular-nums"
+    },
+    {
+      "gate": "58",
+      "grade": "NOTE",
+      "tier": "floor",
+      "file": "http://127.0.0.1:5173/",
+      "line": 1,
+      "evidence": "[1440px] 118 words on one screen (from y=2000)",
+      "fix": "One idea per screen: cut to about 80 words, make the section an object"
+    },
+    {
+      "gate": "waive",
+      "grade": "NOTE",
+      "tier": "ledger",
+      "file": "frontend\\src\\Home.css",
+      "line": 1,
+      "evidence": "4 reflex gates waived (7b, 44c, 59, 77): that is a house style, not a s…",
+      "fix": "Lock it into a design.md so later pages inherit it instead of re-arguing it"
+    }
+  ]
+}
