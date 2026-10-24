@@ -1,0 +1,209 @@
+{
+  "checks": [
+    {
+      "name": "One headline and four feature cards",
+      "passed": true
+    },
+    {
+      "name": "Navigation anchors exist",
+      "passed": true
+    },
+    {
+      "name": "Map water stays distinct from the blue route",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 320px",
+      "passed": true
+    },
+    {
+      "name": "Closing action fits on one line at 320px",
+      "passed": true
+    },
+    {
+      "name": "Readable feature cards at 320px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 360px",
+      "passed": true
+    },
+    {
+      "name": "Readable feature cards at 360px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 375px",
+      "passed": true
+    },
+    {
+      "name": "Readable feature cards at 375px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 560px",
+      "passed": true
+    },
+    {
+      "name": "Readable feature cards at 560px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 900px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 1024px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 1280px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 1440px",
+      "passed": true
+    },
+    {
+      "name": "No page overflow at 1920px",
+      "passed": true
+    },
+    {
+      "name": "Hero action visible at 1280x800",
+      "passed": true
+    },
+    {
+      "name": "Sample marker 1 selects a route",
+      "passed": true
+    },
+    {
+      "name": "Sample marker 2 selects a route",
+      "passed": true
+    },
+    {
+      "name": "Sample marker 3 selects a route",
+      "passed": true
+    },
+    {
+      "name": "Sample marker 4 selects a route",
+      "passed": true
+    },
+    {
+      "name": "Sample marker 5 selects a route",
+      "passed": true
+    },
+    {
+      "name": "Zoom upper limit disables control",
+      "passed": true
+    },
+    {
+      "name": "Reset clears route and zoom",
+      "passed": true
+    },
+    {
+      "name": "Office shortcut focuses search",
+      "passed": true
+    },
+    {
+      "name": "Keyboard office selection shows floor directions",
+      "passed": true
+    },
+    {
+      "name": "Empty search explains recovery",
+      "passed": true
+    },
+    {
+      "name": "Escape closes search",
+      "passed": true
+    },
+    {
+      "name": "Feature 1 opens sample search",
+      "passed": true
+    },
+    {
+      "name": "Tab dismisses feature 1 suggestions",
+      "passed": true
+    },
+    {
+      "name": "Feature 2 opens sample search",
+      "passed": true
+    },
+    {
+      "name": "Tab dismisses feature 2 suggestions",
+      "passed": true
+    },
+    {
+      "name": "Feature 3 opens sample search",
+      "passed": true
+    },
+    {
+      "name": "Tab dismisses feature 3 suggestions",
+      "passed": true
+    },
+    {
+      "name": "Feature 4 opens sample search",
+      "passed": true
+    },
+    {
+      "name": "Tab dismisses feature 4 suggestions",
+      "passed": true
+    },
+    {
+      "name": "dark mode toggle",
+      "passed": true
+    },
+    {
+      "name": "dark mode has no mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "light mode toggle",
+      "passed": true
+    },
+    {
+      "name": "light mode has no mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu opens",
+      "passed": true
+    },
+    {
+      "name": "Escape closes menu and restores focus",
+      "passed": true
+    },
+    {
+      "name": "Menu link closes menu",
+      "passed": true
+    },
+    {
+      "name": "Carousel advances",
+      "passed": true
+    },
+    {
+      "name": "Carousel returns and disables previous arrow",
+      "passed": true
+    },
+    {
+      "name": "Clipboard failure offers visible copy field",
+      "passed": true
+    },
+    {
+      "name": "Copy success is announced",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion disables smooth scrolling",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

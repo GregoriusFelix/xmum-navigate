@@ -1,0 +1,10 @@
+shots/
+before/
+before.json
+before.txt
+compare.html
+*.png
+before-polish.json
+after-polish.json
+map-before.json
+map-after.json

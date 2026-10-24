@@ -1,0 +1,22 @@
+{
+  "scanned": "2026-10-24",
+  "visual_system": "C:/Users/gfcat/Downloads/design-map.md",
+  "content_source": "D:/Felix/University/@FYP/.MD File/XMUM-Navigate-Landing-Page-Prompt.md",
+  "framework": "React 18 / Vite 5",
+  "scope": "Restyle while preserving page layout and functionality",
+  "palette": "Reference A olive / cream; blue route; brown destinations",
+  "responsive": "Reference B sheet structure, same palette",
+  "dials": {
+    "energy": 2,
+    "rhythm": 2,
+    "motion": 1
+  },
+  "browser_checks": 51,
+  "preserve": [
+    "section order",
+    "anchor IDs",
+    "all sample interactions",
+    "no real-location request",
+    "sample-data labels"
+  ]
+}
