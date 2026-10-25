@@ -4,11 +4,9 @@ import { CONFIG } from './campus.js';
 
 let leafletPromise;
 function fitCampus(map) {
-  const sidebar = map.getContainer().closest('.map-workspace')?.querySelector('.map-sidebar');
-  const floating = sidebar && getComputedStyle(sidebar).position === 'absolute';
   map.fitBounds([CONFIG.start, ...CONFIG.places.map(p => p.coords)], {
-    paddingTopLeft: [floating ? sidebar.offsetWidth + 64 : 32, 100],
-    paddingBottomRight: [80, floating ? 280 : 220],
+    paddingTopLeft: [32, 100],
+    paddingBottomRight: [80, 220],
     maxZoom: 17,
     animate: false,
   });
@@ -56,7 +54,6 @@ export default function CampusMap({ selected, onSelect, onReset }) {
         markersRef.current.push({ marker, id: place.id });
       });
       L.marker(CONFIG.start, { keyboard: false, icon: L.divIcon({ className: 'sample-start', html: '<span>S</span><strong>Sample start</strong>', iconSize: [120, 36], iconAnchor: [18, 18] }) }).addTo(map);
-      L.control.attribution({ position: 'bottomright', prefix: false }).addTo(map).addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>');
       observer = new ResizeObserver(() => { map.invalidateSize(); fitCampus(map); });
       observer.observe(element.current);
       setStatus('ready');
@@ -82,15 +79,19 @@ export default function CampusMap({ selected, onSelect, onReset }) {
   }, [selected, status]);
   const enabled = status === 'ready' || status === 'tiles-error';
   return <div className="map-stage" id="campus-map" role="region" aria-label="Campus map preview">
-    <div className="map-canvas" ref={element} aria-label="Sample campus map. Search and destination buttons provide a text alternative." />
+    <div className="map-canvas" ref={element} aria-label="Sample campus map. Office lookup and Campus life provide destination details." />
     <div className="map-caption"><span>XMUM campus preview</span><span className="sample-label">Sample data</span></div>
-    {status !== 'ready' && <div className="map-status" role="status"><Info size={16} aria-hidden="true" /><span>{status === 'loading' ? 'Loading the campus map…' : 'Map unavailable. Use the sample destination list to preview routes and directions.'}</span></div>}
+    {status !== 'ready' && <div className="map-status" role="status"><Info size={16} aria-hidden="true" /><span>{status === 'loading' ? 'Loading the campus map…' : 'Map unavailable. Use Office lookup or Campus life in the navigation to choose a sample destination.'}</span></div>}
     <div className="map-controls"><button className="icon-button" aria-label="Reset map view" disabled={!enabled} onClick={() => fitCampus(mapRef.current)}><Compass size={20} aria-hidden="true" /></button><div className="zoom-controls"><button className="icon-button" disabled={!enabled || zoom >= 19} aria-label="Zoom in" onClick={() => mapRef.current.zoomIn()}><Plus size={20} aria-hidden="true" /></button><button className="icon-button" disabled={!enabled || zoom <= 16} aria-label="Zoom out" onClick={() => mapRef.current.zoomOut()}><Minus size={20} aria-hidden="true" /></button></div></div>
     <div className="route-sheet">
       <button className="sheet-handle" aria-label={expanded ? 'Collapse route details' : 'Expand route details'} aria-expanded={expanded} onClick={() => setExpanded(!expanded)}><span /></button>
       <div className="route-sheet-top"><div><Footprints size={18} aria-hidden="true" /><strong>{selected ? 'Sample walking route' : 'Choose your next stop'}</strong></div><button className="reset-button" onClick={onReset}><RotateCcw size={14} aria-hidden="true" /> Reset</button></div>
       <div className="route-sheet-content" hidden={!expanded} aria-live="polite" aria-atomic="true">
-        {selected ? <><div className="route-destination"><span>Sample start</span><span className="route-line" aria-hidden="true" /><strong>{selected.name}</strong></div><div className="route-stats"><div><strong>{selected.place.minutes}<small> min</small></strong><span>Sample walk</span></div><div><strong>{selected.place.distance}<small> m</small></strong><span>Sample distance</span></div><span className="walking-label"><Footprints size={16} aria-hidden="true" /> Outdoors</span></div>{selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href={`/home?office=${encodeURIComponent(selected.id)}#offices`}>See floor plan and directions</a></p>}</> : <p className="empty-route">Select a marker or search a sample building or office to see a route.</p>}
+        {selected ? <>
+          <div className="route-destination"><span>Sample start</span><span className="route-line" aria-hidden="true" /><strong>{selected.name}</strong></div>
+          <div className="route-stats"><div><strong>{selected.place.minutes}<small> min</small></strong><span>Sample walk</span></div><div><strong>{selected.place.distance}<small> m</small></strong><span>Sample distance</span></div><span className="walking-label"><Footprints size={16} aria-hidden="true" /> Outdoors</span></div>
+          {selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href={`/home?office=${encodeURIComponent(selected.id)}#offices`}>See floor plan and directions</a></p>}
+        </> : <p className="empty-route">Select a map marker, or choose a destination in Office lookup or Campus life to see a route.</p>}
       </div>
     </div>
   </div>;

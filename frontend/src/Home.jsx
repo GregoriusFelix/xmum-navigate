@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Building2, Check, ChevronDown, ChevronRight, Compass, Copy, Footprints, Info, Map, Menu, Moon, Search, Sun, Utensils, X } from 'lucide-react';
+import { Building2, Check, ChevronDown, ChevronRight, Compass, Copy, Footprints, Info, Map, Menu, Moon, Sun, Utensils, X } from 'lucide-react';
 import CampusMap from './CampusMap.jsx';
 import { CONFIG, DESTINATIONS, OFFICES } from './campus.js';
 
@@ -27,19 +27,12 @@ export default function Home() {
   const [theme, setTheme] = useState(() => sessionStorage.getItem('xmum-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
   const manualTheme = useRef(Boolean(sessionStorage.getItem('xmum-theme')));
   const [menu, setMenu] = useState(false);
-  const [query, setQuery] = useState('');
-  const [filter, setFilter] = useState(params.get('filter') === 'offices' ? 'offices' : 'all');
-  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
-  const [activeOption, setActiveOption] = useState(-1);
   const [selected, setSelected] = useState(() => DESTINATIONS.find(item => item.id === params.get('destination')) || DESTINATIONS[0]);
   const [office, setOffice] = useState(() => OFFICES.find(item => item.id === params.get('office')) || OFFICES[0]);
   const [eventType, setEventType] = useState('Presentation');
   const [copied, setCopied] = useState('');
-  const searchRef = useRef(null);
   const shareRef = useRef(null);
-  const searchAreaRef = useRef(null);
   const resultRef = useRef(null);
-  const matches = DESTINATIONS.filter(item => (filter !== 'offices' || item.floor) && item.name.toLowerCase().includes(query.toLowerCase()));
   useEffect(() => {
     document.title = mapPage ? 'Campus map | XMUM Navigate' : 'XMUM Navigate | Find your way around campus';
   }, [mapPage]);
@@ -53,14 +46,8 @@ export default function Home() {
     media.addEventListener('change', change);
     return () => media.removeEventListener('change', change);
   }, []);
-  useEffect(() => {
-    const close = e => { if (!searchAreaRef.current?.contains(e.target)) setSuggestionsOpen(false); };
-    document.addEventListener('pointerdown', close);
-    return () => document.removeEventListener('pointerdown', close);
-  }, []);
-  useEffect(() => { if (activeOption >= 0) document.getElementById(`destination-${activeOption}`)?.scrollIntoView({ block: 'nearest' }); }, [activeOption]);
-  const choose = item => { setSelected(item); setQuery(item.name); setSuggestionsOpen(false); setActiveOption(-1); if (item.floor) setOffice(item); if (mapPage) { const url = new URL(window.location.href); url.searchParams.set('destination', item.id); window.history.replaceState(null, '', url); } };
-  const reset = () => { setSelected(null); setQuery(''); setActiveOption(-1); setSuggestionsOpen(false); if (mapPage) { const url = new URL(window.location.href); url.searchParams.delete('destination'); window.history.replaceState(null, '', url); } };
+  const choose = item => { setSelected(item); if (item.floor) setOffice(item); if (mapPage) { const url = new URL(window.location.href); url.searchParams.set('destination', item.id); window.history.replaceState(null, '', url); } };
+  const reset = () => { setSelected(null); if (mapPage) { const url = new URL(window.location.href); url.searchParams.delete('destination'); window.history.replaceState(null, '', url); } };
   const showRoute = place => { window.location.assign(`/?destination=${encodeURIComponent(place.id)}`); };
   const copyLink = async () => { try { await navigator.clipboard.writeText(window.location.href.split('#')[0]); setCopied('Page link copied.'); } catch { setCopied('Select and copy the page link below.'); setTimeout(() => shareRef.current?.select(), 0); } };
   const venue = CONFIG.places[eventType === 'Study group' ? 2 : 4];
@@ -78,25 +65,13 @@ export default function Home() {
         <div className="intro-copy">
           <h1 id="hero-title">Find your way<br />around XMUM.</h1>
           <p className="hero-description">Walking routes, offices, venue ideas and canteen menus, right in your browser.</p>
-          <div className="hero-actions"><a className="button primary" href="/">Open the map <Map size={18} aria-hidden="true" /></a><a className="button secondary" href="/?filter=offices">Find an office</a></div>
+          <div className="hero-actions"><a className="button primary" href="/">Open the map <Map size={18} aria-hidden="true" /></a><a className="button secondary" href="#offices">Find an office</a></div>
         </div>
         <p className="browser-note"><Check size={16} aria-hidden="true" /> No app download. No account needed.</p>
       </section>}
       {mapPage && <section className="map-section map-page" id="try-it" aria-label="Campus route planner">
+        <h1 className="visually-hidden">XMUM campus map</h1>
         <div className="map-workspace">
-        <aside className="map-sidebar" aria-label="Sample campus destinations">
-          <a className="map-back-link" href="/home">About XMUM Navigate</a>
-          <div className="map-sidebar-heading"><Compass size={24} aria-hidden="true" /><div><h1>Where are you headed?</h1><p>Explore the sample campus directory.</p></div></div>
-          <div className="destination-search" ref={searchAreaRef}>
-            <div className="search-tabs" role="group" aria-label="Search categories"><button aria-pressed={filter === 'all'} onClick={() => { setFilter('all'); reset(); }}>All places</button><button aria-pressed={filter === 'offices'} onClick={() => { setFilter('offices'); reset(); }}>Offices</button></div>
-            <label htmlFor="destination">Where do you want to go?</label>
-            <div className="search-field"><Search size={20} aria-hidden="true" /><input id="destination" ref={searchRef} autoComplete="off" placeholder={filter === 'offices' ? 'Search a sample office' : 'Search a building or office'} value={query} role="combobox" aria-autocomplete="list" aria-expanded={suggestionsOpen} aria-controls="destination-options" aria-activedescendant={suggestionsOpen && activeOption >= 0 ? `destination-${activeOption}` : undefined} onFocus={() => setSuggestionsOpen(true)} onBlur={e => { if (!e.currentTarget.parentElement.parentElement.contains(e.relatedTarget)) setSuggestionsOpen(false); }} onChange={e => { setQuery(e.target.value); setActiveOption(-1); setSuggestionsOpen(true); }} onKeyDown={e => { if (['ArrowDown', 'ArrowUp'].includes(e.key)) { e.preventDefault(); setSuggestionsOpen(true); setActiveOption(i => matches.length ? (i + (e.key === 'ArrowDown' ? 1 : i < 0 ? 0 : -1) + matches.length) % matches.length : -1); } if (e.key === 'Enter' && suggestionsOpen && matches.length) { e.preventDefault(); choose(matches[Math.max(0, activeOption)]); } if (e.key === 'Escape') { setSuggestionsOpen(false); setActiveOption(-1); } }} />{query && <button className="icon-button clear-search" aria-label="Clear search and sample route" onClick={reset}><X size={16} aria-hidden="true" /></button>}</div>
-            <ul id="destination-options" className="suggestions" role="listbox" aria-label="Sample destinations" hidden={!suggestionsOpen}>{matches.length ? matches.map((item, i) => <li key={item.id} id={`destination-${i}`} role="option" aria-selected={activeOption === i} onPointerDown={e => e.preventDefault()} onClick={() => choose(item)}><span>{item.name}<small>{item.floor ? `Office in ${item.place.name}, Floor ${item.floor}` : item.type}</small></span><ChevronRight size={16} aria-hidden="true" /></li>) : <li role="option" aria-selected="false" aria-disabled="true">No sample places found. Try “Sample”.</li>}</ul>
-            <div className="quick-destinations"><span>Sample stops</span>{CONFIG.places.filter(p => ['c', 'd', 'e'].includes(p.id)).map(place => <button key={place.id} onClick={() => choose({ ...place, place })}>{place.name.replace('Sample ', '')}<ChevronRight size={14} aria-hidden="true" /></button>)}</div>
-          </div>
-          <div className="map-destination-list" aria-label="Sample destinations">{(filter === 'offices' ? OFFICES : DESTINATIONS.filter(item => !item.floor)).map((item, index) => <button className="map-destination-row" key={item.id} aria-pressed={selected?.id === item.id} onClick={() => choose(item)}><span className="destination-letter">{filter === 'offices' ? <Building2 size={18} aria-hidden="true" /> : String.fromCharCode(65 + index)}</span><span><strong>{item.name}</strong><small>{item.floor ? `${item.place.name}, Floor ${item.floor}` : item.type}</small></span><ChevronRight size={16} aria-hidden="true" /></button>)}</div>
-          <p className="sidebar-sample-note"><Info size={14} aria-hidden="true" /> All destinations are sample data.</p>
-        </aside>
         <div className="hero-map" ref={resultRef} tabIndex={-1}><CampusMap selected={selected} onSelect={choose} onReset={reset} /></div>
         </div>
         <p className="map-disclaimer"><Info size={14} aria-hidden="true" />Sample routes only. The real app uses surveyed campus paths.</p>
