@@ -16,6 +16,13 @@ try {
   await page.setViewport({ width: 1440, height: 900 });
   await page.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle2' });
   await page.waitForSelector('.map-pin', { timeout: 15000 });
+  check('Map has a separate large section outside the introduction', await page.evaluate(() => Boolean(document.querySelector('#try-it .map-workspace')) && !document.querySelector('.landing-intro .map-canvas') && document.querySelector('.map-workspace').getBoundingClientRect().height >= 740));
+  await (await page.$('.map-workspace')).screenshot({ path: '.hallmark/shots/map-section-desktop.png' });
+  for (let i = 0; i < 5; i++) {
+    const rows = await page.$$('.map-destination-row');
+    await rows[i].click();
+    check(`Floating destination list item ${i + 1} updates the route`, await rows[i].evaluate(el => el.getAttribute('aria-pressed') === 'true'));
+  }
   check('System light theme follows OS preference', await page.$eval('html', el => el.dataset.theme === 'light'));
   check('Semantic page: one h1, labelled controls, real anchor targets', await page.evaluate(() => document.querySelectorAll('h1').length === 1 && [...document.querySelectorAll('a[href^="#"]')].every(a => document.getElementById(a.hash.slice(1))) && [...document.querySelectorAll('input, select')].every(e => e.getAttribute('aria-label') || document.querySelector(`label[for="${e.id}"]`))));
   for (const width of [320, 360, 375, 414, 560, 640, 768, 800, 1024, 1280, 1440, 1920]) {
@@ -97,6 +104,7 @@ try {
     check(`${mode}: all rendered interface text passes WCAG AA contrast`, !contrast.length, contrast);
   }
   await page.setViewport({ width: 375, height: 812 });
+  await (await page.$('.map-workspace')).screenshot({ path: '.hallmark/shots/map-section-mobile.png' });
   await page.evaluate(() => scrollTo(0, 0));
   await page.click('#menu-toggle');
   check('Mobile menu opens', await page.$eval('#menu-toggle', el => el.getAttribute('aria-expanded') === 'true'));
@@ -190,6 +198,6 @@ try {
 } catch (error) { check('Automation completed', false, error.stack); }
 finally {
   await browser.close();
-  await writeFile('.hallmark/browser-checks.json', JSON.stringify({ date: '2026-10-24', checks, errors }, null, 2));
+  await writeFile('.hallmark/browser-checks.json', JSON.stringify({ date: '2026-10-25', checks, errors }, null, 2));
 }
 if (checks.some(item => !item.passed)) process.exitCode = 1;

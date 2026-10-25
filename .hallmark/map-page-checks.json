@@ -1,0 +1,245 @@
+[
+  {
+    "name": "Homepage no longer embeds the map",
+    "passed": true
+  },
+  {
+    "name": "Open the map navigates to /map",
+    "passed": true
+  },
+  {
+    "name": "Planner fills desktop window below header",
+    "passed": true
+  },
+  {
+    "name": "Planner has its own heading and no landing sections",
+    "passed": true
+  },
+  {
+    "name": "Map zoom and recenter controls operate",
+    "passed": true
+  },
+  {
+    "name": "Destination 1 selects route and updates URL",
+    "passed": true
+  },
+  {
+    "name": "Destination 2 selects route and updates URL",
+    "passed": true
+  },
+  {
+    "name": "Destination 3 selects route and updates URL",
+    "passed": true
+  },
+  {
+    "name": "Destination 4 selects route and updates URL",
+    "passed": true
+  },
+  {
+    "name": "Destination 5 selects route and updates URL",
+    "passed": true
+  },
+  {
+    "name": "Selected destination survives reload",
+    "passed": true
+  },
+  {
+    "name": "Reset clears route and URL selection",
+    "passed": true
+  },
+  {
+    "name": "Keyboard search selects a destination",
+    "passed": true
+  },
+  {
+    "name": "Office route includes floor and floor plan link",
+    "passed": true
+  },
+  {
+    "name": "Floor plan link opens corresponding homepage office",
+    "passed": true
+  },
+  {
+    "name": "Homepage office action redirects with selected office",
+    "passed": true
+  },
+  {
+    "name": "light layout at 320px",
+    "passed": true,
+    "detail": {
+      "width": 320,
+      "viewport": 320,
+      "sidebar": 320,
+      "canvas": 560
+    }
+  },
+  {
+    "name": "light layout at 375px",
+    "passed": true,
+    "detail": {
+      "width": 375,
+      "viewport": 375,
+      "sidebar": 375,
+      "canvas": 560
+    }
+  },
+  {
+    "name": "light layout at 700px",
+    "passed": true,
+    "detail": {
+      "width": 700,
+      "viewport": 700,
+      "sidebar": 700,
+      "canvas": 560
+    }
+  },
+  {
+    "name": "light layout at 768px",
+    "passed": true,
+    "detail": {
+      "width": 768,
+      "viewport": 768,
+      "sidebar": 280,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "light layout at 900px",
+    "passed": true,
+    "detail": {
+      "width": 900,
+      "viewport": 900,
+      "sidebar": 280,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "light layout at 1024px",
+    "passed": true,
+    "detail": {
+      "width": 1024,
+      "viewport": 1024,
+      "sidebar": 300,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "light layout at 1440px",
+    "passed": true,
+    "detail": {
+      "width": 1440,
+      "viewport": 1440,
+      "sidebar": 336,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "light text contrast",
+    "passed": true,
+    "detail": []
+  },
+  {
+    "name": "dark layout at 320px",
+    "passed": true,
+    "detail": {
+      "width": 320,
+      "viewport": 320,
+      "sidebar": 320,
+      "canvas": 560
+    }
+  },
+  {
+    "name": "dark layout at 375px",
+    "passed": true,
+    "detail": {
+      "width": 375,
+      "viewport": 375,
+      "sidebar": 375,
+      "canvas": 560
+    }
+  },
+  {
+    "name": "dark layout at 700px",
+    "passed": true,
+    "detail": {
+      "width": 700,
+      "viewport": 700,
+      "sidebar": 700,
+      "canvas": 560
+    }
+  },
+  {
+    "name": "dark layout at 768px",
+    "passed": true,
+    "detail": {
+      "width": 768,
+      "viewport": 768,
+      "sidebar": 280,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "dark layout at 900px",
+    "passed": true,
+    "detail": {
+      "width": 900,
+      "viewport": 900,
+      "sidebar": 280,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "dark layout at 1024px",
+    "passed": true,
+    "detail": {
+      "width": 1024,
+      "viewport": 1024,
+      "sidebar": 300,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "dark layout at 1440px",
+    "passed": true,
+    "detail": {
+      "width": 1440,
+      "viewport": 1440,
+      "sidebar": 336,
+      "canvas": 824
+    }
+  },
+  {
+    "name": "dark text contrast",
+    "passed": true,
+    "detail": []
+  },
+  {
+    "name": "Mobile route details leave zoom controls reachable",
+    "passed": true
+  },
+  {
+    "name": "Mobile route details collapse",
+    "passed": true
+  },
+  {
+    "name": "Mobile navigation opens",
+    "passed": true
+  },
+  {
+    "name": "Escape closes mobile navigation",
+    "passed": true
+  },
+  {
+    "name": "Homepage office search opens filtered map",
+    "passed": true
+  },
+  {
+    "name": "Map failure preserves text route selection",
+    "passed": true
+  },
+  {
+    "name": "No runtime errors",
+    "passed": true,
+    "detail": []
+  }
+]

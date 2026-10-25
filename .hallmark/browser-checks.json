@@ -1,6 +1,30 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "checks": [
+    {
+      "name": "Map has a separate large section outside the introduction",
+      "passed": true
+    },
+    {
+      "name": "Floating destination list item 1 updates the route",
+      "passed": true
+    },
+    {
+      "name": "Floating destination list item 2 updates the route",
+      "passed": true
+    },
+    {
+      "name": "Floating destination list item 3 updates the route",
+      "passed": true
+    },
+    {
+      "name": "Floating destination list item 4 updates the route",
+      "passed": true
+    },
+    {
+      "name": "Floating destination list item 5 updates the route",
+      "passed": true
+    },
     {
       "name": "System light theme follows OS preference",
       "passed": true
@@ -456,6 +480,11 @@
           "Library",
           "Canteen",
           "Event Hall",
+          "ASample Building AAcademic bui",
+          "BSample Building BAdministrati",
+          "CSample LibraryStudy space",
+          "DSample CanteenFood and drink",
+          "ESample Event HallEvent venue",
           "Sample campus map. Search and destination buttons provide a text alternative.",
           "Show sample route to Sample Building A",
           "Show sample route to Sample Building B",

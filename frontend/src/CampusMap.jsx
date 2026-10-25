@@ -3,6 +3,16 @@ import { Compass, Footprints, Info, Minus, Plus, RotateCcw } from 'lucide-react'
 import { CONFIG } from './campus.js';
 
 let leafletPromise;
+function fitCampus(map) {
+  const sidebar = map.getContainer().closest('.map-workspace')?.querySelector('.map-sidebar');
+  const floating = sidebar && getComputedStyle(sidebar).position === 'absolute';
+  map.fitBounds([CONFIG.start, ...CONFIG.places.map(p => p.coords)], {
+    paddingTopLeft: [floating ? sidebar.offsetWidth + 64 : 32, 100],
+    paddingBottomRight: [80, floating ? 280 : 220],
+    maxZoom: 17,
+    animate: false,
+  });
+}
 function loadLeaflet() {
   if (window.L) return Promise.resolve(window.L);
   if (!leafletPromise) leafletPromise = new Promise((resolve, reject) => {
@@ -33,7 +43,7 @@ export default function CampusMap({ selected, onSelect, onReset }) {
       if (cancelled) return;
       const map = L.map(element.current, { zoomControl: false, attributionControl: false, minZoom: 16, maxZoom: 19, maxBounds: CONFIG.bounds, maxBoundsViscosity: 1, scrollWheelZoom: false }).setView(CONFIG.center, 17);
       mapRef.current = map;
-      map.fitBounds([CONFIG.start, ...CONFIG.places.map(p => p.coords)], { paddingTopLeft: [32, 88], paddingBottomRight: [80, 72], maxZoom: 17, animate: false });
+      fitCampus(map);
       setZoom(map.getZoom());
       map.on('zoomend', () => setZoom(map.getZoom()));
       const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 });
@@ -47,7 +57,7 @@ export default function CampusMap({ selected, onSelect, onReset }) {
       });
       L.marker(CONFIG.start, { keyboard: false, icon: L.divIcon({ className: 'sample-start', html: '<span>S</span><strong>Sample start</strong>', iconSize: [120, 36], iconAnchor: [18, 18] }) }).addTo(map);
       L.control.attribution({ position: 'bottomright', prefix: false }).addTo(map).addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>');
-      observer = new ResizeObserver(() => map.invalidateSize());
+      observer = new ResizeObserver(() => { map.invalidateSize(); fitCampus(map); });
       observer.observe(element.current);
       setStatus('ready');
     }).catch(() => { if (!cancelled) setStatus('error'); });
@@ -75,12 +85,12 @@ export default function CampusMap({ selected, onSelect, onReset }) {
     <div className="map-canvas" ref={element} aria-label="Sample campus map. Search and destination buttons provide a text alternative." />
     <div className="map-caption"><span>XMUM campus preview</span><span className="sample-label">Sample data</span></div>
     {status !== 'ready' && <div className="map-status" role="status"><Info size={16} aria-hidden="true" /><span>{status === 'loading' ? 'Loading the campus map…' : 'Map unavailable. Use the sample destination list to preview routes and directions.'}</span></div>}
-    <div className="map-controls"><button className="icon-button" aria-label="Reset map view" disabled={!enabled} onClick={() => mapRef.current.fitBounds([CONFIG.start, ...CONFIG.places.map(p => p.coords)], { paddingTopLeft: [32, 88], paddingBottomRight: [80, 72], maxZoom: 17, animate: false })}><Compass size={20} aria-hidden="true" /></button><div className="zoom-controls"><button className="icon-button" disabled={!enabled || zoom >= 19} aria-label="Zoom in" onClick={() => mapRef.current.zoomIn()}><Plus size={20} aria-hidden="true" /></button><button className="icon-button" disabled={!enabled || zoom <= 16} aria-label="Zoom out" onClick={() => mapRef.current.zoomOut()}><Minus size={20} aria-hidden="true" /></button></div></div>
+    <div className="map-controls"><button className="icon-button" aria-label="Reset map view" disabled={!enabled} onClick={() => fitCampus(mapRef.current)}><Compass size={20} aria-hidden="true" /></button><div className="zoom-controls"><button className="icon-button" disabled={!enabled || zoom >= 19} aria-label="Zoom in" onClick={() => mapRef.current.zoomIn()}><Plus size={20} aria-hidden="true" /></button><button className="icon-button" disabled={!enabled || zoom <= 16} aria-label="Zoom out" onClick={() => mapRef.current.zoomOut()}><Minus size={20} aria-hidden="true" /></button></div></div>
     <div className="route-sheet">
       <button className="sheet-handle" aria-label={expanded ? 'Collapse route details' : 'Expand route details'} aria-expanded={expanded} onClick={() => setExpanded(!expanded)}><span /></button>
       <div className="route-sheet-top"><div><Footprints size={18} aria-hidden="true" /><strong>{selected ? 'Sample walking route' : 'Choose your next stop'}</strong></div><button className="reset-button" onClick={onReset}><RotateCcw size={14} aria-hidden="true" /> Reset</button></div>
       <div className="route-sheet-content" hidden={!expanded} aria-live="polite" aria-atomic="true">
-        {selected ? <><div className="route-destination"><span>Sample start</span><span className="route-line" aria-hidden="true" /><strong>{selected.name}</strong></div><div className="route-stats"><div><strong>{selected.place.minutes}<small> min</small></strong><span>Sample walk</span></div><div><strong>{selected.place.distance}<small> m</small></strong><span>Sample distance</span></div><span className="walking-label"><Footprints size={16} aria-hidden="true" /> Outdoors</span></div>{selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href="#offices">See floor plan and directions</a></p>}</> : <p className="empty-route">Select a marker or search a sample building or office to see a route.</p>}
+        {selected ? <><div className="route-destination"><span>Sample start</span><span className="route-line" aria-hidden="true" /><strong>{selected.name}</strong></div><div className="route-stats"><div><strong>{selected.place.minutes}<small> min</small></strong><span>Sample walk</span></div><div><strong>{selected.place.distance}<small> m</small></strong><span>Sample distance</span></div><span className="walking-label"><Footprints size={16} aria-hidden="true" /> Outdoors</span></div>{selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href={`/?office=${encodeURIComponent(selected.id)}#offices`}>See floor plan and directions</a></p>}</> : <p className="empty-route">Select a marker or search a sample building or office to see a route.</p>}
       </div>
     </div>
   </div>;
