@@ -2,6 +2,8 @@
   "framework": "vite",
   "rewrites": [
     { "source": "/map", "destination": "/index.html" },
-    { "source": "/map/", "destination": "/index.html" }
+    { "source": "/map/", "destination": "/index.html" },
+    { "source": "/home", "destination": "/index.html" },
+    { "source": "/home/", "destination": "/index.html" }
   ]
 }

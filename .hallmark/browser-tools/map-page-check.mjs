@@ -19,9 +19,11 @@ try {
   page.on('pageerror', e => errors.push(e.message));
   await page.setViewport({ width: 1440, height: 900 });
   await page.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle2' });
-  check('Homepage no longer embeds the map', !await page.$('.map-workspace'));
+  check('Root URL opens the map first', Boolean(await page.$('.map-workspace')) && !await page.$('.landing-intro'));
+  await page.goto('http://127.0.0.1:5173/home', { waitUntil: 'networkidle2' });
+  check('Previous homepage remains available at /home', Boolean(await page.$('.landing-intro')) && !await page.$('.map-workspace'));
   await Promise.all([page.waitForNavigation(), page.click('.hero-actions .primary')]);
-  check('Open the map navigates to /map', new URL(page.url()).pathname === '/map');
+  check('Open the map navigates to root URL', new URL(page.url()).pathname === '/');
   await page.waitForSelector('.map-pin', { timeout: 20000 });
   check('Planner fills desktop window below header', await page.$eval('.map-workspace', el => Math.abs(el.getBoundingClientRect().bottom - innerHeight) < 2));
   check('Planner has its own heading and no landing sections', await page.evaluate(() => document.querySelectorAll('h1').length === 1 && !document.querySelector('.landing-intro, .site-footer')));
@@ -46,7 +48,7 @@ try {
   check('Keyboard search selects a destination', await page.$eval('.route-destination', el => el.textContent.includes('Library')));
   await page.click('.search-tabs button:nth-child(2)');
   await page.click('.map-destination-row');
-  check('Office route includes floor and floor plan link', await page.$eval('.route-office a', el => el.getAttribute('href') === '/?office=o1#offices'));
+  check('Office route includes floor and floor plan link', await page.$eval('.route-office a', el => el.getAttribute('href') === '/home?office=o1#offices'));
   await Promise.all([page.waitForNavigation(), page.click('.route-office a')]);
   check('Floor plan link opens corresponding homepage office', await page.$eval('#office-select', el => el.value === 'o1'));
   await page.select('#office-select', 'o4');
@@ -95,7 +97,7 @@ try {
   await page.focus('.main-nav a');
   await page.keyboard.press('Escape');
   check('Escape closes mobile navigation', await page.$eval('#menu-toggle', el => el.getAttribute('aria-expanded') === 'false'));
-  await page.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle2' });
+  await page.goto('http://127.0.0.1:5173/home', { waitUntil: 'networkidle2' });
   await Promise.all([page.waitForNavigation(), page.click('.hero-actions .secondary')]);
   check('Homepage office search opens filtered map', await page.$eval('.search-tabs button:nth-child(2)', el => el.getAttribute('aria-pressed') === 'true'));
   failMapScript = true;
