@@ -1,10 +1,14 @@
 [
   {
-    "name": "Homepage no longer embeds the map",
+    "name": "Root URL opens the map first",
     "passed": true
   },
   {
-    "name": "Open the map navigates to /map",
+    "name": "Previous homepage remains available at /home",
+    "passed": true
+  },
+  {
+    "name": "Open the map navigates to root URL",
     "passed": true
   },
   {
