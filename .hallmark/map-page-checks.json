@@ -5,6 +5,30 @@
       "passed": true
     },
     {
+      "name": "Preview label and sample route notice are removed",
+      "passed": true
+    },
+    {
+      "name": "Top search selects a destination using the keyboard",
+      "passed": true
+    },
+    {
+      "name": "Clearing search resets route and query",
+      "passed": true
+    },
+    {
+      "name": "Empty search shows a recovery message",
+      "passed": true
+    },
+    {
+      "name": "Escape closes search results",
+      "passed": true
+    },
+    {
+      "name": "Clicking an office search result selects its route",
+      "passed": true
+    },
+    {
       "name": "Marker 1 selects route with keyboard",
       "passed": true
     },

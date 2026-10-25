@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Building2, Check, ChevronDown, ChevronRight, Compass, Copy, Footprints, Info, Map, Menu, Moon, Sun, Utensils, X } from 'lucide-react';
 import CampusMap from './CampusMap.jsx';
+import MapSearch from './MapSearch.jsx';
 import { CONFIG, DESTINATIONS, OFFICES } from './campus.js';
 
 const MODULES = [
@@ -72,9 +73,9 @@ export default function Home() {
       {mapPage && <section className="map-section map-page" id="try-it" aria-label="Campus route planner">
         <h1 className="visually-hidden">XMUM campus map</h1>
         <div className="map-workspace">
+        <MapSearch selected={selected} onSelect={choose} onClear={reset} />
         <div className="hero-map" ref={resultRef} tabIndex={-1}><CampusMap selected={selected} onSelect={choose} onReset={reset} /></div>
         </div>
-        <p className="map-disclaimer"><Info size={14} aria-hidden="true" />Sample routes only. The real app uses surveyed campus paths.</p>
       </section>}
       {!mapPage && <>
       <nav className="feature-index container" id="features" aria-label="What you can do">{MODULES.map(({ title, icon: Icon, text, target }) => <a className="feature-link" href={target === 'try-it' ? '/' : `#${target}`} key={title}><Icon size={24} aria-hidden="true" /><div><h2>{title}</h2><p>{text}</p></div><ChevronRight size={16} aria-hidden="true" /></a>)}</nav>

@@ -80,7 +80,6 @@ export default function CampusMap({ selected, onSelect, onReset }) {
   const enabled = status === 'ready' || status === 'tiles-error';
   return <div className="map-stage" id="campus-map" role="region" aria-label="Campus map preview">
     <div className="map-canvas" ref={element} aria-label="Sample campus map. Office lookup and Campus life provide destination details." />
-    <div className="map-caption"><span>XMUM campus preview</span><span className="sample-label">Sample data</span></div>
     {status !== 'ready' && <div className="map-status" role="status"><Info size={16} aria-hidden="true" /><span>{status === 'loading' ? 'Loading the campus map…' : 'Map unavailable. Use Office lookup or Campus life in the navigation to choose a sample destination.'}</span></div>}
     <div className="map-controls"><button className="icon-button" aria-label="Reset map view" disabled={!enabled} onClick={() => fitCampus(mapRef.current)}><Compass size={20} aria-hidden="true" /></button><div className="zoom-controls"><button className="icon-button" disabled={!enabled || zoom >= 19} aria-label="Zoom in" onClick={() => mapRef.current.zoomIn()}><Plus size={20} aria-hidden="true" /></button><button className="icon-button" disabled={!enabled || zoom <= 16} aria-label="Zoom out" onClick={() => mapRef.current.zoomOut()}><Minus size={20} aria-hidden="true" /></button></div></div>
     <div className="route-sheet">

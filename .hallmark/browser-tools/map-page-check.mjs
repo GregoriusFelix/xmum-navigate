@@ -15,6 +15,22 @@ try {
   await page.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle2' });
   await page.waitForSelector('.map-pin');
   check('First page shows map without destination sidebar or attribution label', await page.evaluate(() => Boolean(document.querySelector('.map-canvas')) && !document.querySelector('.map-sidebar, .leaflet-control-attribution') && !document.body.textContent.includes('Where are you headed?')));
+  check('Preview label and sample route notice are removed', await page.evaluate(() => !document.querySelector('.map-caption, .map-disclaimer') && !document.body.textContent.includes('XMUM campus preview')));
+  await page.click('#map-search-input', { clickCount: 3 });
+  await page.type('#map-search-input', 'Library');
+  await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('Enter');
+  check('Top search selects a destination using the keyboard', await page.$eval('.route-destination', el => el.textContent.includes('Sample Library')));
+  await page.click('[aria-label="Clear search and route"]');
+  check('Clearing search resets route and query', Boolean(await page.$('.empty-route')) && await page.$eval('#map-search-input', el => el.value === ''));
+  await page.type('#map-search-input', 'zzzzzz');
+  check('Empty search shows a recovery message', await page.$eval('#map-search-results', el => el.textContent.includes('No destinations found')));
+  await page.keyboard.press('Escape');
+  check('Escape closes search results', await page.$eval('#map-search-input', el => el.getAttribute('aria-expanded') === 'false'));
+  await page.click('[aria-label="Clear search and route"]');
+  await page.type('#map-search-input', 'Faculty');
+  await page.click('#map-search-results li');
+  check('Clicking an office search result selects its route', await page.$eval('.route-office', el => el.textContent.includes('Floor 3')));
   for (let i = 0; i < 5; i++) {
     await page.focus('.map-pin');
     const pins = await page.$$('.map-pin');
@@ -33,7 +49,8 @@ try {
       const pass = await page.evaluate(() => {
         const canvas = document.querySelector('.map-canvas').getBoundingClientRect();
         const sheet = document.querySelector('.route-sheet').getBoundingClientRect();
-        return document.documentElement.scrollWidth <= innerWidth && canvas.left === 0 && canvas.width === innerWidth && canvas.height >= 560 && sheet.left < 25 && sheet.right <= innerWidth;
+        const search = document.querySelector('.map-search').getBoundingClientRect();
+        return document.documentElement.scrollWidth <= innerWidth && canvas.left === 0 && canvas.width === innerWidth && canvas.height >= 560 && sheet.left < 25 && sheet.right <= innerWidth && search.left >= 0 && search.right <= innerWidth && search.top >= canvas.top && search.top - canvas.top <= 24;
       });
       check(`${mode} map uses freed space at ${width}px`, pass);
     }
