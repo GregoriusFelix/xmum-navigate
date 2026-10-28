@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Building2, Check, ChevronDown, ChevronRight, Compass, Copy, Footprints, Info, Map, Menu, Moon, Sun, Utensils, X } from 'lucide-react';
 import CampusMap from './CampusMap.jsx';
 import MapSearch from './MapSearch.jsx';
+import HomeHero from './HomeHero.jsx';
 import { CONFIG, DESTINATIONS, OFFICES } from './campus.js';
 
 const MODULES = [
@@ -23,7 +24,7 @@ function FloorPlan({ floor }) {
 
 export default function Home() {
   const pathname = window.location.pathname.replace(/\/$/, '');
-  const mapPage = pathname === '' || pathname === '/map';
+  const mapPage = pathname === '/map';
   const params = new URLSearchParams(window.location.search);
   const [theme, setTheme] = useState(() => sessionStorage.getItem('xmum-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
   const manualTheme = useRef(Boolean(sessionStorage.getItem('xmum-theme')));
@@ -49,27 +50,20 @@ export default function Home() {
   }, []);
   const choose = item => { setSelected(item); if (item.floor) setOffice(item); if (mapPage) { const url = new URL(window.location.href); url.searchParams.set('destination', item.id); window.history.replaceState(null, '', url); } };
   const reset = () => { setSelected(null); if (mapPage) { const url = new URL(window.location.href); url.searchParams.delete('destination'); window.history.replaceState(null, '', url); } };
-  const showRoute = place => { window.location.assign(`/?destination=${encodeURIComponent(place.id)}`); };
+  const showRoute = place => { window.location.assign(`/map?destination=${encodeURIComponent(place.id)}`); };
   const copyLink = async () => { try { await navigator.clipboard.writeText(window.location.href.split('#')[0]); setCopied('Page link copied.'); } catch { setCopied('Select and copy the page link below.'); setTimeout(() => shareRef.current?.select(), 0); } };
   const venue = CONFIG.places[eventType === 'Study group' ? 2 : 4];
-  return <>
+  return <div className={mapPage ? 'map-shell' : 'homepage'}>
     <a className="skip-link" href="#main">Skip to content</a>
     <header className={`site-header container${mapPage ? ' map-page-header' : ''}`}>
       <a className="wordmark" href="/">XMUM <span>Navigate</span></a>
       <nav className={menu ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation" onKeyDown={e => { if (e.key === 'Escape') { setMenu(false); document.getElementById('menu-toggle').focus(); } }}>
-        {[['Campus map', '/'], ['Office lookup', '/home#offices'], ['Campus life', '/home#campus-life'], ['For visitors', '/home#visitors']].map(([label, href]) => <a key={href} href={href} aria-current={mapPage && href === '/' ? 'page' : undefined} onClick={() => setMenu(false)}>{label}</a>)}
+        {[['Home', '/'], ['Campus map', '/map'], ['Office lookup', '/#offices'], ['Campus life', '/#campus-life'], ['For visitors', '/#visitors']].map(([label, href]) => <a key={href} href={href} aria-current={(mapPage ? href === '/map' : href === '/') ? 'page' : undefined} onClick={() => setMenu(false)}>{label}</a>)}
       </nav>
       <div className="header-actions"><button className="icon-button" aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} onClick={() => { manualTheme.current = true; const next = theme === 'light' ? 'dark' : 'light'; sessionStorage.setItem('xmum-theme', next); setTheme(next); }}>{theme === 'light' ? <Moon size={20} aria-hidden="true" /> : <Sun size={20} aria-hidden="true" />}</button><button id="menu-toggle" className="icon-button menu-toggle" aria-label={menu ? 'Close navigation' : 'Open navigation'} aria-expanded={menu} onClick={() => setMenu(!menu)}>{menu ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}</button></div>
     </header>
     <main id="main" className={mapPage ? 'map-page-main' : undefined}>
-      {!mapPage && <section className="landing-intro container" aria-labelledby="hero-title">
-        <div className="intro-copy">
-          <h1 id="hero-title">Find your way<br />around XMUM.</h1>
-          <p className="hero-description">Walking routes, offices, venue ideas and canteen menus, right in your browser.</p>
-          <div className="hero-actions"><a className="button primary" href="/">Open the map <Map size={18} aria-hidden="true" /></a><a className="button secondary" href="#offices">Find an office</a></div>
-        </div>
-        <p className="browser-note"><Check size={16} aria-hidden="true" /> No app download. No account needed.</p>
-      </section>}
+      {!mapPage && <HomeHero />}
       {mapPage && <section className="map-section map-page" id="try-it" aria-label="Campus route planner">
         <h1 className="visually-hidden">XMUM campus map</h1>
         <div className="map-workspace">
@@ -78,7 +72,7 @@ export default function Home() {
         </div>
       </section>}
       {!mapPage && <>
-      <nav className="feature-index container" id="features" aria-label="What you can do">{MODULES.map(({ title, icon: Icon, text, target }) => <a className="feature-link" href={target === 'try-it' ? '/' : `#${target}`} key={title}><Icon size={24} aria-hidden="true" /><div><h2>{title}</h2><p>{text}</p></div><ChevronRight size={16} aria-hidden="true" /></a>)}</nav>
+      <nav className="feature-index container" id="features" aria-label="What you can do">{MODULES.map(({ title, icon: Icon, text, target }) => <a className="feature-link" href={target === 'try-it' ? '/map' : `#${target}`} key={title}><Icon size={24} aria-hidden="true" /><div><h2>{title}</h2><p>{text}</p></div><ChevronRight size={16} aria-hidden="true" /></a>)}</nav>
       <section className="office-section container" id="offices" aria-labelledby="office-title">
         <div className="office-copy"><h2 id="office-title">The right building.<br />The right floor.</h2><p>Search a department for its building, floor plan and written directions.</p><label htmlFor="office-select">Try a sample office</label><div className="select-wrap"><select id="office-select" value={office.id} onChange={e => { const item = OFFICES.find(o => o.id === e.target.value); setOffice(item); choose(item); }}>{OFFICES.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select><ChevronDown size={18} aria-hidden="true" /></div><p className="office-scope"><Info size={16} aria-hidden="true" /> Floor plan and directions, no live tracking.</p></div>
         <div className="office-example" aria-live="polite"><div className="office-example-title"><Building2 size={24} aria-hidden="true" /><div><h3>{office.name}</h3><p>{office.place.name}, Floor {office.floor}</p></div></div><FloorPlan floor={office.floor} /><ol className="office-directions">{office.directions.map(direction => <li key={direction}>{direction}</li>)}</ol><button className="text-button" onClick={() => showRoute(office)}>Show outdoor sample route <Footprints size={18} aria-hidden="true" /></button></div>
@@ -89,5 +83,5 @@ export default function Home() {
       </>}
     </main>
     {!mapPage && <footer className="site-footer container"><div><a className="wordmark" href="#main">XMUM <span>Navigate</span></a><p>Final Year Project, Xiamen University Malaysia</p><small>This is a student project, not an official XMUM service.</small></div><div className="footer-details"><span>Contact: email to be confirmed</span><a href="https://www.openstreetmap.org/copyright">Map data © OpenStreetMap contributors</a><a href="#how-it-works">How it works</a></div></footer>}
-  </>;
+  </div>;
 }
