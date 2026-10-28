@@ -1,0 +1,305 @@
+{
+  "checks": [
+    {
+      "name": "/: one page heading",
+      "passed": true
+    },
+    {
+      "name": "/: correct active bottom tab",
+      "passed": true
+    },
+    {
+      "name": "/: exactly five always-visible bottom links",
+      "passed": true
+    },
+    {
+      "name": "/: local anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "/ @320: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/ @390: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/ @768: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/ @1024: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/ @1440: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/: final content remains above bottom navigation",
+      "passed": true
+    },
+    {
+      "name": "/map: one page heading",
+      "passed": true
+    },
+    {
+      "name": "/map: correct active bottom tab",
+      "passed": true
+    },
+    {
+      "name": "/map: exactly five always-visible bottom links",
+      "passed": true
+    },
+    {
+      "name": "/map: local anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "/map @320: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/map @390: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/map @768: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/map @1024: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/map @1440: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/map: final content remains above bottom navigation",
+      "passed": true
+    },
+    {
+      "name": "/offices: one page heading",
+      "passed": true
+    },
+    {
+      "name": "/offices: correct active bottom tab",
+      "passed": true
+    },
+    {
+      "name": "/offices: exactly five always-visible bottom links",
+      "passed": true
+    },
+    {
+      "name": "/offices: local anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "/offices @320: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/offices @390: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/offices @768: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/offices @1024: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/offices @1440: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/offices: final content remains above bottom navigation",
+      "passed": true
+    },
+    {
+      "name": "/venues: one page heading",
+      "passed": true
+    },
+    {
+      "name": "/venues: correct active bottom tab",
+      "passed": true
+    },
+    {
+      "name": "/venues: exactly five always-visible bottom links",
+      "passed": true
+    },
+    {
+      "name": "/venues: local anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "/venues @320: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/venues @390: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/venues @768: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/venues @1024: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/venues @1440: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/venues: final content remains above bottom navigation",
+      "passed": true
+    },
+    {
+      "name": "/canteens: one page heading",
+      "passed": true
+    },
+    {
+      "name": "/canteens: correct active bottom tab",
+      "passed": true
+    },
+    {
+      "name": "/canteens: exactly five always-visible bottom links",
+      "passed": true
+    },
+    {
+      "name": "/canteens: local anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "/canteens @320: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/canteens @390: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/canteens @768: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/canteens @1024: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/canteens @1440: no overflow, fixed bottom bar, usable touch targets",
+      "passed": true
+    },
+    {
+      "name": "/canteens: final content remains above bottom navigation",
+      "passed": true
+    },
+    {
+      "name": "Homepage shortcuts open separate pages",
+      "passed": true
+    },
+    {
+      "name": "Homepage has no embedded feature tools",
+      "passed": true
+    },
+    {
+      "name": "Bottom tab navigates to /map",
+      "passed": true
+    },
+    {
+      "name": "Bottom tab navigates to /offices",
+      "passed": true
+    },
+    {
+      "name": "Bottom tab navigates to /venues",
+      "passed": true
+    },
+    {
+      "name": "Bottom tab navigates to /canteens",
+      "passed": true
+    },
+    {
+      "name": "Office query restores selected department",
+      "passed": true
+    },
+    {
+      "name": "Office change updates URL and floor",
+      "passed": true
+    },
+    {
+      "name": "Office selection survives reload",
+      "passed": true
+    },
+    {
+      "name": "Office route opens selected map office",
+      "passed": true
+    },
+    {
+      "name": "Map links directly to office page",
+      "passed": true
+    },
+    {
+      "name": "Venue recommendation and URL update",
+      "passed": true
+    },
+    {
+      "name": "Venue choice survives reload",
+      "passed": true
+    },
+    {
+      "name": "Venue route opens recommended destination",
+      "passed": true
+    },
+    {
+      "name": "Canteen menu and hours retained",
+      "passed": true
+    },
+    {
+      "name": "Canteen route opens correct map destination",
+      "passed": true
+    },
+    {
+      "name": "Legacy office link redirects with selection",
+      "passed": true
+    },
+    {
+      "name": "Legacy canteen anchor redirects",
+      "passed": true
+    },
+    {
+      "name": "Trailing slash page works",
+      "passed": true
+    },
+    {
+      "name": "Theme persists across feature navigation",
+      "passed": true
+    },
+    {
+      "name": "Bottom tab has keyboard focus ring",
+      "passed": true
+    },
+    {
+      "name": "Keyboard Enter navigates bottom tab",
+      "passed": true
+    },
+    {
+      "name": "Unknown page has recovery link",
+      "passed": true
+    },
+    {
+      "name": "Hosting rewrites cover all feature pages",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
