@@ -26,7 +26,7 @@ export default function HomeHero() {
             {results.length ? results.map(item => <a key={item.id} href={`/map?destination=${encodeURIComponent(item.id)}`}><MapPin size={18} aria-hidden="true" /><span>{item.name}<small>{item.floor ? `${item.place.name}, Floor ${item.floor}` : item.type}</small></span><ArrowUpRight size={17} aria-hidden="true" /></a>) : <p>No destinations found. Try “library”, “office”, or “canteen”.</p>}
           </div>}
         </form>
-        <div className="suggested-stops"><span>Looking for</span><a href="#offices">An office</a><a href="#canteens">A bite to eat</a><a href="#venues">An event space</a></div>
+        <div className="suggested-stops"><span>Looking for</span><a href="/offices">An office</a><a href="/canteens">A bite to eat</a><a href="/venues">An event space</a></div>
         <div className="welcome-actions"><a className="button primary" href="/map">Open campus map <Compass size={20} aria-hidden="true" /></a><span><Check size={16} aria-hidden="true" /> No download needed</span></div>
       </div>
       <div className="campus-collage" aria-label="A glimpse of Xiamen University Malaysia">

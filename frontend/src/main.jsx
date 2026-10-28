@@ -3,5 +3,6 @@ import { createRoot } from 'react-dom/client';
 import Home from './Home.jsx';
 import './Home.css';
 import './Homepage.css';
+import './FeaturePages.css';
 
 createRoot(document.getElementById('root')).render(<Home />);

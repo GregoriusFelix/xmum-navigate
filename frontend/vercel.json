@@ -4,6 +4,12 @@
     { "source": "/map", "destination": "/index.html" },
     { "source": "/map/", "destination": "/index.html" },
     { "source": "/home", "destination": "/index.html" },
-    { "source": "/home/", "destination": "/index.html" }
+    { "source": "/home/", "destination": "/index.html" },
+    { "source": "/offices", "destination": "/index.html" },
+    { "source": "/offices/", "destination": "/index.html" },
+    { "source": "/venues", "destination": "/index.html" },
+    { "source": "/venues/", "destination": "/index.html" },
+    { "source": "/canteens", "destination": "/index.html" },
+    { "source": "/canteens/", "destination": "/index.html" }
   ]
 }

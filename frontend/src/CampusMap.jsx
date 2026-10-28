@@ -89,7 +89,7 @@ export default function CampusMap({ selected, onSelect, onReset }) {
         {selected ? <>
           <div className="route-destination"><span>Sample start</span><span className="route-line" aria-hidden="true" /><strong>{selected.name}</strong></div>
           <div className="route-stats"><div><strong>{selected.place.minutes}<small> min</small></strong><span>Sample walk</span></div><div><strong>{selected.place.distance}<small> m</small></strong><span>Sample distance</span></div><span className="walking-label"><Footprints size={16} aria-hidden="true" /> Outdoors</span></div>
-          {selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href={`/home?office=${encodeURIComponent(selected.id)}#offices`}>See floor plan and directions</a></p>}
+          {selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href={`/offices?office=${encodeURIComponent(selected.id)}`}>See floor plan and directions</a></p>}
         </> : <p className="empty-route">Select a map marker, or choose a destination in Office lookup or Campus life to see a route.</p>}
       </div>
     </div>
