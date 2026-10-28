@@ -1,0 +1,51 @@
+import puppeteer from 'puppeteer-core';
+import { mkdir, writeFile } from 'node:fs/promises';
+const browser = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, pipe: true, args: ['--no-first-run', '--no-default-browser-check'] });
+const checks = [];
+try {
+  await mkdir('.hallmark/homepage', { recursive: true });
+  const page = await browser.newPage();
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  const check = (name, passed) => { checks.push({ name, passed: Boolean(passed) }); console.log(`${passed ? 'PASS' : 'FAIL'} ${name}`); };
+  await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'light' }, { name: 'prefers-reduced-motion', value: 'reduce' }]);
+  await page.setViewport({ width: 1440, height: 1000 });
+  await page.goto('http://127.0.0.1:5174', { waitUntil: 'networkidle0' });
+  for (const width of [320, 390, 620, 768, 999, 1024, 1440, 1920]) {
+    await page.setViewport({ width, height: 900 });
+    check(`No overflow at ${width}px`, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    if ([390, 768, 1440].includes(width)) await page.screenshot({ path: `.hallmark/homepage/${width}.png`, fullPage: true });
+  }
+  check('Campus photos loaded', await page.evaluate(() => [...document.images].every(i => i.complete && i.naturalWidth > 0)));
+  check('One homepage title', await page.evaluate(() => document.querySelectorAll('h1').length === 1));
+  await page.setViewport({ width: 1280, height: 800 });
+  check('Map action visible on first desktop screen', await page.$eval('.welcome-actions a', e => e.getBoundingClientRect().bottom < 800));
+  await page.type('#destination-query', 'library');
+  check('Search returns library', await page.$eval('.destination-results', e => e.innerText.includes('Sample Library')));
+  await page.click('.destination-results > a');
+  await page.waitForSelector('.map-page');
+  check('Search opens selected map destination', page.url().includes('/map?destination=c'));
+  check('Map displays selected library', await page.evaluate(() => document.body.innerText.includes('Sample Library')));
+  await page.goto('http://127.0.0.1:5174', { waitUntil: 'networkidle0' });
+  await page.type('#destination-query', 'zzzzzz');
+  check('Empty search gives recovery suggestion', await page.$eval('.destination-results', e => e.innerText.includes('No destinations found')));
+  await page.click('[aria-label="Close search results"]');
+  check('Search closes', !(await page.$('.destination-results')));
+  await page.select('#office-select', 'o3');
+  check('Office selection updates directions', await page.$eval('.office-example', e => e.innerText.includes('Sample Finance Office') && e.innerText.includes('Floor 2')));
+  await page.select('#event-type', 'Study group');
+  check('Venue selection updates suggestion', await page.$eval('.venue-result', e => e.innerText.includes('Sample Library')));
+  await page.click('[aria-label="Switch to dark theme"]');
+  check('Dark theme activates', await page.evaluate(() => document.documentElement.dataset.theme === 'dark'));
+  await page.screenshot({ path: '.hallmark/homepage/dark.png', fullPage: true });
+  await page.click('[aria-label="Switch to light theme"]');
+  await page.setViewport({ width: 390, height: 844 });
+  await page.click('#menu-toggle');
+  check('Mobile menu opens', await page.$eval('.main-nav', e => getComputedStyle(e).display !== 'none'));
+  await page.focus('.main-nav a');
+  await page.keyboard.press('Escape');
+  check('Escape closes menu and restores focus', await page.$eval('#menu-toggle', e => e.getAttribute('aria-expanded') === 'false' && e === document.activeElement));
+  check('No JavaScript errors', errors.length === 0);
+  await writeFile('.hallmark/homepage/checks.json', JSON.stringify({ checks, errors }, null, 2));
+  if (checks.some(c => !c.passed)) process.exitCode = 1;
+} finally { await browser.close(); }

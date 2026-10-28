@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "name": "No overflow at 320px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 390px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 620px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 999px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 1024px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 1440px",
+      "passed": true
+    },
+    {
+      "name": "No overflow at 1920px",
+      "passed": true
+    },
+    {
+      "name": "Campus photos loaded",
+      "passed": true
+    },
+    {
+      "name": "One homepage title",
+      "passed": true
+    },
+    {
+      "name": "Map action visible on first desktop screen",
+      "passed": true
+    },
+    {
+      "name": "Search returns library",
+      "passed": true
+    },
+    {
+      "name": "Search opens selected map destination",
+      "passed": true
+    },
+    {
+      "name": "Map displays selected library",
+      "passed": true
+    },
+    {
+      "name": "Empty search gives recovery suggestion",
+      "passed": true
+    },
+    {
+      "name": "Search closes",
+      "passed": true
+    },
+    {
+      "name": "Office selection updates directions",
+      "passed": true
+    },
+    {
+      "name": "Venue selection updates suggestion",
+      "passed": true
+    },
+    {
+      "name": "Dark theme activates",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu opens",
+      "passed": true
+    },
+    {
+      "name": "Escape closes menu and restores focus",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
