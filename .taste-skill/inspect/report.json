@@ -1,0 +1,2094 @@
+{
+ "url": "http://127.0.0.1:5174",
+ "at": "2026-10-28T19:03:17.213Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.56,
+    0.46,
+    0.43,
+    0.47
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 3,
+    "transitions": 7,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3321,
+     "screens": 3.7,
+     "words": 406,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 34,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "library.jpg",
+      "walkway.jpg",
+      "campus.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Your campus. Your next discovery.",
+     "words": 5,
+     "chars": 33,
+     "lines": 2,
+     "size": 56,
+     "vw": 3.9,
+     "font": "Figtree",
+     "weight": 700,
+     "tracking": -0.055,
+     "leading": 1.14,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.4,
+     "top": 148,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Your campus. Your next discovery.",
+     "words": 5,
+     "lines": 2,
+     "size": 56,
+     "font": "Figtree"
+    },
+    "headings": [
+     {
+      "text": "Your campus. Your next discovery.",
+      "words": 5,
+      "chars": 33,
+      "lines": 2,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 148,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The right building. The right floor.",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 44.8,
+      "vw": 3.1,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 1192,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A place to meet. A place to eat.",
+      "words": 8,
+      "chars": 32,
+      "lines": 2,
+      "size": 44.8,
+      "vw": 3.1,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 1816,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "From search to your next stop.",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 44.8,
+      "vw": 3.1,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 2613,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "First time here? Bring this along.",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 44.8,
+      "vw": 3.1,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 2824,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 6,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.86,
+       "mono": false
+      },
+      {
+       "family": "Figtree",
+       "share": 0.14,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      22,
+      23,
+      26,
+      45,
+      56
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 12,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10
+     },
+     "measureChars": 57,
+     "max": {
+      "size": 56,
+      "vw": 3.9,
+      "font": "Figtree",
+      "text": "Your campus.Your next discovery."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.03,
+     "smallText": 25
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#101623",
+     "bodyBgHsl": {
+      "h": 221,
+      "s": 0.37,
+      "l": 0.1
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#101623",
+       "top": 0,
+       "hsl": {
+        "h": 221,
+        "s": 0.37,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#141c2c",
+       "top": 1030,
+       "hsl": {
+        "h": 220,
+        "s": 0.38,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c0c7d5",
+       "share": 0.39
+      },
+      {
+       "color": "#f3f5fa",
+       "share": 0.38
+      },
+      {
+       "color": "#bbc3d3",
+       "share": 0.2
+      },
+      {
+       "color": "#171f32",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#ff5421",
+      "hsl": {
+       "h": 14,
+       "s": 1,
+       "l": 0.56
+      },
+      "fg": "#171f32"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Open campus map",
+      "Take the next step Find your way on camp"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.welcome-stage → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)",
+      "section#visitors.visitors-section.container → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div 510px",
+      "div 510px",
+      "div 510px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 12,
+     "boxRadius": 28,
+     "squareMedia": 0,
+     "roundedMedia": 3,
+     "mediaRadius": 28,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 758
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.19
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 96,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "figtree",
+     "plus jakarta sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3321,
+    "margins": {
+     "left": 90,
+     "right": 90
+    },
+    "sections": [
+     {
+      "sel": "section.welcome.container",
+      "tag": "section",
+      "top": 96,
+      "height": 594,
+      "words": 56,
+      "media": 4,
+      "middle": 128,
+      "heading": {
+       "text": "Your campus.",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 94,
+      "right": 119,
+      "textLeft": 94,
+      "textRight": 123,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "nav#features.feature-index.container",
+      "tag": "nav",
+      "top": 726,
+      "height": 232,
+      "words": 33,
+      "media": 0,
+      "middle": 77,
+      "heading": {
+       "text": "Campus navigation",
+       "size": 15,
+       "tag": "h2"
+      },
+      "left": 110,
+      "right": 150,
+      "textLeft": 110,
+      "textRight": 150,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#offices.office-section.container",
+      "tag": "section",
+      "top": 958,
+      "height": 795,
+      "words": 79,
+      "media": 1,
+      "middle": 68,
+      "heading": {
+       "text": "The right building.",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 90,
+      "right": 130,
+      "textLeft": 90,
+      "textRight": 137,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#campus-life.campus-life-section",
+      "tag": "section",
+      "top": 1752,
+      "height": 789,
+      "words": 96,
+      "media": 0,
+      "middle": 88,
+      "heading": {
+       "text": "A place to meet.",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 138,
+      "right": 138,
+      "textLeft": 138,
+      "textRight": 138,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how-it-works.how-section.container",
+      "tag": "section",
+      "top": 2541,
+      "height": 243,
+      "words": 24,
+      "media": 0,
+      "middle": 142,
+      "heading": {
+       "text": "From search",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 90,
+      "right": 157,
+      "textLeft": 90,
+      "textRight": 157,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#visitors.visitors-section.container",
+      "tag": "section",
+      "top": 2784,
+      "height": 275,
+      "words": 36,
+      "media": 0,
+      "middle": 284,
+      "heading": {
+       "text": "First time here?",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 154,
+      "right": 154,
+      "textLeft": 154,
+      "textRight": 178,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer.container",
+      "tag": "footer",
+      "top": 3058,
+      "height": 262,
+      "words": 50,
+      "media": 0,
+      "middle": 720,
+      "heading": {
+       "text": "XMUM",
+       "size": 23,
+       "tag": "a"
+      },
+      "left": 90,
+      "right": 90,
+      "textLeft": 90,
+      "textRight": 90,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Your campus. Your next discovery.",
+      "size": 56,
+      "top": 148,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 90,
+      "n": 5
+     },
+     {
+      "x": 134,
+      "n": 5
+     },
+     {
+      "x": 154,
+      "n": 2
+     },
+     {
+      "x": 210,
+      "n": 1
+     },
+     {
+      "x": 706,
+      "n": 1
+     },
+     {
+      "x": 808,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.12,
+    "voidBox": {
+     "x": 360,
+     "y": 600,
+     "w": 840,
+     "h": 180
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.82,
+    0.48,
+    0.61,
+    0.38,
+    0.52
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 3,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4645,
+     "screens": 4.5,
+     "words": 397,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 34,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "library.jpg",
+      "walkway.jpg",
+      "campus.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Your campus. Your next discovery.",
+     "words": 5,
+     "chars": 33,
+     "lines": 2,
+     "size": 49.6,
+     "vw": 6.5,
+     "font": "Figtree",
+     "weight": 700,
+     "tracking": -0.055,
+     "leading": 1.14,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.83,
+     "top": 124,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Your campus. Your next discovery.",
+     "words": 5,
+     "lines": 2,
+     "size": 49.6,
+     "font": "Figtree"
+    },
+    "headings": [
+     {
+      "text": "Your campus. Your next discovery.",
+      "words": 5,
+      "chars": 33,
+      "lines": 2,
+      "size": 49.6,
+      "vw": 6.5,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 124,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The right building. The right floor.",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 3.8,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 1458,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A place to meet. A place to eat.",
+      "words": 8,
+      "chars": 32,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 3.8,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 2549,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Venue finder",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 2744,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Canteen directory",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 3207,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "From searchto your next stop.",
+      "words": 5,
+      "chars": 29,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 3.8,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 3844,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "First time here? Bring this along.",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 3.8,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 4116,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 6,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.86,
+       "mono": false
+      },
+      {
+       "family": "Figtree",
+       "share": 0.14,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      22,
+      23,
+      26,
+      29,
+      50
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 12,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10
+     },
+     "measureChars": 57,
+     "max": {
+      "size": 49.6,
+      "vw": 6.5,
+      "font": "Figtree",
+      "text": "Your campus.Your next discovery."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.04,
+     "smallText": 25
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#101623",
+     "bodyBgHsl": {
+      "h": 221,
+      "s": 0.37,
+      "l": 0.1
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#101623",
+       "top": 0,
+       "hsl": {
+        "h": 221,
+        "s": 0.37,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#141c2c",
+       "top": 1765,
+       "hsl": {
+        "h": 220,
+        "s": 0.38,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c0c7d5",
+       "share": 0.4
+      },
+      {
+       "color": "#f3f5fa",
+       "share": 0.37
+      },
+      {
+       "color": "#bbc3d3",
+       "share": 0.2
+      },
+      {
+       "color": "#171f32",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ff5421",
+      "hsl": {
+       "h": 14,
+       "s": 1,
+       "l": 0.56
+      },
+      "fg": "#171f32"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 4,
+     "radius": "pill",
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Menu",
+      "Open campus map",
+      "Take the next step Find your way on camp"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.welcome-stage → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)",
+      "section#visitors.visitors-section.container → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div 651px",
+      "div 651px",
+      "div 651px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 12,
+     "boxRadius": 28,
+     "squareMedia": 0,
+     "roundedMedia": 3,
+     "mediaRadius": 28,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1111
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.31
+     },
+     {
+      "type": "img",
+      "ratio": 0.13
+     },
+     {
+      "type": "img",
+      "ratio": 0.11
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "figtree",
+     "plus jakarta sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4645,
+    "margins": {
+     "left": 31,
+     "right": 31
+    },
+    "sections": [
+     {
+      "sel": "section.welcome.container",
+      "tag": "section",
+      "top": 80,
+      "height": 975,
+      "words": 56,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Your campus.",
+       "size": 50,
+       "tag": "h1"
+      },
+      "left": 35,
+      "right": 64,
+      "textLeft": 35,
+      "textRight": 64,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "nav#features.feature-index.container",
+      "tag": "nav",
+      "top": 1079,
+      "height": 307,
+      "words": 33,
+      "media": 0,
+      "middle": 204,
+      "heading": {
+       "text": "Campus navigation",
+       "size": 15,
+       "tag": "h2"
+      },
+      "left": 93,
+      "right": 90,
+      "textLeft": 93,
+      "textRight": 90,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#offices.office-section.container",
+      "tag": "section",
+      "top": 1386,
+      "height": 1100,
+      "words": 79,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The right building.",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 71,
+      "textLeft": 31,
+      "textRight": 78,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#campus-life.campus-life-section",
+      "tag": "section",
+      "top": 2485,
+      "height": 1286,
+      "words": 96,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "A place to meet.",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 59,
+      "textLeft": 31,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how-it-works.how-section.container",
+      "tag": "section",
+      "top": 3772,
+      "height": 304,
+      "words": 24,
+      "media": 0,
+      "middle": 82,
+      "heading": {
+       "text": "From search",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 60,
+      "textLeft": 31,
+      "textRight": 60,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#visitors.visitors-section.container",
+      "tag": "section",
+      "top": 4076,
+      "height": 307,
+      "words": 36,
+      "media": 0,
+      "middle": 63,
+      "heading": {
+       "text": "First time here?",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 51,
+      "right": 51,
+      "textLeft": 51,
+      "textRight": 75,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer.container",
+      "tag": "footer",
+      "top": 4382,
+      "height": 262,
+      "words": 50,
+      "media": 0,
+      "middle": 166,
+      "heading": {
+       "text": "XMUM",
+       "size": 23,
+       "tag": "a"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Your campus. Your next discovery.",
+      "size": 50,
+      "top": 124,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 31,
+      "n": 6
+     },
+     {
+      "x": 67,
+      "n": 3
+     },
+     {
+      "x": 99,
+      "n": 3
+     },
+     {
+      "x": 51,
+      "n": 2
+     },
+     {
+      "x": 180,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.79,
+    0.52,
+    0.59,
+    0.41,
+    0.34,
+    0.66,
+    0.53
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 3,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5215,
+     "screens": 6.2,
+     "words": 398,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 34,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "library.jpg",
+      "walkway.jpg",
+      "campus.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Your campus. Your next discovery.",
+     "words": 5,
+     "chars": 33,
+     "lines": 2,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Figtree",
+     "weight": 700,
+     "tracking": -0.055,
+     "leading": 1.14,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.77,
+     "top": 116,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Your campus. Your next discovery.",
+     "words": 5,
+     "lines": 2,
+     "size": 32,
+     "font": "Figtree"
+    },
+    "headings": [
+     {
+      "text": "XMUM Navigate",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1.55,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 16,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Your campus. Your next discovery.",
+      "words": 5,
+      "chars": 33,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 1.14,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 116,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The right building. The right floor.",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 7.4,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1579,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A place to meet. A place to eat.",
+      "words": 8,
+      "chars": 32,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 7.4,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2569,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Venue finder",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.38,
+      "top": 2747,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Sample Event Hall",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3016,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Canteen directory",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.54,
+      "top": 3266,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "From search to your next stop.",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 7.4,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3909,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "First time here? Bring this along.",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 7.4,
+      "font": "Figtree",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 4373,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "XMUM Navigate",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.035,
+      "leading": 1.55,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 4844,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.86,
+       "mono": false
+      },
+      {
+       "family": "Figtree",
+       "share": 0.14,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      22,
+      23,
+      26,
+      29,
+      32
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Plus Jakarta Sans",
+      "size": 12,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10
+     },
+     "measureChars": 57,
+     "max": {
+      "size": 32,
+      "vw": 8.2,
+      "font": "Figtree",
+      "text": "Your campus.Your next discovery."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.04,
+     "smallText": 25
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#101623",
+     "bodyBgHsl": {
+      "h": 221,
+      "s": 0.37,
+      "l": 0.1
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#101623",
+       "top": 0,
+       "hsl": {
+        "h": 221,
+        "s": 0.37,
+        "l": 0.1
+       }
+      },
+      {
+       "color": "#141c2c",
+       "top": 1910,
+       "hsl": {
+        "h": 220,
+        "s": 0.38,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c0c7d5",
+       "share": 0.4
+      },
+      {
+       "color": "#f3f5fa",
+       "share": 0.37
+      },
+      {
+       "color": "#bbc3d3",
+       "share": 0.2
+      },
+      {
+       "color": "#171f32",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#ff5421",
+      "hsl": {
+       "h": 14,
+       "s": 1,
+       "l": 0.56
+      },
+      "fg": "#171f32"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 4,
+     "radius": "pill",
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Menu",
+      "Open campus map",
+      "Take the next step Find your way on camp"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.welcome-stage → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)",
+      "section#visitors.visitors-section.container → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "div 294px",
+      "div 294px",
+      "div 294px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 13,
+     "boxRadius": 28,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 1037
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.31
+     },
+     {
+      "type": "img",
+      "ratio": 0.13
+     },
+     {
+      "type": "img",
+      "ratio": 0.12
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "figtree",
+     "plus jakarta sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 5215,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.welcome.container",
+      "tag": "section",
+      "top": 80,
+      "height": 917,
+      "words": 56,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Your campus.",
+       "size": 32,
+       "tag": "h1"
+      },
+      "left": 23,
+      "right": 20,
+      "textLeft": 24,
+      "textRight": 56,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "nav#features.feature-index.container",
+      "tag": "nav",
+      "top": 1021,
+      "height": 486,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Campus navigation",
+       "size": 15,
+       "tag": "h2"
+      },
+      "left": 82,
+      "right": 82,
+      "textLeft": 82,
+      "textRight": 82,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#offices.office-section.container",
+      "tag": "section",
+      "top": 1507,
+      "height": 997,
+      "words": 79,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The right building.",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#campus-life.campus-life-section",
+      "tag": "section",
+      "top": 2505,
+      "height": 1333,
+      "words": 96,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "A place to meet.",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 26,
+      "textLeft": 20,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how-it-works.how-section.container",
+      "tag": "section",
+      "top": 3837,
+      "height": 496,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "From search",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 160,
+      "textLeft": 20,
+      "textRight": 160,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#visitors.visitors-section.container",
+      "tag": "section",
+      "top": 4333,
+      "height": 451,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "First time here?",
+       "size": 29,
+       "tag": "h2"
+      },
+      "left": 40,
+      "right": 64,
+      "textLeft": 40,
+      "textRight": 64,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer.container",
+      "tag": "footer",
+      "top": 4784,
+      "height": 430,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "XMUM",
+       "size": 23,
+       "tag": "a"
+      },
+      "left": 20,
+      "right": 63,
+      "textLeft": 20,
+      "textRight": 63,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Your campus. Your next discovery.",
+      "size": 32,
+      "top": 116,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 7
+     },
+     {
+      "x": 40,
+      "n": 5
+     },
+     {
+      "x": 84,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 12,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "2 gradient fill(s): div.welcome-stage → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%) | section#visitors.visitors-section.container → linear-gradient(135deg, rgb(37, 49, 73) 0%, rgb(32, 41, 58) 100%)",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "3 thin rule(s)/divider line(s): div 510px | div 510px | div 510px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "1 row(s) of identical cards each topped with a small icon (4 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "13 different font sizes (11, 12, 13, 14, 15, 17, 18, 20, 22, 23, 26, 45, 56).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 12px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 3 picture(s) on the page (3 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "25 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 56px (3.9vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 10 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\Felix\\University\\@FYP\\xmum-navigate\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\Felix\\University\\@FYP\\xmum-navigate\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "D:\\Felix\\University\\@FYP\\xmum-navigate\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "D:\\Felix\\University\\@FYP\\xmum-navigate\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "D:\\Felix\\University\\@FYP\\xmum-navigate\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "D:\\Felix\\University\\@FYP\\xmum-navigate\\.taste-skill\\inspect\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

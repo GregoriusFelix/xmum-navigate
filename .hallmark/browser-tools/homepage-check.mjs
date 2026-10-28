@@ -14,6 +14,7 @@ try {
   for (const width of [320, 390, 620, 768, 999, 1024, 1440, 1920]) {
     await page.setViewport({ width, height: 900 });
     check(`No overflow at ${width}px`, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    check(`Hero heading stays within two lines at ${width}px`, await page.$eval('.welcome h1', e => e.getBoundingClientRect().height <= parseFloat(getComputedStyle(e).lineHeight) * 2.1));
     if ([390, 768, 1440].includes(width)) await page.screenshot({ path: `.hallmark/homepage/${width}.png`, fullPage: true });
   }
   check('Campus photos loaded', await page.evaluate(() => [...document.images].every(i => i.complete && i.naturalWidth > 0)));
@@ -31,6 +32,13 @@ try {
   check('Empty search gives recovery suggestion', await page.$eval('.destination-results', e => e.innerText.includes('No destinations found')));
   await page.click('[aria-label="Close search results"]');
   check('Search closes', !(await page.$('.destination-results')));
+  await page.click('.destination-search > button');
+  await page.keyboard.press('Escape');
+  check('Escape closes search', !(await page.$('.destination-results')));
+  check('All homepage section links resolve', await page.evaluate(() => [...document.querySelectorAll('a[href^="#"]')].every(a => document.getElementById(a.hash.slice(1)))));
+  await page.click('.visitor-action button');
+  await page.waitForFunction(() => /copied|copy the page link/.test(document.querySelector('.visitor-action [role="status"]').textContent));
+  check('Copy link gives feedback', await page.$eval('.visitor-action [role="status"]', e => /copied|copy the page link/.test(e.textContent)));
   await page.select('#office-select', 'o3');
   check('Office selection updates directions', await page.$eval('.office-example', e => e.innerText.includes('Sample Finance Office') && e.innerText.includes('Floor 2')));
   await page.select('#event-type', 'Study group');

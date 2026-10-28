@@ -5,7 +5,15 @@
       "passed": true
     },
     {
+      "name": "Hero heading stays within two lines at 320px",
+      "passed": true
+    },
+    {
       "name": "No overflow at 390px",
+      "passed": true
+    },
+    {
+      "name": "Hero heading stays within two lines at 390px",
       "passed": true
     },
     {
@@ -13,7 +21,15 @@
       "passed": true
     },
     {
+      "name": "Hero heading stays within two lines at 620px",
+      "passed": true
+    },
+    {
       "name": "No overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "Hero heading stays within two lines at 768px",
       "passed": true
     },
     {
@@ -21,7 +37,15 @@
       "passed": true
     },
     {
+      "name": "Hero heading stays within two lines at 999px",
+      "passed": true
+    },
+    {
       "name": "No overflow at 1024px",
+      "passed": true
+    },
+    {
+      "name": "Hero heading stays within two lines at 1024px",
       "passed": true
     },
     {
@@ -29,7 +53,15 @@
       "passed": true
     },
     {
+      "name": "Hero heading stays within two lines at 1440px",
+      "passed": true
+    },
+    {
       "name": "No overflow at 1920px",
+      "passed": true
+    },
+    {
+      "name": "Hero heading stays within two lines at 1920px",
       "passed": true
     },
     {
@@ -62,6 +94,18 @@
     },
     {
       "name": "Search closes",
+      "passed": true
+    },
+    {
+      "name": "Escape closes search",
+      "passed": true
+    },
+    {
+      "name": "All homepage section links resolve",
+      "passed": true
+    },
+    {
+      "name": "Copy link gives feedback",
       "passed": true
     },
     {

@@ -1,6 +1,8 @@
-/* Hallmark · shape: campus discovery · genre: editorial · theme: custom · job: navigate · hero: photo collage and live search · signature: XMUM campus postcards · v2.0.0 */
+/* Hallmark · shape: campus discovery · genre: editorial · theme: custom · job: navigate · hero: photo collage and live search · signature: XMUM campus postcards · surface: absolute · v2.0.0 */
 /* Critique: user reference governs rounded travel surfaces; real campus photos replace travel stand-ins. */
 /* Waivers: photo frames, orbit, generous radii and restrained surface gradient follow the supplied reference. Quiet motion preserves the destination-search task. */
+/* Hallmark · waive 7b · white photo chips on campus imagery · white is explicitly part of the user's brand palette */
+/* Hallmark · waive 24b · travel reference uses 6px icon gaps and photo frames · these measured layout details preserve the supplied reference */
 :root {
   --home-navy: #171f32;
   --home-gold: #c48f1e;
@@ -22,7 +24,10 @@
   --home-tint: linear-gradient(135deg, #253149 0%, #20293a 100%);
   --home-frame: rgb(255 255 255 / 22%);
 }
-.homepage { background: var(--color-paper); font-family: var(--home-font); }
+.homepage { --font-body: var(--home-font); --font-display: var(--home-font); background: var(--color-paper); font-family: var(--home-font); }
+.homepage :focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+.homepage button:active:not(:disabled), .homepage a:active { transform: translateY(1px); }
+.homepage button:disabled { opacity: .5; cursor: not-allowed; }
 .homepage .container { max-width: 1376px; padding-inline: clamp(20px, 4vw, 64px); }
 .homepage .site-header { min-height: 96px; position: relative; }
 .homepage .wordmark { font-size: 23px; letter-spacing: -.8px; gap: 6px; }
@@ -33,11 +38,11 @@
 .homepage .header-actions .icon-button { border-radius: 50%; background: var(--home-ground); }
 .welcome-stage { background: var(--home-tint); border-radius: 36px; padding: 36px 24px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
 .welcome-copy { min-width: 0; position: relative; z-index: 5; }
-.welcome h1 { font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.14; letter-spacing: -.055em; margin: 0; font-weight: 700; }
+.welcome h1 { font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.14; letter-spacing: -.055em; margin: 0; font-weight: 700; text-wrap: balance; }
 .welcome-copy > p { font-size: 15px; max-width: 365px; line-height: 1.8; color: var(--home-muted); margin: 24px 0; }
-.destination-search { display: flex; gap: 12px; align-items: center; background: var(--color-paper); border-radius: 999px; padding: 7px 7px 7px 18px; position: relative; max-width: 440px; }
+.destination-search { display: flex; gap: 12px; align-items: center; background: var(--color-paper); border: 1px solid var(--home-muted); border-radius: 999px; padding: 7px 7px 7px 18px; position: relative; max-width: 440px; }
 .destination-search > svg { color: var(--home-muted); flex-shrink: 0; }
-.destination-search input { padding: 0; width: 100%; min-width: 0; border: 0; outline-offset: 5px; background: transparent; color: var(--color-ink); font-size: 13px; height: 42px; }
+.destination-search input { padding: 8px 4px; width: 100%; min-width: 0; border: 0; outline-offset: 5px; background: var(--color-paper); color: var(--color-ink); font-size: 13px; height: 42px; }
 .destination-search input::placeholder { color: var(--home-muted); opacity: 1; }
 .destination-search > button { width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--home-navy); color: var(--home-white); display: grid; place-items: center; flex-shrink: 0; }
 .destination-results { position: absolute; top: calc(100% + 8px); left: 0; width: 100%; max-height: 360px; overflow-y: auto; border-radius: 24px; padding: 14px; background: var(--color-paper); box-shadow: var(--home-shadow); z-index: 20; }
@@ -58,7 +63,7 @@
 .campus-collage { position: relative; min-width: 0; height: 340px; margin-top: 24px; }
 .campus-photo { position: absolute; margin: 0; border: 6px solid var(--home-frame); border-radius: var(--home-radius); background: var(--color-paper); overflow: clip; }
 .campus-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.campus-photo figcaption { position: absolute; display: flex; align-items: center; gap: 6px; top: 12px; left: 12px; padding: 8px 11px; background: var(--home-white); color: var(--home-navy); border-radius: 999px; font-size: 10px; white-space: nowrap; }
+.campus-photo figcaption { position: absolute; display: flex; align-items: center; gap: 6px; top: 12px; left: 12px; padding: 8px 11px; background: var(--home-white); color: var(--home-navy); border-radius: 999px; font-size: 11px; white-space: nowrap; }
 .photo-back { left: 0; top: 30px; width: 43%; height: 220px; transform: rotate(-9deg); }
 .photo-back figcaption, .photo-side figcaption { top: auto; bottom: 12px; }
 .photo-side { right: 0; top: 7px; width: 45%; height: 240px; transform: rotate(9deg); }
@@ -67,7 +72,7 @@
 .campus-orbit { position: absolute; z-index: 1; width: 115%; height: 100%; left: -7%; top: 0; overflow: visible; pointer-events: none; }
 .campus-orbit path { stroke: var(--home-gold); stroke-width: 10; stroke-linecap: round; }
 .collage-map-link { position: absolute; bottom: 0; left: 10%; z-index: 3; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 20px; background: var(--color-paper); color: var(--color-ink); width: 85%; }
-.collage-map-link > span:nth-child(2) { font-size: 10px; color: var(--home-muted); flex: 1; }
+.collage-map-link > span:nth-child(2) { font-size: 11px; color: var(--home-muted); flex: 1; }
 .collage-map-link strong { display: block; font-size: 12px; font-weight: 600; color: var(--color-ink); margin-top: 3px; }
 .map-link-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--home-ground); display: grid; place-items: center; }
 .welcome-footnote { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center; padding: 18px 4px 0; font-size: 11px; color: var(--home-muted); }
@@ -81,10 +86,22 @@
 .homepage .office-copy h2, .homepage .life-heading h2, .homepage .how-section h2, .homepage .visitors-section h2 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); letter-spacing: -.045em; }
 .homepage .office-copy > p, .homepage .life-heading > p { color: var(--home-muted); font-size: 15px; }
 .homepage .office-example { border-radius: 28px; background: var(--home-ground); border: 0; padding: 28px; }
-.homepage .floor-plan { border-radius: 18px; background: var(--color-paper); }
+.homepage .floor-plan { border-radius: 18px; background: var(--color-paper); padding: 12px; }
 .homepage .select-wrap select { border-radius: 16px; }
-.homepage .campus-life-section { background: var(--home-ground); padding-block: 64px; border-radius: 36px; margin-inline: auto; max-width: 1280px; }
+.homepage .campus-life-section { background: var(--home-ground); color: var(--color-ink); --color-dark-paper: var(--color-paper); --color-dark-ink: var(--color-ink); --color-dark-muted: var(--home-muted); padding-block: 64px; border-radius: 36px; margin-inline: auto; max-width: 1280px; }
 .homepage .life-module { background: var(--color-paper); border-radius: 28px; padding: 28px; border: 0; }
+.homepage .life-module:first-child, .homepage .life-module:last-child { padding: 28px; }
+.homepage .steps li { border: 0; }
+.homepage .steps li::before { display: none; }
+.homepage .steps h3, .homepage .steps p { grid-column: 1 / -1; }
+.homepage .sample-menu > div { border: 0; }
+.homepage .welcome-footnote, .homepage .suggested-stops, .homepage .welcome-actions > span,
+.homepage .collage-map-link > span:nth-child(2), .homepage .campus-photo figcaption,
+.homepage .feature-link p, .homepage .photo-credits, .homepage .site-footer p,
+.homepage .site-footer small, .homepage .footer-details { font-size: 13px; }
+.homepage .destination-search input { font-size: 14px; }
+.homepage .office-directions, .homepage .life-module > p, .homepage .venue-result p,
+.homepage .sample-menu { font-size: 16px; }
 .homepage .how-section { padding-block: 72px; }
 .homepage .visitors-section { background: var(--home-tint); border-radius: 32px; padding-block: 40px; width: calc(100% - 40px); max-width: 1248px; }
 .homepage .site-footer { padding-top: 60px; padding-bottom: 32px; border: 0; }
@@ -109,11 +126,11 @@
   .photo-back { top: 25px; height: 285px; }
   .photo-side { top: 0; height: 300px; }
   .photo-front { top: 73px; height: 300px; }
-  .campus-photo figcaption { font-size: 10px; }
+  .campus-photo figcaption { font-size: 11px; }
   .homepage .feature-index { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 36px; }
-  .homepage .feature-link { flex-wrap: wrap; padding: 24px 20px; position: relative; min-height: 160px; align-content: start; gap: 16px; }
-  .homepage .feature-link > div { flex-basis: 100%; }
-  .homepage .feature-link > svg:last-child { position: absolute; top: 27px; right: 20px; }
+  .homepage .feature-link { flex-wrap: nowrap; padding: 24px 20px; min-height: 140px; align-items: flex-start; gap: 12px; }
+  .homepage .feature-link > svg:first-child { margin-top: 2px; width: 20px; }
+  .homepage .feature-link > svg:last-child { display: none; }
   .homepage .visitors-section { width: calc(100% - 128px); }
 }
 @media (max-width: 999px) {
@@ -129,7 +146,7 @@
   .welcome h1 { font-size: 1.7rem; }
   .homepage .wordmark { font-size: 19px; }
   .homepage .header-actions { gap: 4px; }
-  .photo-front figcaption { font-size: 8px; padding: 6px; left: 5px; gap: 2px; }
+  .photo-front figcaption { font-size: 11px; padding: 8px; left: 5px; gap: 4px; }
   .photo-front figcaption svg { width: 12px; }
 }
 @media (prefers-reduced-motion: no-preference) {
