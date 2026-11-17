@@ -1,0 +1,2293 @@
+{
+ "note": "Sample data for development. Coordinates, paths, scores, menus and offices are placeholders, not surveyed XMUM data.",
+ "boundary": [
+  [
+   2.8298,
+   101.7022
+  ],
+  [
+   2.8298,
+   101.7076
+  ],
+  [
+   2.8363,
+   101.7076
+  ],
+  [
+   2.8363,
+   101.7022
+  ]
+ ],
+ "settings": {
+  "algorithm": "astar",
+  "scenicPenalty": 0.5,
+  "scenicRadiusM": 70,
+  "weightVersion": "literature",
+  "weights": {
+   "literature": {
+    "capacity": 35,
+    "eventType": 25,
+    "facilities": 20,
+    "setting": 20
+   },
+   "elicited": null
+  }
+ },
+ "places": [
+  {
+   "id": "a",
+   "name": "Sample Building A",
+   "type": "Academic building",
+   "coords": [
+    2.8336,
+    101.7043
+   ],
+   "node": "ea"
+  },
+  {
+   "id": "b",
+   "name": "Sample Building B",
+   "type": "Administration",
+   "coords": [
+    2.8342,
+    101.7065
+   ],
+   "node": "eb"
+  },
+  {
+   "id": "c",
+   "name": "Sample Library",
+   "type": "Study space",
+   "coords": [
+    2.8353,
+    101.7048
+   ],
+   "node": "n62"
+  },
+  {
+   "id": "d",
+   "name": "Sample Canteen",
+   "type": "Food and drink",
+   "coords": [
+    2.8321,
+    101.7048
+   ],
+   "node": "n22"
+  },
+  {
+   "id": "e",
+   "name": "Sample Event Hall",
+   "type": "Event venue",
+   "coords": [
+    2.8318,
+    101.7066
+   ],
+   "node": "ee"
+  }
+ ],
+ "offices": [
+  {
+   "id": "o1",
+   "name": "Sample Admissions Office",
+   "placeId": "a",
+   "floor": 2,
+   "directions": [
+    "Enter through the main entrance.",
+    "Take the lift to Floor 2.",
+    "Turn left. The sample office is at the end of the corridor."
+   ]
+  },
+  {
+   "id": "o2",
+   "name": "Sample Student Affairs Office",
+   "placeId": "a",
+   "floor": 1,
+   "directions": [
+    "Enter through the main entrance.",
+    "Take the lift to Floor 1.",
+    "Turn left and follow the corridor to the sample office."
+   ]
+  },
+  {
+   "id": "o3",
+   "name": "Sample Finance Office",
+   "placeId": "b",
+   "floor": 2,
+   "directions": [
+    "Enter through the main entrance.",
+    "Take the lift to Floor 2.",
+    "Turn left at the lobby. The sample office is at the end of the corridor."
+   ]
+  },
+  {
+   "id": "o4",
+   "name": "Sample Faculty Office",
+   "placeId": "b",
+   "floor": 3,
+   "directions": [
+    "Enter through the main entrance.",
+    "Take the lift to Floor 3.",
+    "Follow the corridor to the left to reach the sample office."
+   ]
+  }
+ ],
+ "venues": [
+  {
+   "id": "v1",
+   "name": "Sample Main Hall",
+   "placeId": "e",
+   "capacity": 200,
+   "eventTypes": [
+    "Presentation",
+    "Student gathering"
+   ],
+   "facilities": [
+    "Projector",
+    "Microphone",
+    "Speakers"
+   ],
+   "setting": "indoor",
+   "description": "A sample indoor hall for presentations and student events."
+  },
+  {
+   "id": "v2",
+   "name": "Sample Lecture Room",
+   "placeId": "a",
+   "capacity": 60,
+   "eventTypes": [
+    "Presentation",
+    "Study group"
+   ],
+   "facilities": [
+    "Projector",
+    "Whiteboard"
+   ],
+   "setting": "indoor",
+   "description": "A sample classroom with a projector."
+  },
+  {
+   "id": "v3",
+   "name": "Sample Discussion Room",
+   "placeId": "c",
+   "capacity": 12,
+   "eventTypes": [
+    "Study group"
+   ],
+   "facilities": [
+    "Whiteboard"
+   ],
+   "setting": "indoor",
+   "description": "A sample small room for group study."
+  },
+  {
+   "id": "v4",
+   "name": "Sample Hall Forecourt",
+   "placeId": "e",
+   "capacity": 150,
+   "eventTypes": [
+    "Student gathering"
+   ],
+   "facilities": [
+    "Speakers"
+   ],
+   "setting": "outdoor",
+   "description": "A sample open-air space beside the event hall."
+  }
+ ],
+ "stalls": [
+  {
+   "id": "s1",
+   "name": "Sample Kitchen",
+   "placeId": "d",
+   "hours": "Sample hours: Mon–Fri, 8 am–6 pm",
+   "menu": [
+    {
+     "name": "Sample rice bowl",
+     "price": "RM 8.00"
+    },
+    {
+     "name": "Sample noodle soup",
+     "price": "RM 7.50"
+    },
+    {
+     "name": "Sample iced tea",
+     "price": "RM 2.50"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "name": "Sample Noodle House",
+   "placeId": "d",
+   "hours": "Sample hours: Mon–Sat, 10 am–8 pm",
+   "menu": [
+    {
+     "name": "Sample dry noodles",
+     "price": "RM 7.00"
+    },
+    {
+     "name": "Sample dumplings",
+     "price": "RM 6.00"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "name": "Sample Drinks Bar",
+   "placeId": "d",
+   "hours": "Sample hours: Daily, 9 am–9 pm",
+   "menu": [
+    {
+     "name": "Sample milk tea",
+     "price": "RM 5.50"
+    },
+    {
+     "name": "Sample fruit juice",
+     "price": "RM 4.50"
+    }
+   ]
+  }
+ ],
+ "spots": [
+  {
+   "id": "k1",
+   "name": "Sample Lakeside",
+   "lat": 2.8329,
+   "lng": 101.7057,
+   "photo": "/images/campus.jpg",
+   "score": 4.6
+  },
+  {
+   "id": "k2",
+   "name": "Sample Garden Walk",
+   "lat": 2.8344,
+   "lng": 101.704,
+   "photo": "/images/walkway.jpg",
+   "score": 4.1
+  },
+  {
+   "id": "k3",
+   "name": "Sample Plaza",
+   "lat": 2.8315,
+   "lng": 101.7057,
+   "photo": "/images/library.jpg",
+   "score": 3.4
+  }
+ ],
+ "nodes": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n00"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8308
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n01"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8308
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n02"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8308
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n03"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8308
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n04"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8308
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n10"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8315
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n11"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8315
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n12"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8315
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n13"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8315
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n14"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8315
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n20"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8321
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n21"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8321
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n22"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8321
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n23"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8321
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n24"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8321
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n30"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8329
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n31"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8329
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n32"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8329
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n33"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8329
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n34"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8329
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n40"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8336
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n41"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8336
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n42"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8336
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n43"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8336
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n44"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8336
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n50"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8344
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n51"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8344
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n52"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8344
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n53"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8344
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n54"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8344
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n60"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032,
+      2.8353
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n61"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704,
+      2.8353
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n62"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7048,
+      2.8353
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n63"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057,
+      2.8353
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n64"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8353
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "ea"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7043,
+      2.8336
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "eb"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7065,
+      2.8342
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "ee"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066,
+      2.8318
+     ]
+    }
+   }
+  ]
+ },
+ "paths": {
+  "type": "FeatureCollection",
+  "features": [
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 89,
+     "source_node": "n00",
+     "target_node": "n01",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8308
+      ],
+      [
+       101.704,
+       2.8308
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p2",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n00",
+     "target_node": "n10",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8308
+      ],
+      [
+       101.7032,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 89,
+     "source_node": "n01",
+     "target_node": "n02",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8308
+      ],
+      [
+       101.7048,
+       2.8308
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 100,
+     "source_node": "n02",
+     "target_node": "n03",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8308
+      ],
+      [
+       101.7057,
+       2.8308
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p5",
+     "type": "covered_walkway",
+     "covered": true,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n02",
+     "target_node": "n12",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8308
+      ],
+      [
+       101.7048,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 100,
+     "source_node": "n03",
+     "target_node": "n04",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8308
+      ],
+      [
+       101.7066,
+       2.8308
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p7",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n03",
+     "target_node": "n13",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8308
+      ],
+      [
+       101.7057,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p8",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n04",
+     "target_node": "n14",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8308
+      ],
+      [
+       101.7066,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p9",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n10",
+     "target_node": "n11",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8315
+      ],
+      [
+       101.704,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p10",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 67,
+     "source_node": "n10",
+     "target_node": "n20",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8315
+      ],
+      [
+       101.7032,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p11",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n11",
+     "target_node": "n12",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8315
+      ],
+      [
+       101.7048,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p12",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 67,
+     "source_node": "n11",
+     "target_node": "n21",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8315
+      ],
+      [
+       101.704,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p13",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n12",
+     "target_node": "n13",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8315
+      ],
+      [
+       101.7057,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p14",
+     "type": "covered_walkway",
+     "covered": true,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 67,
+     "source_node": "n12",
+     "target_node": "n22",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8315
+      ],
+      [
+       101.7048,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p15",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n13",
+     "target_node": "n14",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8315
+      ],
+      [
+       101.7066,
+       2.8315
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p16",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n20",
+     "target_node": "n21",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8321
+      ],
+      [
+       101.704,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p17",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n20",
+     "target_node": "n30",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8321
+      ],
+      [
+       101.7032,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p18",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n21",
+     "target_node": "n22",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8321
+      ],
+      [
+       101.7048,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p19",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n21",
+     "target_node": "n31",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8321
+      ],
+      [
+       101.704,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p20",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n22",
+     "target_node": "n23",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8321
+      ],
+      [
+       101.7057,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p21",
+     "type": "covered_walkway",
+     "covered": true,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n22",
+     "target_node": "n32",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8321
+      ],
+      [
+       101.7048,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p22",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n23",
+     "target_node": "n24",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8321
+      ],
+      [
+       101.7066,
+       2.8321
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p23",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n23",
+     "target_node": "n33",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8321
+      ],
+      [
+       101.7057,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p24",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n30",
+     "target_node": "n31",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8329
+      ],
+      [
+       101.704,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p25",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n30",
+     "target_node": "n40",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8329
+      ],
+      [
+       101.7032,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p26",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n31",
+     "target_node": "n41",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8329
+      ],
+      [
+       101.704,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p27",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n32",
+     "target_node": "n33",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8329
+      ],
+      [
+       101.7057,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p28",
+     "type": "covered_walkway",
+     "covered": true,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n32",
+     "target_node": "n42",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8329
+      ],
+      [
+       101.7048,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p29",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n33",
+     "target_node": "n34",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8329
+      ],
+      [
+       101.7066,
+       2.8329
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p30",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n33",
+     "target_node": "n43",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8329
+      ],
+      [
+       101.7057,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p31",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n34",
+     "target_node": "n44",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8329
+      ],
+      [
+       101.7066,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p32",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n40",
+     "target_node": "n41",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8336
+      ],
+      [
+       101.704,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p33",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n41",
+     "target_node": "n51",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8336
+      ],
+      [
+       101.704,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p34",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n42",
+     "target_node": "n43",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8336
+      ],
+      [
+       101.7057,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p35",
+     "type": "covered_walkway",
+     "covered": true,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n42",
+     "target_node": "n52",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8336
+      ],
+      [
+       101.7048,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p36",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n43",
+     "target_node": "n44",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8336
+      ],
+      [
+       101.7066,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p37",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n43",
+     "target_node": "n53",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8336
+      ],
+      [
+       101.7057,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p38",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n44",
+     "target_node": "n54",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8336
+      ],
+      [
+       101.7066,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p39",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n50",
+     "target_node": "n51",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8344
+      ],
+      [
+       101.704,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p40",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n50",
+     "target_node": "n60",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8344
+      ],
+      [
+       101.7032,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p41",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n51",
+     "target_node": "n52",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8344
+      ],
+      [
+       101.7048,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p42",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n51",
+     "target_node": "n61",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8344
+      ],
+      [
+       101.704,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p43",
+     "type": "covered_walkway",
+     "covered": true,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n52",
+     "target_node": "n62",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8344
+      ],
+      [
+       101.7048,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p44",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n53",
+     "target_node": "n54",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8344
+      ],
+      [
+       101.7066,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p45",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n53",
+     "target_node": "n63",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8344
+      ],
+      [
+       101.7057,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p46",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n54",
+     "target_node": "n64",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8344
+      ],
+      [
+       101.7066,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p47",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n60",
+     "target_node": "n61",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032,
+       2.8353
+      ],
+      [
+       101.704,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p48",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 89,
+     "source_node": "n61",
+     "target_node": "n62",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8353
+      ],
+      [
+       101.7048,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p49",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n62",
+     "target_node": "n63",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7048,
+       2.8353
+      ],
+      [
+       101.7057,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p50",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 100,
+     "source_node": "n63",
+     "target_node": "n64",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057,
+       2.8353
+      ],
+      [
+       101.7066,
+       2.8353
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p51",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 33,
+     "source_node": "n41",
+     "target_node": "ea",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704,
+       2.8336
+      ],
+      [
+       101.7043,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p52",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 56,
+     "source_node": "ea",
+     "target_node": "n42",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043,
+       2.8336
+      ],
+      [
+       101.7048,
+       2.8336
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p53",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 68,
+     "source_node": "n44",
+     "target_node": "eb",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8336
+      ],
+      [
+       101.7065,
+       2.8342
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p54",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 25,
+     "source_node": "eb",
+     "target_node": "n54",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7065,
+       2.8342
+      ],
+      [
+       101.7066,
+       2.8344
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p55",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 33,
+     "source_node": "n14",
+     "target_node": "ee",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8315
+      ],
+      [
+       101.7066,
+       2.8318
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p56",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 33,
+     "source_node": "ee",
+     "target_node": "n24",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066,
+       2.8318
+      ],
+      [
+       101.7066,
+       2.8321
+      ]
+     ]
+    }
+   }
+  ]
+ }
+}

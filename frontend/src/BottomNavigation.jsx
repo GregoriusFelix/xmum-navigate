@@ -1,11 +1,11 @@
-import { Building2, Compass, House, Map, Utensils } from 'lucide-react';
+import { CircleUser, Compass, Info, Map, Utensils } from 'lucide-react';
 
 const ITEMS = [
-  { href: '/', label: 'Home', icon: House },
   { href: '/map', label: 'Map', icon: Map },
-  { href: '/offices', label: 'Offices', icon: Building2 },
   { href: '/venues', label: 'Venues', icon: Compass },
   { href: '/canteens', label: 'Canteens', icon: Utensils },
+  { href: '/profile', label: 'Profile', icon: CircleUser },
+  { href: '/about', label: 'About', icon: Info },
 ];
 
 export default function BottomNavigation({ activePath }) {

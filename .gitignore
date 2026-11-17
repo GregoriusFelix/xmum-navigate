@@ -4,3 +4,7 @@ dist/
 .env.local
 *.log
 .DS_Store
+
+# Runtime copy of the sample data, written by admin edits
+backend/data/campus.json
+backend/data/users.json

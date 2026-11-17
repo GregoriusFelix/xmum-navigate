@@ -10,6 +10,12 @@
     { "source": "/venues", "destination": "/index.html" },
     { "source": "/venues/", "destination": "/index.html" },
     { "source": "/canteens", "destination": "/index.html" },
-    { "source": "/canteens/", "destination": "/index.html" }
+    { "source": "/canteens/", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/profile", "destination": "/index.html" },
+    { "source": "/profile/", "destination": "/index.html" },
+    { "source": "/about/", "destination": "/index.html" },
+    { "source": "/admin/", "destination": "/index.html" }
   ]
 }

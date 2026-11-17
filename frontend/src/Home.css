@@ -1,5 +1,5 @@
 /* Hallmark · shape: Campus workbench · genre: editorial · theme: brand · redesign: full · job: try
- * paper: #ffffff · accent: #ff5421 · display: Figtree · body: Figtree · hero: Counter · nav: quiet three-part bar · footer: project colophon
+ * paper: #ffffff · accent: #19325e · display: Poppins · body: Inter · hero: Counter · nav: quiet three-part bar · footer: project colophon
  * signature: office search joins an outdoor route to a floor and written directions · axes: light/grotesk-heavy/warm · posture: Restrained · surface: absolute · modes: light+dark · v2.0.0 */
 /* Hallmark · pre-emit critique: practical, map-led, scoped samples · weakest: office context; resolved with an interactive floor-plan section · hero-review: in-thread, map overlap resolved · finish-review: in-thread, floor-plan labels enlarged */
 /* Hallmark · waive 7b · white surfaces and navy ink come from design.md · the campus design system explicitly specifies white map panels and white text on navy */
@@ -32,7 +32,7 @@ button svg, a svg { flex-shrink: 0; }
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .skip-link { position: fixed; z-index: 2000; top: 12px; left: 12px; padding: var(--space-sm) var(--space-lg); background: var(--color-action); color: var(--color-action-ink); border-radius: var(--radius-sm); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
-.site-header { position: sticky; top: 0; z-index: 2000; background: var(--color-paper); min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); }
+.site-header { position: sticky; top: 0; z-index: 2000; min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); }
 .wordmark { display: inline-flex; align-items: center; gap: var(--space-xs); min-height: 48px; font-size: 24px; font-weight: 700; letter-spacing: -.9px; white-space: nowrap; }
 .wordmark span { font-weight: 400; }
 .main-nav { display: flex; align-items: center; gap: 28px; }
@@ -212,7 +212,7 @@ select { appearance: none; display: block; width: 100%; min-height: 56px; paddin
 .campus-marker { display: flex; align-items: center; justify-content: center; }
 .map-pin { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 3px solid var(--map-marker-ink); background: var(--map-marker); color: var(--map-marker-ink); font: 700 15px var(--font-body); box-shadow: var(--shadow-float); }
 .map-pin:hover { transform: translateY(-2px); }
-.is-selected .map-pin { background: var(--map-route); color: var(--color-primary); }
+.is-selected .map-pin { background: var(--map-route); }
 .pin-label { display: none; position: absolute; top: 8px; left: 52px; color: var(--map-label); background: var(--map-label-paper); border-radius: 4px; padding: 4px var(--space-xs); font-size: 12px; font-weight: 600; white-space: nowrap; pointer-events: none; }
 .is-selected .pin-label { display: block; }
 .sample-start { display: flex; align-items: center; gap: var(--space-xs); color: var(--map-label); font-size: 12px; }

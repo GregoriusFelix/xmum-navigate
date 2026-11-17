@@ -1,16 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { Compass, Footprints, Info, Minus, Plus, RotateCcw } from 'lucide-react';
-import { CONFIG } from './campus.js';
+import { Compass, Info, Minus, Plus } from 'lucide-react';
+
+const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.4 9.4l6-.8z"/></svg>';
 
 let leafletPromise;
-function fitCampus(map) {
-  map.fitBounds([CONFIG.start, ...CONFIG.places.map(p => p.coords)], {
-    paddingTopLeft: [32, 100],
-    paddingBottomRight: [80, 220],
-    maxZoom: 17,
-    animate: false,
-  });
-}
 function loadLeaflet() {
   if (window.L) return Promise.resolve(window.L);
   if (!leafletPromise) leafletPromise = new Promise((resolve, reject) => {
@@ -24,74 +17,100 @@ function loadLeaflet() {
   return leafletPromise;
 }
 
-export default function CampusMap({ selected, onSelect, onReset }) {
+export default function CampusMap({ campus, selected, route, position, testStart, spotId, onMap, onSelect, onSpot, onPick, children }) {
   const element = useRef(null);
   const mapRef = useRef(null);
-  const routeRef = useRef(null);
+  const layers = useRef({});
   const markersRef = useRef([]);
-  const onSelectRef = useRef(onSelect);
-  onSelectRef.current = onSelect;
+  const handlers = useRef({});
+  handlers.current = { onSelect, onSpot, onPick };
   const [status, setStatus] = useState('loading');
-  const [expanded, setExpanded] = useState(true);
   const [zoom, setZoom] = useState(16);
+  // Bottom padding is everything the sheet and tab bar cover, so the fitted area stays visible above them.
+  const fit = points => {
+    const sheet = element.current.parentElement.querySelector('.route-sheet');
+    const covered = sheet ? window.innerHeight - sheet.getBoundingClientRect().top : 0;
+    mapRef.current.fitBounds(points, { paddingTopLeft: [24, 180], paddingBottomRight: [64, Math.max(48, covered + 24)], maxZoom: 17, animate: false });
+  };
+  const fitCampus = () => fit(campus.places.map(place => place.coords));
+
   useEffect(() => {
     let cancelled = false;
     let observer;
     loadLeaflet().then(L => {
       if (cancelled) return;
-      const map = L.map(element.current, { zoomControl: false, attributionControl: false, minZoom: 16, maxZoom: 19, maxBounds: CONFIG.bounds, maxBoundsViscosity: 1, scrollWheelZoom: false }).setView(CONFIG.center, 17);
+      const map = L.map(element.current, { zoomControl: false, attributionControl: false, minZoom: 15, maxZoom: 19, maxBounds: L.latLngBounds(campus.boundary).pad(1.5), maxBoundsViscosity: 1, scrollWheelZoom: false });
       mapRef.current = map;
-      fitCampus(map);
+      onMap?.(map);
+      fitCampus();
       setZoom(map.getZoom());
       map.on('zoomend', () => setZoom(map.getZoom()));
+      map.on('click', event => handlers.current.onPick?.([event.latlng.lat, event.latlng.lng]));
       const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 });
       tiles.on('tileerror', () => { if (!cancelled) setStatus('tiles-error'); });
       tiles.on('load', () => { if (!cancelled) setStatus(tiles._tiles && Object.values(tiles._tiles).some(t => t.el.naturalWidth) ? 'ready' : 'tiles-error'); });
       tiles.addTo(map);
-      CONFIG.places.forEach((place, i) => {
-        const marker = L.marker(place.coords, { keyboard: false, icon: L.divIcon({ className: 'campus-marker', html: `<button type="button" class="map-pin" aria-label="Show sample route to ${place.name}">${String.fromCharCode(65 + i)}</button><span class="pin-label">${place.name}</span>`, iconSize: [48, 48], iconAnchor: [24, 24] }) }).addTo(map);
-        marker.getElement().querySelector('button').addEventListener('click', e => { e.stopPropagation(); onSelectRef.current({ ...place, place }); });
+
+      const tokens = getComputedStyle(document.documentElement);
+      campus.paths.features.forEach(feature => {
+        const line = feature.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
+        const style = feature.properties.is_closed
+          ? { color: tokens.getPropertyValue('--map-route').trim(), weight: 5, dashArray: '2 10', lineCap: 'round' }
+          : { color: tokens.getPropertyValue('--map-marker').trim(), weight: 3, opacity: .3 };
+        L.polyline(line, { ...style, interactive: false }).addTo(map);
+      });
+      campus.places.forEach((place, i) => {
+        const marker = L.marker(place.coords, { keyboard: false, icon: L.divIcon({ className: 'campus-marker', html: `<button type="button" class="map-pin">${String.fromCharCode(65 + i)}</button><span class="pin-label"></span>`, iconSize: [48, 48], iconAnchor: [24, 24] }) }).addTo(map);
+        const button = marker.getElement().querySelector('button');
+        button.setAttribute('aria-label', `Route to ${place.name}`);
+        marker.getElement().querySelector('.pin-label').textContent = place.name;
+        button.addEventListener('click', event => { event.stopPropagation(); handlers.current.onSelect({ ...place, kind: 'place', place }); });
         markersRef.current.push({ marker, id: place.id });
       });
-      L.marker(CONFIG.start, { keyboard: false, icon: L.divIcon({ className: 'sample-start', html: '<span>S</span><strong>Sample start</strong>', iconSize: [120, 36], iconAnchor: [18, 18] }) }).addTo(map);
-      observer = new ResizeObserver(() => { map.invalidateSize(); fitCampus(map); });
+      campus.spots.forEach(spot => {
+        const marker = L.marker([spot.lat, spot.lng], { keyboard: false, icon: L.divIcon({ className: 'spot-marker', html: `<button type="button" class="spot-pin">${STAR}</button>`, iconSize: [40, 40], iconAnchor: [20, 20] }) }).addTo(map);
+        const button = marker.getElement().querySelector('button');
+        button.setAttribute('aria-label', `Route through scenic spot ${spot.name}`);
+        button.addEventListener('click', event => { event.stopPropagation(); handlers.current.onSpot(spot.id); });
+        markersRef.current.push({ marker, id: spot.id });
+      });
+      observer = new ResizeObserver(() => map.invalidateSize());
       observer.observe(element.current);
       setStatus('ready');
     }).catch(() => { if (!cancelled) setStatus('error'); });
-    return () => { cancelled = true; observer?.disconnect(); mapRef.current?.remove(); mapRef.current = null; markersRef.current = []; };
+    return () => { cancelled = true; observer?.disconnect(); mapRef.current?.remove(); mapRef.current = null; markersRef.current = []; layers.current = {}; };
   }, []);
+
+  useEffect(() => {
+    markersRef.current.forEach(({ marker, id }) => marker.getElement()?.classList.toggle('is-selected', id === selected?.place.id || id === spotId));
+  }, [selected, spotId, status]);
+
+  // Each overlay is rebuilt from its prop, so the map never shows a stale route or dot.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !window.L) return;
-    routeRef.current?.remove();
-    routeRef.current = null;
-    markersRef.current.forEach(({ marker, id }) => marker.getElement()?.classList.toggle('is-selected', id === selected?.place.id));
-    if (!selected) return;
-    const [lat, lng] = selected.place.coords;
-    const points = [CONFIG.start, [2.8314, 101.7032], [2.8314, lng], [lat, lng]];
+    const L = window.L;
     const tokens = getComputedStyle(document.documentElement);
-    const routeColor = tokens.getPropertyValue('--map-route').trim();
-    const casing = tokens.getPropertyValue('--map-route-casing').trim();
-    routeRef.current = window.L.layerGroup([
-      window.L.polyline(points, { color: casing, weight: 9, lineCap: 'round' }),
-      window.L.polyline(points, { color: routeColor, weight: 4, lineCap: 'round', lineJoin: 'round' }),
-    ]).addTo(map);
-  }, [selected, status]);
+    const dot = (className, html, size) => L.divIcon({ className, html, iconSize: size, iconAnchor: [size[1] / 2, size[1] / 2] });
+    Object.values(layers.current).forEach(layer => layer.remove());
+    layers.current = {};
+    if (route) {
+      layers.current.route = L.layerGroup([
+        L.polyline(route.points, { color: tokens.getPropertyValue('--map-route-casing').trim(), weight: 9, lineCap: 'round', interactive: false }),
+        L.polyline(route.points, { color: tokens.getPropertyValue('--map-route').trim(), weight: 4, lineCap: 'round', lineJoin: 'round', interactive: false }),
+      ]).addTo(map);
+    }
+    if (position) layers.current.position = L.marker(position, { interactive: false, keyboard: false, icon: dot('you-dot', '', [22, 22]) }).addTo(map);
+    if (testStart) layers.current.testStart = L.marker(testStart, { interactive: false, keyboard: false, icon: dot('sample-start', '<span>S</span><strong>Test start</strong>', [120, 36]) }).addTo(map);
+  }, [route, position?.join(), testStart?.join(), status]);
+
+  useEffect(() => { if (route && mapRef.current) fit(route.points); }, [route]);
+
   const enabled = status === 'ready' || status === 'tiles-error';
-  return <div className="map-stage" id="campus-map" role="region" aria-label="Campus map preview">
-    <div className="map-canvas" ref={element} aria-label="Sample campus map. Office lookup and Campus life provide destination details." />
-    {status !== 'ready' && <div className="map-status" role="status"><Info size={16} aria-hidden="true" /><span>{status === 'loading' ? 'Loading the campus map…' : 'Map unavailable. Use Office lookup or Campus life in the navigation to choose a sample destination.'}</span></div>}
-    <div className="map-controls"><button className="icon-button" aria-label="Reset map view" disabled={!enabled} onClick={() => fitCampus(mapRef.current)}><Compass size={20} aria-hidden="true" /></button><div className="zoom-controls"><button className="icon-button" disabled={!enabled || zoom >= 19} aria-label="Zoom in" onClick={() => mapRef.current.zoomIn()}><Plus size={20} aria-hidden="true" /></button><button className="icon-button" disabled={!enabled || zoom <= 16} aria-label="Zoom out" onClick={() => mapRef.current.zoomOut()}><Minus size={20} aria-hidden="true" /></button></div></div>
-    <div className="route-sheet">
-      <button className="sheet-handle" aria-label={expanded ? 'Collapse route details' : 'Expand route details'} aria-expanded={expanded} onClick={() => setExpanded(!expanded)}><span /></button>
-      <div className="route-sheet-top"><div><Footprints size={18} aria-hidden="true" /><strong>{selected ? 'Sample walking route' : 'Choose your next stop'}</strong></div><button className="reset-button" onClick={onReset}><RotateCcw size={14} aria-hidden="true" /> Reset</button></div>
-      <div className="route-sheet-content" hidden={!expanded} aria-live="polite" aria-atomic="true">
-        {selected ? <>
-          <div className="route-destination"><span>Sample start</span><span className="route-line" aria-hidden="true" /><strong>{selected.name}</strong></div>
-          <div className="route-stats"><div><strong>{selected.place.minutes}<small> min</small></strong><span>Sample walk</span></div><div><strong>{selected.place.distance}<small> m</small></strong><span>Sample distance</span></div><span className="walking-label"><Footprints size={16} aria-hidden="true" /> Outdoors</span></div>
-          {selected.floor && <p className="route-office">{selected.place.name}, Floor {selected.floor}. <a href={`/offices?office=${encodeURIComponent(selected.id)}`}>See floor plan and directions</a></p>}
-        </> : <p className="empty-route">Select a map marker, or choose a destination in Office lookup or Campus life to see a route.</p>}
-      </div>
-    </div>
+  return <div className="map-stage" id="campus-map" role="region" aria-label="Campus map">
+    <div className="map-canvas" ref={element} />
+    {status !== 'ready' && <div className="map-status" role="status"><Info size={16} aria-hidden="true" /><span>{status === 'loading' ? 'Loading the campus map…' : 'The map could not load. Check your connection and reload.'}</span></div>}
+    <div className="map-controls"><button className="icon-button" aria-label="Reset map view" disabled={!enabled} onClick={fitCampus}><Compass size={20} aria-hidden="true" /></button><div className="zoom-controls"><button className="icon-button" disabled={!enabled || zoom >= 19} aria-label="Zoom in" onClick={() => mapRef.current.zoomIn()}><Plus size={20} aria-hidden="true" /></button><button className="icon-button" disabled={!enabled || zoom <= 15} aria-label="Zoom out" onClick={() => mapRef.current.zoomOut()}><Minus size={20} aria-hidden="true" /></button></div></div>
+    {children}
   </div>;
 }
