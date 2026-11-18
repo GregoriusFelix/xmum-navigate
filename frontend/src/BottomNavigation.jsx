@@ -11,7 +11,7 @@ const ITEMS = [
 export default function BottomNavigation({ activePath }) {
   return <nav className="bottom-navigation" aria-label="Main navigation">
     {ITEMS.map(({ href, label, icon: Icon }) => <a key={href} href={href} aria-current={activePath === href ? 'page' : undefined}>
-      <Icon size={22} strokeWidth={1.6} aria-hidden="true" />
+      <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
       <span>{label}</span>
     </a>)}
   </nav>;

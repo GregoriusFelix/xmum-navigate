@@ -77,7 +77,7 @@ export default function MapPage({ campus }) {
     <div className="map-workspace">
       <MapSearch destinations={campus.destinations} selected={selected} onSelect={setDestination} onClear={() => setDestination(null)} />
       <div className="map-chips" role="group" aria-label="Browse by type">
-        {CATEGORIES.map(([kind, name, Icon]) => <button key={kind} aria-pressed={!selected && category === kind} onClick={() => { setCategory(kind); setDestination(null); }}><Icon size={18} aria-hidden="true" />{name}</button>)}
+        {CATEGORIES.map(([kind, name, Icon]) => <button key={kind} aria-pressed={!selected && category === kind} onClick={() => { setCategory(kind); setDestination(null); }}><Icon size={18} strokeWidth={1.75} aria-hidden="true" />{name}</button>)}
       </div>
       <div className="map-layers">
         <button className="icon-button" aria-label="Outdoor or indoor map" aria-expanded={layersOpen} onClick={() => setLayersOpen(!layersOpen)}><Layers size={20} aria-hidden="true" /></button>

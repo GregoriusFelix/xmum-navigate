@@ -188,3 +188,38 @@ legend { padding: 0; margin-bottom: 8px; font-size: var(--text-sm); font-weight:
 .entry-logo img { border-radius: 10px; box-shadow: 0 0 0 2px rgb(255 255 255 / 30%); }
 /* The map search bar is the field itself; the caret shows focus, so no gold rings. */
 .map-search .search-field:focus-within, .map-search .search-field input:focus-visible { outline: none; }
+/* Horizontal scrollers fade at both edges so cut-off items read as "more this way". */
+.map-chips, .explore-cards { mask: linear-gradient(90deg, transparent, black 12px calc(100% - 24px), transparent); }
+/* Dark mode shows depth with lighter floating surfaces, since shadows barely show on dark. */
+:root[data-theme='dark'] .map-shell { --color-paper: oklch(0.27 0.045 262); --color-paper-2: oklch(0.33 0.05 262); --color-paper-3: oklch(0.39 0.06 262); }
+/* Theme icon swap: the outgoing icon blurs as it fades. */
+.icon-swap { display: grid; }
+.icon-swap > svg { grid-area: 1 / 1; transition: opacity var(--dur-short) var(--ease-out), filter var(--dur-short) var(--ease-out), scale var(--dur-short) var(--ease-out); }
+.icon-swap[data-on='a'] > svg:last-child, .icon-swap[data-on='b'] > svg:first-child { opacity: 0; filter: blur(4px); scale: .6; }
+@media (prefers-reduced-motion: reduce) { .icon-swap > svg { transition: none; } }
+
+/* Desktop, after Google Maps: a left rail for navigation, a side panel under the search, chips across the top, controls bottom right. */
+@media (min-width: 1000px) {
+  :root { --rail: 88px; --panel: 408px; }
+  .app-shell, .map-shell { padding: 0 0 0 var(--rail); }
+  .bottom-navigation { top: 0; right: auto; width: var(--rail); grid-auto-flow: row; grid-auto-rows: 72px; align-content: start; gap: 8px; padding: 16px 0; border-top: 0; border-right: 1px solid var(--color-rule); }
+  .bottom-navigation a { min-height: 0; }
+  .map-shell .map-search { top: 16px; left: 16px; width: var(--panel); }
+  .map-shell .map-page .route-sheet { position: fixed; top: 80px; left: calc(var(--rail) + 16px); right: auto; bottom: auto; width: var(--panel); max-width: none; max-height: calc(100dvh - 96px); overflow-y: auto; padding: 12px; border-radius: 24px; box-shadow: var(--shadow-float); }
+  .map-shell .sheet-handle { display: none; }
+  .map-shell .route-sheet-content { display: block; }
+  .map-shell .route-sheet-top { padding: 4px 4px 0; }
+  .map-shell .map-credit { padding-inline: 4px; }
+  .map-chips { top: 20px; left: calc(var(--panel) + 32px); right: 16px; padding: 0 0 6px; mask: none; }
+  .map-layers { top: auto; bottom: 24px; right: auto; left: calc(var(--panel) + 32px); flex-direction: row; }
+  .map-shell .map-page .map-controls { top: auto; bottom: 24px; right: 16px; }
+  .map-shell .map-page .map-status { top: 72px; left: calc(var(--panel) + 32px); right: 16px; }
+  .locate-fab { position: fixed; right: 16px; bottom: 196px; width: 48px; height: 48px; }
+  /* Rows sit 12px inside a 24px-radius panel, so their radius is 24 - 12. */
+  .explore-cards { flex-direction: column; gap: 0; margin: 4px 0 0; padding: 0; overflow: visible; mask: none; }
+  .explore-cards button { width: 100%; min-height: 64px; display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 16px; align-items: center; padding: 8px 4px; border: 0; border-radius: 12px; }
+  .explore-cards button:hover { background: var(--color-paper-2); }
+  .explore-cards button > svg { grid-row: span 2; padding: 10px; border-radius: 50%; }
+  .explore-cards strong { font-size: 15px; font-weight: 500; }
+  .explore-label, .explore-note { padding-inline: 4px; }
+}

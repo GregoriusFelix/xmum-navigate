@@ -26,11 +26,13 @@ export default function CampusMap({ campus, selected, route, position, testStart
   handlers.current = { onSelect, onSpot, onPick };
   const [status, setStatus] = useState('loading');
   const [zoom, setZoom] = useState(16);
-  // Bottom padding is everything the sheet and tab bar cover, so the fitted area stays visible above them.
+  // Pad by what the sheet covers: the bottom on phones, the left side where it is a side panel on desktop.
   const fit = points => {
-    const sheet = element.current.parentElement.querySelector('.route-sheet');
-    const covered = sheet ? window.innerHeight - sheet.getBoundingClientRect().top : 0;
-    mapRef.current.fitBounds(points, { paddingTopLeft: [24, 180], paddingBottomRight: [64, Math.max(48, covered + 24)], maxZoom: 17, animate: false });
+    const sheet = element.current.parentElement.querySelector('.route-sheet')?.getBoundingClientRect();
+    const side = sheet && window.matchMedia('(min-width: 1000px)').matches;
+    const left = side ? sheet.right - element.current.getBoundingClientRect().left + 24 : 24;
+    const covered = sheet && !side ? window.innerHeight - sheet.top : 0;
+    mapRef.current.fitBounds(points, { paddingTopLeft: [left, side ? 80 : 180], paddingBottomRight: [64, Math.max(48, covered + 24)], maxZoom: 17, animate: false });
   };
   const fitCampus = () => fit(campus.places.map(place => place.coords));
 

@@ -32,8 +32,8 @@ export default function Home() {
   const homePage = pathname === '/about';
   const mapPage = pathname === '/map';
   const [pageTitle, Page] = PAGES[pathname] || [homePage ? 'About' : 'Page not found'];
-  const [theme, setTheme] = useState(() => sessionStorage.getItem('xmum-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-  const manualTheme = useRef(Boolean(sessionStorage.getItem('xmum-theme')));
+  // Light by default; dark only when the visitor picks it.
+  const [theme, setTheme] = useState(() => sessionStorage.getItem('xmum-theme') || 'light');
   const [campus, setCampus] = useState(null);
   const [user, setUser] = useState(null);
   const [entered, setEntered] = useState(() => Boolean(userToken()) || isGuest());
@@ -73,12 +73,6 @@ export default function Home() {
     document.documentElement.dataset.theme = theme;
     document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0c1424' : '#19325e';
   }, [theme]);
-  useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
-    const change = () => { if (!manualTheme.current) setTheme(media.matches ? 'dark' : 'light'); };
-    media.addEventListener('change', change);
-    return () => media.removeEventListener('change', change);
-  }, []);
   const copyLink = async () => { try { await navigator.clipboard.writeText(window.location.href.split('#')[0]); setCopied('Page link copied.'); } catch { setCopied('Select and copy the page link below.'); setTimeout(() => shareRef.current?.select(), 0); } };
   if (splash) return <Splash />;
   if (!entered && pathname !== '/admin') return <Welcome onEnter={account => { setUser(account); setEntered(true); }} />;
@@ -86,7 +80,7 @@ export default function Home() {
     <a className="skip-link" href="#main">Skip to content</a>
     {!mapPage && <header className="site-header container">
       <a className="wordmark" href="/"><img src="/logo.png" alt="" width="40" height="40" />XMUM <span>Navigate</span></a>
-      <div className="header-actions"><button className="icon-button" aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} onClick={() => { manualTheme.current = true; const next = theme === 'light' ? 'dark' : 'light'; sessionStorage.setItem('xmum-theme', next); setTheme(next); }}>{theme === 'light' ? <Moon size={20} aria-hidden="true" /> : <Sun size={20} aria-hidden="true" />}</button></div>
+      <div className="header-actions"><button className="icon-button" aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} onClick={() => { const next = theme === 'light' ? 'dark' : 'light'; sessionStorage.setItem('xmum-theme', next); setTheme(next); }}><span className="icon-swap" data-on={theme === 'light' ? 'a' : 'b'}><Moon size={20} aria-hidden="true" /><Sun size={20} aria-hidden="true" /></span></button></div>
     </header>}
     <main id="main" className={mapPage ? 'map-page-main' : undefined}>
       {homePage && <HomeHero destinations={campus?.destinations || []} />}
