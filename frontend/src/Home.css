@@ -212,6 +212,8 @@ select { appearance: none; display: block; width: 100%; min-height: 56px; paddin
 .campus-marker { display: flex; align-items: center; justify-content: center; }
 .map-pin { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 3px solid var(--map-marker-ink); background: var(--map-marker); color: var(--map-marker-ink); font: 700 15px var(--font-body); box-shadow: var(--shadow-float); }
 .map-pin:hover { transform: translateY(-2px); }
+.map-pin.is-small { width: 36px; height: 36px; border-width: 2px; font-size: 11px; }
+.map-pin.is-small + .pin-label { top: 2px; left: 40px; }
 .is-selected .map-pin { background: var(--map-route); }
 .pin-label { display: none; position: absolute; top: 8px; left: 52px; color: var(--map-label); background: var(--map-label-paper); border-radius: 4px; padding: 4px var(--space-xs); font-size: 12px; font-weight: 600; white-space: nowrap; pointer-events: none; }
 .is-selected .pin-label { display: block; }
@@ -454,3 +456,4 @@ select { appearance: none; display: block; width: 100%; min-height: 56px; paddin
   .map-page .map-status { top: 92px; left: 12px; right: 76px; }
   .map-page .map-disclaimer { position: absolute; left: 12px; right: 12px; bottom: 4px; font-size: 10px; padding: 2px 4px; }
 }
+.hide-small-pins .campus-marker:not(.is-selected):has(.is-small) { display: none; }

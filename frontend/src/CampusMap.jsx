@@ -60,7 +60,10 @@ export default function CampusMap({ campus, selected, route, position, testStart
         L.polyline(line, { color: tokens.getPropertyValue('--map-route').trim(), weight: 5, dashArray: '2 10', lineCap: 'round', interactive: false }).addTo(map);
       });
       campus.places.forEach((place, i) => {
-        const marker = L.marker(place.coords, { keyboard: false, icon: L.divIcon({ className: 'campus-marker', html: `<button type="button" class="map-pin">${place.code || String.fromCharCode(65 + i)}</button><span class="pin-label"></span>`, iconSize: [48, 48], iconAnchor: [24, 24] }) }).addTo(map);
+        // Dorm blocks stand about 50 m apart, so their pins are smaller to stay clear of each other.
+        const small = place.type === 'Residence';
+        const size = small ? 36 : 48;
+        const marker = L.marker(place.coords, { keyboard: false, icon: L.divIcon({ className: 'campus-marker', html: `<button type="button" class="map-pin${small ? ' is-small' : ''}">${place.code || String.fromCharCode(65 + i)}</button><span class="pin-label"></span>`, iconSize: [size, size], iconAnchor: [size / 2, size / 2] }) }).addTo(map);
         const button = marker.getElement().querySelector('button');
         button.setAttribute('aria-label', `Route to ${place.name}`);
         marker.getElement().querySelector('.pin-label').textContent = place.name;
@@ -105,6 +108,8 @@ export default function CampusMap({ campus, selected, route, position, testStart
   }, [route, position?.join(), testStart?.join(), status]);
 
   useEffect(() => { if (route && mapRef.current) fit(route.points); }, [route]);
+  // Dorm pins crowd together when zoomed out, so they appear from zoom 17 (a selected one always shows).
+  useEffect(() => { element.current?.classList.toggle('hide-small-pins', zoom < 17); }, [zoom]);
 
   const enabled = status === 'ready' || status === 'tiles-error';
   return <div className="map-stage" id="campus-map" role="region" aria-label="Campus map">

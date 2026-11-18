@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { Briefcase, Building2, Footprints, Layers, LocateFixed, Navigation, RotateCcw, Users, Utensils } from 'lucide-react';
+import { BedDouble, Briefcase, Building2, Footprints, Layers, LocateFixed, Navigation, RotateCcw, Users, Utensils } from 'lucide-react';
 import CampusMap from './CampusMap.jsx';
 import MapSearch from './MapSearch.jsx';
 import { adminToken, api, destinationDetail, insideCampus } from './api.js';
 import { ViewToggle } from './FeaturePages.jsx';
 
 const MODES = [['shortest', 'Shortest'], ['scenic', 'Scenic'], ['combined', 'Scenic stop']];
-const CATEGORIES = [['place', 'Buildings', Building2], ['office', 'Offices', Briefcase], ['venue', 'Venues', Users], ['stall', 'Food', Utensils]];
+const CATEGORIES = [['place', 'Buildings', Building2], ['residence', 'Residences', BedDouble], ['office', 'Offices', Briefcase], ['venue', 'Venues', Users], ['stall', 'Food', Utensils]];
 const LOCATION_MESSAGES = {
   locating: 'Finding your location…',
   denied: 'Routing needs your location. Allow location for this site in your browser settings (the icon beside the address), then reload the page.',

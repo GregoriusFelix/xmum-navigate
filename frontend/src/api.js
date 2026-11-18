@@ -31,7 +31,7 @@ export async function api(path, { method = 'GET', body } = {}) {
 // Adds each entry's building as `place`, and one flat list of everything a user can route to.
 export function withDestinations(data) {
   const inPlace = (items, kind) => items.map(item => ({ ...item, kind, place: data.places.find(place => place.id === item.placeId) }))
-  const places = data.places.map(place => ({ ...place, kind: 'place', place }))
+  const places = data.places.map(place => ({ ...place, kind: place.type === 'Residence' ? 'residence' : 'place', place }))
   const offices = inPlace(data.offices, 'office')
   const venues = inPlace(data.venues, 'venue')
   const stalls = inPlace(data.stalls, 'stall')
