@@ -187,8 +187,25 @@ legend { padding: 0; margin-bottom: 8px; font-size: var(--text-sm); font-weight:
 .entry-logo img { border-radius: 10px; box-shadow: 0 0 0 2px rgb(255 255 255 / 30%); }
 /* The map search bar is the field itself; the caret shows focus, so no gold rings. */
 .map-search .search-field:focus-within, .map-search .search-field input:focus-visible { outline: none; }
-/* Horizontal scrollers fade at both edges so cut-off items read as "more this way". */
-.map-chips, .explore-cards { mask: linear-gradient(90deg, transparent, black 12px calc(100% - 24px), transparent); }
+/* Horizontal scrollers fade only at an edge that has more to scroll, driven by scroll position. */
+@property --fade-start { syntax: "<length>"; inherits: false; initial-value: 0px; }
+@property --fade-end { syntax: "<length>"; inherits: false; initial-value: 0px; }
+@keyframes reveal-fade-start { to { --fade-start: var(--fade-size); } }
+@keyframes hide-fade-end { from { --fade-end: var(--fade-size); } }
+.map-chips, .explore-cards {
+  --fade-size: 2rem;
+  scroll-padding-inline: var(--fade-size);
+  mask: linear-gradient(black, black) no-clip subtract,
+    linear-gradient(to right, black, transparent) 0 0 / var(--fade-start) 100% no-repeat no-clip,
+    linear-gradient(to right, transparent, black) 100% 0 / var(--fade-end) 100% no-repeat no-clip;
+  animation: reveal-fade-start linear both, hide-fade-end linear both;
+  animation-timeline: scroll(self inline);
+  animation-range: 0 var(--fade-size), calc(100% - var(--fade-size)) 100%;
+}
+/* Scrollbars are hidden here, so browsers without scroll timelines get a fixed right-edge fade as the cue. */
+@supports not (animation-timeline: scroll()) {
+  .map-chips, .explore-cards { mask: linear-gradient(90deg, black calc(100% - 24px), transparent); }
+}
 /* Dark mode shows depth with lighter floating surfaces, since shadows barely show on dark. */
 :root[data-theme='dark'] .map-shell { --color-paper: oklch(0.27 0.045 262); --color-paper-2: oklch(0.33 0.05 262); --color-paper-3: oklch(0.39 0.06 262); }
 /* Theme icon swap: the outgoing icon blurs as it fades. */

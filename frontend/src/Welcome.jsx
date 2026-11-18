@@ -16,7 +16,7 @@ function Field({ id, label, icon: Icon, children }) {
 
 export default function Welcome({ onEnter }) {
   const [mode, setMode] = useState('login');
-  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' });
+  const [form, setForm] = useState({ name: '', email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
@@ -24,7 +24,6 @@ export default function Welcome({ onEnter }) {
   const field = key => event => setForm({ ...form, [key]: event.target.value });
   const submit = async event => {
     event.preventDefault();
-    if (registering && form.password !== form.confirm) { setError('The two passwords do not match.'); return; }
     setError('');
     setBusy(true);
     try {
@@ -43,13 +42,13 @@ export default function Welcome({ onEnter }) {
       <h1>{registering ? 'Create account' : 'Log in'}</h1>
       <p className="entry-sub">Find your way around XMUM.</p>
       <form className="entry-form" onSubmit={submit}>
-        {registering && <Field id="entry-name" label="Name" icon={User}><input id="entry-name" autoComplete="name" required value={form.name} onChange={field('name')} /></Field>}
-        <Field id="entry-email" label="Email" icon={Mail}><input id="entry-email" type="email" autoComplete="email" placeholder="you@example.com" required value={form.email} onChange={field('email')} /></Field>
+        {registering && <Field id="entry-name" label="Name" icon={User}><input id="entry-name" name="name" autoComplete="name" enterKeyHint="next" required value={form.name} onChange={field('name')} /></Field>}
+        {/* "username" (not "email") is what password managers key saved logins on. */}
+        <Field id="entry-email" label="Email" icon={Mail}><input id="entry-email" name="email" type="email" autoComplete="username" spellCheck="false" enterKeyHint="next" placeholder="you@example.com" required value={form.email} onChange={field('email')} /></Field>
         <Field id="entry-password" label="Password" icon={Lock}>
-          <input id="entry-password" type={passwordType} autoComplete={registering ? 'new-password' : 'current-password'} minLength={registering ? 8 : undefined} required value={form.password} onChange={field('password')} />
+          <input id="entry-password" name="password" type={passwordType} autoComplete={registering ? 'new-password' : 'current-password'} enterKeyHint="done" minLength={registering ? 8 : undefined} required value={form.password} onChange={field('password')} />
           <button type="button" className="entry-eye" aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword} onClick={() => setShowPassword(!showPassword)}>{showPassword ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}</button>
         </Field>
-        {registering && <Field id="entry-confirm" label="Confirm password" icon={Lock}><input id="entry-confirm" type={passwordType} autoComplete="new-password" required value={form.confirm} onChange={field('confirm')} /></Field>}
         {error && <p role="alert">{error}</p>}
         <button className="button primary" type="submit" disabled={busy}>{registering ? 'Create account' : 'Log in'}</button>
         <p className="entry-or">or</p>

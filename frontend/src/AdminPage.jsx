@@ -57,7 +57,7 @@ function Login({ onDone }) {
   };
   return <form className="admin-form admin-login" onSubmit={submit}>
     <label htmlFor="admin-password">Admin password</label>
-    <input id="admin-password" type="password" autoComplete="current-password" required value={password} onChange={event => setPassword(event.target.value)} />
+    <input id="admin-password" name="password" type="password" autoComplete="current-password" enterKeyHint="done" required value={password} onChange={event => setPassword(event.target.value)} />
     {error && <p role="alert">{error}</p>}
     <button className="button primary" type="submit">Log in</button>
   </form>;
