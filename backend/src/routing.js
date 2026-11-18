@@ -154,9 +154,11 @@ export function findRoute(data, { start, goalNode, mode = 'shortest', spotId, al
   if (legs.includes(null)) return null
 
   const edges = legs.flatMap(leg => leg.edges)
-  const distance = edges.reduce((sum, edge) => sum + edge.length, 0)
-  const shortest = mode === 'shortest' ? distance : run(lengthGraph, startNode, goalNode).edges.reduce((sum, edge) => sum + edge.length, 0)
-  const points = [coords.get(startNode), ...edges.flatMap(edge => edge.line.slice(1))]
+  // The walk from the user's position onto the nearest path junction counts too, so the line starts at the user.
+  const lead = Math.round(haversine(start, coords.get(startNode)))
+  const distance = lead + edges.reduce((sum, edge) => sum + edge.length, 0)
+  const shortest = mode === 'shortest' ? distance : lead + run(lengthGraph, startNode, goalNode).edges.reduce((sum, edge) => sum + edge.length, 0)
+  const points = [start, coords.get(startNode), ...edges.flatMap(edge => edge.line.slice(1))]
   return {
     points,
     distance,

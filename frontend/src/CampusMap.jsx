@@ -54,15 +54,13 @@ export default function CampusMap({ campus, selected, route, position, testStart
       tiles.addTo(map);
 
       const tokens = getComputedStyle(document.documentElement);
-      campus.paths.features.forEach(feature => {
+      // Open paths are already on the OpenStreetMap tiles; only closures need drawing.
+      campus.paths.features.filter(feature => feature.properties.is_closed).forEach(feature => {
         const line = feature.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
-        const style = feature.properties.is_closed
-          ? { color: tokens.getPropertyValue('--map-route').trim(), weight: 5, dashArray: '2 10', lineCap: 'round' }
-          : { color: tokens.getPropertyValue('--map-marker').trim(), weight: 3, opacity: .3 };
-        L.polyline(line, { ...style, interactive: false }).addTo(map);
+        L.polyline(line, { color: tokens.getPropertyValue('--map-route').trim(), weight: 5, dashArray: '2 10', lineCap: 'round', interactive: false }).addTo(map);
       });
       campus.places.forEach((place, i) => {
-        const marker = L.marker(place.coords, { keyboard: false, icon: L.divIcon({ className: 'campus-marker', html: `<button type="button" class="map-pin">${String.fromCharCode(65 + i)}</button><span class="pin-label"></span>`, iconSize: [48, 48], iconAnchor: [24, 24] }) }).addTo(map);
+        const marker = L.marker(place.coords, { keyboard: false, icon: L.divIcon({ className: 'campus-marker', html: `<button type="button" class="map-pin">${place.code || String.fromCharCode(65 + i)}</button><span class="pin-label"></span>`, iconSize: [48, 48], iconAnchor: [24, 24] }) }).addTo(map);
         const button = marker.getElement().querySelector('button');
         button.setAttribute('aria-label', `Route to ${place.name}`);
         marker.getElement().querySelector('.pin-label').textContent = place.name;

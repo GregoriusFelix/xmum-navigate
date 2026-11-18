@@ -92,7 +92,7 @@ export default function AdminPage({ campus, reload }) {
       <h2>Paths</h2>
       <p>A closed path is left out of every route straight away and is drawn as a dotted red line on the map.</p>
       <ul className="admin-paths">{campus.paths.features.map(({ properties: path }) => <li key={path.path_id}>
-        <span><strong>{path.path_id}</strong> {path.source_node} to {path.target_node}, {path.length_m} m, {path.type.replace('_', ' ')}{path.is_closed && ' (closed)'}</span>
+        <span><strong>{path.path_id}</strong> {path.name || `${path.source_node} to ${path.target_node}, ${path.type.replace('_', ' ')}`}, {path.length_m} m{path.is_closed && ' (closed)'}</span>
         <button className="button secondary" onClick={() => send(`/admin/paths/${path.path_id}`, { method: 'PATCH', body: { is_closed: !path.is_closed } }, `${path.path_id} is now ${path.is_closed ? 'open' : 'closed'}.`).catch(failure => setNotice(failure.message))}>{path.is_closed ? 'Reopen' : 'Close'}</button>
       </li>)}</ul>
     </div>

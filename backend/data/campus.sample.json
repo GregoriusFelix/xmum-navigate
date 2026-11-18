@@ -1,27 +1,147 @@
 {
- "note": "Sample data for development. Coordinates, paths, scores, menus and offices are placeholders, not surveyed XMUM data.",
+ "note": "Walkways, buildings and the campus outline come from OpenStreetMap (© OpenStreetMap contributors, ODbL). Offices, venues, menus, hours and scenic scores are sample data.",
  "boundary": [
   [
-   2.8298,
-   101.7022
+   2.8337373,
+   101.7076387
   ],
   [
-   2.8298,
-   101.7076
+   2.8334,
+   101.7076891
   ],
   [
-   2.8363,
-   101.7076
+   2.8331405,
+   101.7077089
   ],
   [
-   2.8363,
-   101.7022
+   2.8330655,
+   101.7077086
+  ],
+  [
+   2.8295828,
+   101.7078584
+  ],
+  [
+   2.8294113,
+   101.7076707
+  ],
+  [
+   2.8293497,
+   101.7060935
+  ],
+  [
+   2.8293818,
+   101.7043179
+  ],
+  [
+   2.829422,
+   101.7042777
+  ],
+  [
+   2.8294676,
+   101.7042321
+  ],
+  [
+   2.8294649,
+   101.7040202
+  ],
+  [
+   2.8294247,
+   101.7038539
+  ],
+  [
+   2.8293872,
+   101.7038512
+  ],
+  [
+   2.8293443,
+   101.7037976
+  ],
+  [
+   2.8293818,
+   101.7032021
+  ],
+  [
+   2.8296199,
+   101.7010874
+  ],
+  [
+   2.8298878,
+   101.6996605
+  ],
+  [
+   2.8303111,
+   101.698829
+  ],
+  [
+   2.8310611,
+   101.6981584
+  ],
+  [
+   2.8314848,
+   101.6979343
+  ],
+  [
+   2.8323421,
+   101.6977787
+  ],
+  [
+   2.8331909,
+   101.6978384
+  ],
+  [
+   2.8349743,
+   101.6986016
+  ],
+  [
+   2.8351067,
+   101.6995275
+  ],
+  [
+   2.835321,
+   101.6997957
+  ],
+  [
+   2.8354496,
+   101.7000961
+  ],
+  [
+   2.8355139,
+   101.7053103
+  ],
+  [
+   2.8353318,
+   101.7054498
+  ],
+  [
+   2.8350746,
+   101.7056429
+  ],
+  [
+   2.8351389,
+   101.7076063
+  ],
+  [
+   2.8351215,
+   101.707814
+  ],
+  [
+   2.8341655,
+   101.7077358
+  ],
+  [
+   2.8340093,
+   101.7075255
+  ],
+  [
+   2.8337373,
+   101.7076387
   ]
  ],
  "settings": {
   "algorithm": "astar",
-  "scenicPenalty": 0.5,
-  "scenicRadiusM": 70,
+  "scenicPenalty": 1,
+  "scenicRadiusM": 100,
   "weightVersion": "literature",
   "weights": {
    "literature": {
@@ -36,53 +156,102 @@
  "places": [
   {
    "id": "a",
-   "name": "Sample Building A",
+   "name": "A1",
+   "code": "A1",
    "type": "Academic building",
    "coords": [
-    2.8336,
-    101.7043
+    2.830789,
+    101.702425
    ],
-   "node": "ea"
+   "node": "n13"
   },
   {
    "id": "b",
-   "name": "Sample Building B",
-   "type": "Administration",
+   "name": "A2",
+   "code": "A2",
+   "type": "Academic building",
    "coords": [
-    2.8342,
-    101.7065
+    2.831036,
+    101.703042
    ],
-   "node": "eb"
+   "node": "n14"
   },
   {
    "id": "c",
-   "name": "Sample Library",
-   "type": "Study space",
+   "name": "A3 Library",
+   "code": "A3",
+   "type": "Library",
    "coords": [
-    2.8353,
-    101.7048
+    2.831267,
+    101.703822
    ],
-   "node": "n62"
+   "node": "n161"
   },
   {
    "id": "d",
-   "name": "Sample Canteen",
+   "name": "Canteen D6",
+   "code": "D6",
    "type": "Food and drink",
    "coords": [
-    2.8321,
-    101.7048
+    2.834098,
+    101.706439
    ],
-   "node": "n22"
+   "node": "n97"
   },
   {
    "id": "e",
-   "name": "Sample Event Hall",
+   "name": "B1 Student Activity Centre",
+   "code": "B1",
    "type": "Event venue",
    "coords": [
-    2.8318,
-    101.7066
+    2.832444,
+    101.706873
    ],
-   "node": "ee"
+   "node": "n136"
+  },
+  {
+   "id": "f",
+   "name": "A4",
+   "code": "A4",
+   "type": "Academic building",
+   "coords": [
+    2.831208,
+    101.704629
+   ],
+   "node": "n144"
+  },
+  {
+   "id": "g",
+   "name": "A5",
+   "code": "A5",
+   "type": "Academic building",
+   "coords": [
+    2.8311,
+    101.705269
+   ],
+   "node": "n142"
+  },
+  {
+   "id": "h",
+   "name": "LY3 Food Court",
+   "code": "LY3",
+   "type": "Food and drink",
+   "coords": [
+    2.834396,
+    101.703444
+   ],
+   "node": "n56"
+  },
+  {
+   "id": "i",
+   "name": "Musical Island Café",
+   "code": "MI",
+   "type": "Café by the lake",
+   "coords": [
+    2.833212,
+    101.703145
+   ],
+   "node": "n71"
   }
  ],
  "offices": [
@@ -234,7 +403,7 @@
   {
    "id": "s3",
    "name": "Sample Drinks Bar",
-   "placeId": "d",
+   "placeId": "h",
    "hours": "Sample hours: Daily, 9 am–9 pm",
    "menu": [
     {
@@ -251,27 +420,27 @@
  "spots": [
   {
    "id": "k1",
-   "name": "Sample Lakeside",
-   "lat": 2.8329,
-   "lng": 101.7057,
+   "name": "Furong Lake",
+   "lat": 2.8328065,
+   "lng": 101.7044512,
    "photo": "/images/campus.jpg",
-   "score": 4.6
+   "score": 4.8
   },
   {
    "id": "k2",
-   "name": "Sample Garden Walk",
-   "lat": 2.8344,
-   "lng": 101.704,
+   "name": "Lakeside Garden",
+   "lat": 2.832504,
+   "lng": 101.7038584,
    "photo": "/images/walkway.jpg",
-   "score": 4.1
+   "score": 4.2
   },
   {
    "id": "k3",
-   "name": "Sample Plaza",
-   "lat": 2.8315,
-   "lng": 101.7057,
+   "name": "Tan Kah Kee Memorial",
+   "lat": 2.8296542,
+   "lng": 101.7040215,
    "photo": "/images/library.jpg",
-   "score": 3.4
+   "score": 3.8
   }
  ],
  "nodes": {
@@ -280,65 +449,117 @@
    {
     "type": "Feature",
     "properties": {
-     "node_id": "n00"
+     "node_id": "n1"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8308
+      101.7025236,
+      2.8298707
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "n01"
+     "node_id": "n2"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8308
+      101.7038635,
+      2.8303406
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "n02"
+     "node_id": "n3"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8308
+      101.7040024,
+      2.830362
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "n03"
+     "node_id": "n4"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8308
+      101.7038355,
+      2.8305643
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "n04"
+     "node_id": "n5"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8308
+      101.7039567,
+      2.8296462
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n6"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7040215,
+      2.8296542
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n7"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7021425,
+      2.8296173
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n8"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7021641,
+      2.8297542
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n9"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.701163,
+      2.8297275
      ]
     }
    },
@@ -350,8 +571,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8315
+      101.7014262,
+      2.8305001
      ]
     }
    },
@@ -363,8 +584,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8315
+      101.7000854,
+      2.830594
      ]
     }
    },
@@ -376,8 +597,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8315
+      101.7001283,
+      2.8308311
      ]
     }
    },
@@ -389,8 +610,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8315
+      101.7022057,
+      2.8311432
      ]
     }
    },
@@ -402,8 +623,73 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8315
+      101.7027569,
+      2.8313937
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n15"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032469,
+      2.8316004
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n16"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7030173,
+      2.8320657
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n17"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7036972,
+      2.8322542
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n18"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032835,
+      2.8323773
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n19"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7037289,
+      2.8322501
      ]
     }
    },
@@ -415,8 +701,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8321
+      101.7038584,
+      2.832504
      ]
     }
    },
@@ -428,8 +714,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8321
+      101.7060353,
+      2.8320709
      ]
     }
    },
@@ -441,8 +727,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8321
+      101.7057045,
+      2.8329148
      ]
     }
    },
@@ -454,8 +740,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8321
+      101.7061606,
+      2.8320829
      ]
     }
    },
@@ -467,8 +753,73 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8321
+      101.7057483,
+      2.8331932
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n25"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7056107,
+      2.8330517
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n26"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7058013,
+      2.8332478
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n27"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7056827,
+      2.8332445
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n28"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057351,
+      2.8333092
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n29"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.705548,
+      2.8330782
      ]
     }
    },
@@ -480,8 +831,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8329
+      101.7050122,
+      2.8335461
      ]
     }
    },
@@ -493,8 +844,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8329
+      101.7049002,
+      2.8332946
      ]
     }
    },
@@ -506,8 +857,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8329
+      101.7044523,
+      2.8335959
      ]
     }
    },
@@ -519,8 +870,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8329
+      101.7050249,
+      2.8336457
      ]
     }
    },
@@ -532,8 +883,73 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8329
+      101.7050383,
+      2.8337129
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n35"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7044403,
+      2.8337216
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n36"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7044091,
+      2.8337244
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n37"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7044036,
+      2.8338519
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n38"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7038405,
+      2.8337539
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n39"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032303,
+      2.8336976
      ]
     }
    },
@@ -545,8 +961,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8336
+      101.703764,
+      2.8343178
      ]
     }
    },
@@ -558,8 +974,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8336
+      101.7043836,
+      2.8343084
      ]
     }
    },
@@ -571,8 +987,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8336
+      101.7036863,
+      2.8349032
      ]
     }
    },
@@ -584,8 +1000,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8336
+      101.7042804,
+      2.8349111
      ]
     }
    },
@@ -597,8 +1013,73 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8336
+      101.7030922,
+      2.8348871
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n45"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7036849,
+      2.8350558
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n46"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7043931,
+      2.8350497
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n47"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7030868,
+      2.8350585
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n48"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7024095,
+      2.8350585
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n49"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.701735,
+      2.834879
      ]
     }
    },
@@ -610,8 +1091,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8344
+      101.7024095,
+      2.834883
      ]
     }
    },
@@ -623,8 +1104,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8344
+      101.7029071,
+      2.834886
      ]
     }
    },
@@ -636,8 +1117,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8344
+      101.7022245,
+      2.8348819
      ]
     }
    },
@@ -649,8 +1130,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8344
+      101.7024488,
+      2.8345226
      ]
     }
    },
@@ -662,8 +1143,73 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8344
+      101.702482,
+      2.8342187
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n55"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7018461,
+      2.8341337
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n56"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7031478,
+      2.8343003
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n57"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7026268,
+      2.8335583
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n58"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7021085,
+      2.8334364
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n59"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7021385,
+      2.8331578
      ]
     }
    },
@@ -675,8 +1221,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7032,
-      2.8353
+      101.7022962,
+      2.8326246
      ]
     }
    },
@@ -688,8 +1234,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.704,
-      2.8353
+      101.7027182,
+      2.8329616
      ]
     }
    },
@@ -701,8 +1247,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7048,
-      2.8353
+      101.7024145,
+      2.8324542
      ]
     }
    },
@@ -714,8 +1260,8 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7057,
-      2.8353
+      101.7010349,
+      2.831888
      ]
     }
    },
@@ -727,47 +1273,1282 @@
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8353
+      101.7029005,
+      2.8321482
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "ea"
+     "node_id": "n65"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7043,
-      2.8336
+      101.7005719,
+      2.832546
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "eb"
+     "node_id": "n66"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7065,
-      2.8342
+      101.6997609,
+      2.8307428
      ]
     }
    },
    {
     "type": "Feature",
     "properties": {
-     "node_id": "ee"
+     "node_id": "n67"
     },
     "geometry": {
      "type": "Point",
      "coordinates": [
-      101.7066,
-      2.8318
+      101.7010859,
+      2.8325068
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n68"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.697657,
+      2.8328553
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n69"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.6999472,
+      2.830732
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n70"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7031337,
+      2.8334552
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n71"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032903,
+      2.8333828
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n72"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7032569,
+      2.8334998
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n73"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7044597,
+      2.8335582
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n74"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7031183,
+      2.8345163
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n75"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7031655,
+      2.8341714
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n76"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.703216,
+      2.8338021
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n77"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7043836,
+      2.8349125
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n78"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7053311,
+      2.8350434
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n79"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7058886,
+      2.8350457
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n80"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7053184,
+      2.8349191
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n81"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7058809,
+      2.8348865
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n82"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7053091,
+      2.8348093
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n83"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7051038,
+      2.8349084
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n84"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7052057,
+      2.8344477
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n85"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7051581,
+      2.8342756
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n86"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.705114,
+      2.8341367
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n87"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7051073,
+      2.8340902
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n88"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.705787,
+      2.834146
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n89"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7059192,
+      2.8339568
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n90"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7060866,
+      2.834142
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n91"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7061513,
+      2.8338189
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n92"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7064771,
+      2.8344328
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n93"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7067009,
+      2.8343889
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n94"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7058039,
+      2.8345656
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n95"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7067826,
+      2.8344947
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n96"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7067617,
+      2.8342529
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n97"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7066666,
+      2.8338951
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n98"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7069787,
+      2.8340887
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n99"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7062197,
+      2.8337674
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n100"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7061079,
+      2.8336347
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n101"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.706401,
+      2.8335888
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n102"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7068519,
+      2.8335181
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n103"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7065937,
+      2.8336593
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n104"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7072615,
+      2.8334539
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n105"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7064572,
+      2.8329579
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n106"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7074353,
+      2.8334255
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n107"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7071561,
+      2.8337679
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n108"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075741,
+      2.8334056
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n109"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075944,
+      2.8331427
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n110"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7072463,
+      2.8339984
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n111"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7074068,
+      2.8340463
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n112"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075408,
+      2.8341215
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n113"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.706879,
+      2.8346196
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n114"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7069629,
+      2.8347229
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n115"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7063661,
+      2.8348181
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n116"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7064233,
+      2.8349661
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n117"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7064525,
+      2.8350417
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n118"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7067644,
+      2.8350395
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n119"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7072238,
+      2.8350362
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n120"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7070844,
+      2.8348612
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n121"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7071682,
+      2.8349691
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n122"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7076471,
+      2.8342323
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n123"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7076797,
+      2.8345165
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n124"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7077057,
+      2.8347439
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n125"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7073764,
+      2.8350406
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n126"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075906,
+      2.8328915
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n127"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7076793,
+      2.8328897
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n128"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075899,
+      2.83284
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n129"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7060667,
+      2.8328404
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n130"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075888,
+      2.8327702
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n131"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7075849,
+      2.8321197
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n132"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7076831,
+      2.8327708
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n133"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.707712,
+      2.8327709
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n134"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7079155,
+      2.8326301
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n135"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7079117,
+      2.8327721
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n136"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7063137,
+      2.8321058
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n137"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7058217,
+      2.8294713
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n138"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7059389,
+      2.8299138
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n139"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7040819,
+      2.8296605
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n140"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7059541,
+      2.8302176
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n141"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7054613,
+      2.830306
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n142"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7051643,
+      2.8304744
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n143"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7062386,
+      2.8321512
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n144"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7046064,
+      2.8305718
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n145"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7039731,
+      2.830571
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n146"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7039583,
+      2.8307015
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n147"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7059328,
+      2.833091
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n148"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7061733,
+      2.8331866
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n149"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7077361,
+      2.8328886
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n150"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7060768,
+      2.833726
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n151"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7058237,
+      2.8334307
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n152"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7057578,
+      2.8336898
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n153"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7059563,
+      2.8339766
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n154"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7043836,
+      2.8344624
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n155"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7043862,
+      2.8342509
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n156"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.704808,
+      2.8331467
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n157"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7044512,
+      2.8328065
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n158"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7038883,
+      2.8325858
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n159"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7016022,
+      2.8302967
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n160"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7040431,
+      2.8294401
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n161"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7038226,
+      2.8306905
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "node_id": "n162"
+    },
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      101.7055054,
+      2.8301773
      ]
     }
    }
@@ -780,25 +2561,54 @@
     "type": "Feature",
     "properties": {
      "path_id": "p1",
-     "type": "shared_road",
+     "name": "footpath near A2",
+     "type": "footpath",
      "covered": false,
      "accessible": true,
-     "width": 6,
-     "length_m": 89,
-     "source_node": "n00",
-     "target_node": "n01",
+     "width": 2.5,
+     "length_m": 160,
+     "source_node": "n1",
+     "target_node": "n2",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8308
+       101.7025236,
+       2.8298707
       ],
       [
-       101.704,
-       2.8308
+       101.7026687,
+       2.829984
+      ],
+      [
+       101.7028067,
+       2.8300511
+      ],
+      [
+       101.7029453,
+       2.8301108
+      ],
+      [
+       101.7031204,
+       2.8301792
+      ],
+      [
+       101.7032952,
+       2.8302356
+      ],
+      [
+       101.7033992,
+       2.8302642
+      ],
+      [
+       101.7036532,
+       2.8303237
+      ],
+      [
+       101.7038635,
+       2.8303406
       ]
      ]
     }
@@ -807,25 +2617,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p2",
+     "name": "footpath near A3",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 78,
-     "source_node": "n00",
-     "target_node": "n10",
+     "length_m": 16,
+     "source_node": "n2",
+     "target_node": "n3",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8308
+       101.7038635,
+       2.8303406
       ],
       [
-       101.7032,
-       2.8315
+       101.7039385,
+       2.8303513
+      ],
+      [
+       101.7040024,
+       2.830362
       ]
      ]
     }
@@ -834,25 +2649,38 @@
     "type": "Feature",
     "properties": {
      "path_id": "p3",
-     "type": "shared_road",
+     "name": "footpath near A4",
+     "type": "footpath",
      "covered": false,
      "accessible": true,
-     "width": 6,
-     "length_m": 89,
-     "source_node": "n01",
-     "target_node": "n02",
+     "width": 2.5,
+     "length_m": 169,
+     "source_node": "n3",
+     "target_node": "n162",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8308
+       101.7040024,
+       2.830362
       ],
       [
-       101.7048,
-       2.8308
+       101.7042618,
+       2.8303579
+      ],
+      [
+       101.7045837,
+       2.8303419
+      ],
+      [
+       101.7050128,
+       2.8302883
+      ],
+      [
+       101.7055054,
+       2.8301773
       ]
      ]
     }
@@ -861,25 +2689,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p4",
-     "type": "shared_road",
+     "name": "footpath near A3",
+     "type": "footpath",
      "covered": false,
      "accessible": true,
-     "width": 6,
-     "length_m": 100,
-     "source_node": "n02",
-     "target_node": "n03",
+     "width": 2.5,
+     "length_m": 15,
+     "source_node": "n161",
+     "target_node": "n4",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8308
+       101.7038226,
+       2.8306905
       ],
       [
-       101.7057,
-       2.8308
+       101.7038355,
+       2.8305643
       ]
      ]
     }
@@ -888,25 +2717,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p5",
-     "type": "covered_walkway",
-     "covered": true,
+     "name": "footpath near A3",
+     "type": "footpath",
+     "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 78,
-     "source_node": "n02",
-     "target_node": "n12",
+     "length_m": 26,
+     "source_node": "n4",
+     "target_node": "n2",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8308
+       101.7038355,
+       2.8305643
       ],
       [
-       101.7048,
-       2.8315
+       101.7038635,
+       2.8303406
       ]
      ]
     }
@@ -915,25 +2745,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p6",
-     "type": "shared_road",
+     "name": "footpath near A3",
+     "type": "footpath",
      "covered": false,
      "accessible": true,
-     "width": 6,
-     "length_m": 100,
-     "source_node": "n03",
-     "target_node": "n04",
+     "width": 2.5,
+     "length_m": 78,
+     "source_node": "n2",
+     "target_node": "n5",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8308
+       101.7038635,
+       2.8303406
       ],
       [
-       101.7066,
-       2.8308
+       101.7039567,
+       2.8296462
       ]
      ]
     }
@@ -942,25 +2773,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p7",
-     "type": "footpath",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 78,
-     "source_node": "n03",
-     "target_node": "n13",
+     "width": 6,
+     "length_m": 10,
+     "source_node": "n126",
+     "target_node": "n127",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8308
+       101.7075906,
+       2.8328915
       ],
       [
-       101.7057,
-       2.8315
+       101.7076793,
+       2.8328897
       ]
      ]
     }
@@ -969,25 +2801,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p8",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 78,
-     "source_node": "n04",
-     "target_node": "n14",
+     "width": 6,
+     "length_m": 18,
+     "source_node": "n111",
+     "target_node": "n112",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8308
+       101.7074068,
+       2.8340463
       ],
       [
-       101.7066,
-       2.8315
+       101.7075408,
+       2.8341215
       ]
      ]
     }
@@ -996,25 +2829,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p9",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n10",
-     "target_node": "n11",
+     "width": 6,
+     "length_m": 18,
+     "source_node": "n112",
+     "target_node": "n122",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8315
+       101.7075408,
+       2.8341215
       ],
       [
-       101.704,
-       2.8315
+       101.7076148,
+       2.83417
+      ],
+      [
+       101.7076471,
+       2.8342323
       ]
      ]
     }
@@ -1023,25 +2861,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p10",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 67,
-     "source_node": "n10",
-     "target_node": "n20",
+     "width": 6,
+     "length_m": 32,
+     "source_node": "n122",
+     "target_node": "n123",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8315
+       101.7076471,
+       2.8342323
       ],
       [
-       101.7032,
-       2.8321
+       101.7076797,
+       2.8345165
       ]
      ]
     }
@@ -1050,25 +2889,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p11",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n11",
-     "target_node": "n12",
+     "width": 6,
+     "length_m": 26,
+     "source_node": "n123",
+     "target_node": "n124",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8315
+       101.7076797,
+       2.8345165
       ],
       [
-       101.7048,
-       2.8315
+       101.7077057,
+       2.8347439
       ]
      ]
     }
@@ -1077,25 +2917,46 @@
     "type": "Feature",
     "properties": {
      "path_id": "p12",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 67,
-     "source_node": "n11",
-     "target_node": "n21",
+     "width": 6,
+     "length_m": 68,
+     "source_node": "n124",
+     "target_node": "n125",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8315
+       101.7077057,
+       2.8347439
       ],
       [
-       101.704,
-       2.8321
+       101.7077211,
+       2.8348787
+      ],
+      [
+       101.7077234,
+       2.8349664
+      ],
+      [
+       101.7077072,
+       2.8350126
+      ],
+      [
+       101.7076587,
+       2.835038
+      ],
+      [
+       101.7076032,
+       2.8350472
+      ],
+      [
+       101.7073764,
+       2.8350406
       ]
      ]
     }
@@ -1104,25 +2965,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p13",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n12",
-     "target_node": "n13",
+     "width": 6,
+     "length_m": 17,
+     "source_node": "n125",
+     "target_node": "n119",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8315
+       101.7073764,
+       2.8350406
       ],
       [
-       101.7057,
-       2.8315
+       101.7072238,
+       2.8350362
       ]
      ]
     }
@@ -1131,25 +2993,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p14",
-     "type": "covered_walkway",
-     "covered": true,
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 67,
-     "source_node": "n12",
-     "target_node": "n22",
+     "width": 6,
+     "length_m": 10,
+     "source_node": "n119",
+     "target_node": "n121",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8315
+       101.7072238,
+       2.8350362
       ],
       [
-       101.7048,
-       2.8321
+       101.7071682,
+       2.8349691
       ]
      ]
     }
@@ -1158,25 +3021,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p15",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n13",
-     "target_node": "n14",
+     "width": 6,
+     "length_m": 16,
+     "source_node": "n121",
+     "target_node": "n120",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8315
+       101.7071682,
+       2.8349691
       ],
       [
-       101.7066,
-       2.8315
+       101.7070844,
+       2.8348612
       ]
      ]
     }
@@ -1185,25 +3049,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p16",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n20",
-     "target_node": "n21",
+     "width": 6,
+     "length_m": 21,
+     "source_node": "n120",
+     "target_node": "n114",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8321
+       101.7070844,
+       2.8348612
       ],
       [
-       101.704,
-       2.8321
+       101.7069629,
+       2.8347229
       ]
      ]
     }
@@ -1212,25 +3077,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p17",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n20",
-     "target_node": "n30",
+     "width": 6,
+     "length_m": 15,
+     "source_node": "n114",
+     "target_node": "n113",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8321
+       101.7069629,
+       2.8347229
       ],
       [
-       101.7032,
-       2.8329
+       101.706879,
+       2.8346196
       ]
      ]
     }
@@ -1239,25 +3105,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p18",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n21",
-     "target_node": "n22",
+     "width": 6,
+     "length_m": 18,
+     "source_node": "n113",
+     "target_node": "n95",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8321
+       101.706879,
+       2.8346196
       ],
       [
-       101.7048,
-       2.8321
+       101.7067826,
+       2.8344947
       ]
      ]
     }
@@ -1266,25 +3133,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p19",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n21",
-     "target_node": "n31",
+     "width": 6,
+     "length_m": 15,
+     "source_node": "n95",
+     "target_node": "n93",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8321
+       101.7067826,
+       2.8344947
       ],
       [
-       101.704,
-       2.8329
+       101.7067009,
+       2.8343889
       ]
      ]
     }
@@ -1293,25 +3161,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p20",
-     "type": "footpath",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n22",
-     "target_node": "n23",
+     "width": 6,
+     "length_m": 170,
+     "source_node": "n129",
+     "target_node": "n128",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8321
+       101.7060667,
+       2.8328404
       ],
       [
-       101.7057,
-       2.8321
+       101.7075899,
+       2.83284
       ]
      ]
     }
@@ -1320,25 +3189,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p21",
-     "type": "covered_walkway",
-     "covered": true,
+     "name": "shared road near D5",
+     "type": "shared_road",
+     "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n22",
-     "target_node": "n32",
+     "width": 6,
+     "length_m": 63,
+     "source_node": "n80",
+     "target_node": "n81",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8321
+       101.7053184,
+       2.8349191
       ],
       [
-       101.7048,
-       2.8329
+       101.7053939,
+       2.8349152
+      ],
+      [
+       101.7058809,
+       2.8348865
       ]
      ]
     }
@@ -1347,25 +3221,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p22",
-     "type": "footpath",
+     "name": "shared road near D5",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n23",
-     "target_node": "n24",
+     "width": 6,
+     "length_m": 55,
+     "source_node": "n81",
+     "target_node": "n115",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8321
+       101.7058809,
+       2.8348865
       ],
       [
-       101.7066,
-       2.8321
+       101.706154,
+       2.8348521
+      ],
+      [
+       101.7063661,
+       2.8348181
       ]
      ]
     }
@@ -1374,25 +3253,34 @@
     "type": "Feature",
     "properties": {
      "path_id": "p23",
-     "type": "footpath",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n23",
-     "target_node": "n33",
+     "width": 6,
+     "length_m": 62,
+     "source_node": "n115",
+     "target_node": "n113",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8321
+       101.7063661,
+       2.8348181
       ],
       [
-       101.7057,
-       2.8329
+       101.7064114,
+       2.8348108
+      ],
+      [
+       101.7066382,
+       2.8347379
+      ],
+      [
+       101.706879,
+       2.8346196
       ]
      ]
     }
@@ -1401,25 +3289,34 @@
     "type": "Feature",
     "properties": {
      "path_id": "p24",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n30",
-     "target_node": "n31",
+     "width": 6,
+     "length_m": 88,
+     "source_node": "n113",
+     "target_node": "n111",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8329
+       101.706879,
+       2.8346196
       ],
       [
-       101.704,
-       2.8329
+       101.7072221,
+       2.834323
+      ],
+      [
+       101.7073714,
+       2.8341219
+      ],
+      [
+       101.7074068,
+       2.8340463
       ]
      ]
     }
@@ -1428,25 +3325,34 @@
     "type": "Feature",
     "properties": {
      "path_id": "p25",
-     "type": "footpath",
+     "name": "shared road near D1",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 78,
-     "source_node": "n30",
-     "target_node": "n40",
+     "width": 6,
+     "length_m": 74,
+     "source_node": "n111",
+     "target_node": "n108",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8329
+       101.7074068,
+       2.8340463
       ],
       [
-       101.7032,
-       2.8336
+       101.7074776,
+       2.8338396
+      ],
+      [
+       101.7075554,
+       2.8334806
+      ],
+      [
+       101.7075741,
+       2.8334056
       ]
      ]
     }
@@ -1455,25 +3361,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p26",
-     "type": "footpath",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 78,
-     "source_node": "n31",
-     "target_node": "n41",
+     "width": 6,
+     "length_m": 30,
+     "source_node": "n108",
+     "target_node": "n109",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8329
+       101.7075741,
+       2.8334056
       ],
       [
-       101.704,
-       2.8336
+       101.7075944,
+       2.8331427
       ]
      ]
     }
@@ -1482,25 +3389,38 @@
     "type": "Feature",
     "properties": {
      "path_id": "p27",
+     "name": "footpath near Musical Island",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n32",
-     "target_node": "n33",
+     "length_m": 32,
+     "source_node": "n19",
+     "target_node": "n20",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8329
+       101.7037289,
+       2.8322501
       ],
       [
-       101.7057,
-       2.8329
+       101.7037869,
+       2.832367
+      ],
+      [
+       101.7038129,
+       2.83242
+      ],
+      [
+       101.7038277,
+       2.8324659
+      ],
+      [
+       101.7038584,
+       2.832504
       ]
      ]
     }
@@ -1509,25 +3429,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p28",
-     "type": "covered_walkway",
-     "covered": true,
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 78,
-     "source_node": "n32",
-     "target_node": "n42",
+     "length_m": 11,
+     "source_node": "n20",
+     "target_node": "n158",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8329
+       101.7038584,
+       2.832504
       ],
       [
-       101.7048,
-       2.8336
+       101.7038908,
+       2.8325526
+      ],
+      [
+       101.7038883,
+       2.8325858
       ]
      ]
     }
@@ -1536,25 +3461,34 @@
     "type": "Feature",
     "properties": {
      "path_id": "p29",
-     "type": "footpath",
+     "name": "shared road near D4",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
+     "width": 6,
+     "length_m": 88,
      "source_node": "n33",
-     "target_node": "n34",
+     "target_node": "n28",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8329
+       101.7050249,
+       2.8336457
       ],
       [
-       101.7066,
-       2.8329
+       101.7053336,
+       2.8335492
+      ],
+      [
+       101.7055642,
+       2.8334231
+      ],
+      [
+       101.7057351,
+       2.8333092
       ]
      ]
     }
@@ -1563,25 +3497,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p30",
-     "type": "footpath",
+     "name": "shared road near D3",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 78,
-     "source_node": "n33",
-     "target_node": "n43",
+     "width": 6,
+     "length_m": 11,
+     "source_node": "n28",
+     "target_node": "n26",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8329
+       101.7057351,
+       2.8333092
       ],
       [
-       101.7057,
-       2.8336
+       101.7058013,
+       2.8332478
       ]
      ]
     }
@@ -1590,25 +3525,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p31",
-     "type": "footpath",
+     "name": "shared road near D3",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 78,
-     "source_node": "n34",
-     "target_node": "n44",
+     "width": 6,
+     "length_m": 23,
+     "source_node": "n26",
+     "target_node": "n147",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8329
+       101.7058013,
+       2.8332478
       ],
       [
-       101.7066,
-       2.8336
+       101.7059328,
+       2.833091
       ]
      ]
     }
@@ -1617,25 +3553,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p32",
-     "type": "footpath",
+     "name": "shared road near D3",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n40",
-     "target_node": "n41",
+     "width": 6,
+     "length_m": 32,
+     "source_node": "n147",
+     "target_node": "n129",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8336
+       101.7059328,
+       2.833091
       ],
       [
-       101.704,
-       2.8336
+       101.7060249,
+       2.8329424
+      ],
+      [
+       101.7060667,
+       2.8328404
       ]
      ]
     }
@@ -1644,25 +3585,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p33",
-     "type": "footpath",
+     "name": "shared road near D4",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n41",
-     "target_node": "n51",
+     "width": 6,
+     "length_m": 17,
+     "source_node": "n28",
+     "target_node": "n151",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8336
+       101.7057351,
+       2.8333092
       ],
       [
-       101.704,
-       2.8344
+       101.7058237,
+       2.8334307
       ]
      ]
     }
@@ -1671,25 +3613,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p34",
-     "type": "footpath",
+     "name": "shared road near D3",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n42",
-     "target_node": "n43",
+     "width": 6,
+     "length_m": 44,
+     "source_node": "n151",
+     "target_node": "n150",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8336
+       101.7058237,
+       2.8334307
       ],
       [
-       101.7057,
-       2.8336
+       101.7060768,
+       2.833726
       ]
      ]
     }
@@ -1698,25 +3641,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p35",
-     "type": "covered_walkway",
-     "covered": true,
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n42",
-     "target_node": "n52",
+     "width": 6,
+     "length_m": 14,
+     "source_node": "n150",
+     "target_node": "n91",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8336
+       101.7060768,
+       2.833726
       ],
       [
-       101.7048,
-       2.8344
+       101.7061513,
+       2.8338189
       ]
      ]
     }
@@ -1725,25 +3669,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p36",
+     "name": "footpath near D4",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n43",
-     "target_node": "n44",
+     "length_m": 30,
+     "source_node": "n151",
+     "target_node": "n152",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8336
+       101.7058237,
+       2.8334307
       ],
       [
-       101.7066,
-       2.8336
+       101.7057578,
+       2.8336898
       ]
      ]
     }
@@ -1752,25 +3697,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p37",
-     "type": "footpath",
+     "name": "shared road near D3",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n43",
-     "target_node": "n53",
+     "width": 6,
+     "length_m": 33,
+     "source_node": "n100",
+     "target_node": "n101",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8336
+       101.7061079,
+       2.8336347
       ],
       [
-       101.7057,
-       2.8344
+       101.706401,
+       2.8335888
       ]
      ]
     }
@@ -1779,25 +3725,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p38",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n44",
-     "target_node": "n54",
+     "width": 6,
+     "length_m": 51,
+     "source_node": "n101",
+     "target_node": "n102",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8336
+       101.706401,
+       2.8335888
       ],
       [
-       101.7066,
-       2.8344
+       101.7068519,
+       2.8335181
       ]
      ]
     }
@@ -1806,25 +3753,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p39",
-     "type": "footpath",
+     "name": "shared road near D1",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n50",
-     "target_node": "n51",
+     "width": 6,
+     "length_m": 47,
+     "source_node": "n102",
+     "target_node": "n104",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8344
+       101.7068519,
+       2.8335181
       ],
       [
-       101.704,
-       2.8344
+       101.7072615,
+       2.8334539
       ]
      ]
     }
@@ -1833,25 +3781,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p40",
-     "type": "footpath",
+     "name": "shared road near D1",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n50",
-     "target_node": "n60",
+     "width": 6,
+     "length_m": 20,
+     "source_node": "n104",
+     "target_node": "n106",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8344
+       101.7072615,
+       2.8334539
       ],
       [
-       101.7032,
-       2.8353
+       101.7073708,
+       2.8334367
+      ],
+      [
+       101.7074353,
+       2.8334255
       ]
      ]
     }
@@ -1860,25 +3813,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p41",
-     "type": "footpath",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 89,
-     "source_node": "n51",
-     "target_node": "n52",
+     "width": 6,
+     "length_m": 16,
+     "source_node": "n106",
+     "target_node": "n108",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8344
+       101.7074353,
+       2.8334255
       ],
       [
-       101.7048,
-       2.8344
+       101.7075741,
+       2.8334056
       ]
      ]
     }
@@ -1887,25 +3841,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p42",
-     "type": "footpath",
+     "name": "shared road near D2",
+     "type": "shared_road",
      "covered": false,
      "accessible": true,
-     "width": 2.5,
-     "length_m": 100,
-     "source_node": "n51",
-     "target_node": "n61",
+     "width": 6,
+     "length_m": 77,
+     "source_node": "n105",
+     "target_node": "n102",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8344
+       101.7064572,
+       2.8329579
       ],
       [
-       101.704,
-       2.8353
+       101.7068519,
+       2.8335181
       ]
      ]
     }
@@ -1914,25 +3869,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p43",
-     "type": "covered_walkway",
-     "covered": true,
+     "name": "footpath near D3",
+     "type": "footpath",
+     "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n52",
-     "target_node": "n62",
+     "length_m": 29,
+     "source_node": "n147",
+     "target_node": "n148",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8344
+       101.7059328,
+       2.833091
       ],
       [
-       101.7048,
-       2.8353
+       101.7061733,
+       2.8331866
       ]
      ]
     }
@@ -1941,25 +3897,34 @@
     "type": "Feature",
     "properties": {
      "path_id": "p44",
+     "name": "footpath near D3",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n53",
-     "target_node": "n54",
+     "length_m": 27,
+     "source_node": "n101",
+     "target_node": "n103",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8344
+       101.706401,
+       2.8335888
       ],
       [
-       101.7066,
-       2.8344
+       101.7064285,
+       2.8336536
+      ],
+      [
+       101.7065096,
+       2.8336393
+      ],
+      [
+       101.7065937,
+       2.8336593
       ]
      ]
     }
@@ -1968,25 +3933,30 @@
     "type": "Feature",
     "properties": {
      "path_id": "p45",
+     "name": "footpath near Musical Island",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n53",
-     "target_node": "n63",
+     "length_m": 49,
+     "source_node": "n18",
+     "target_node": "n17",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8344
+       101.7032835,
+       2.8323773
       ],
       [
-       101.7057,
-       2.8353
+       101.7034534,
+       2.832302
+      ],
+      [
+       101.7036972,
+       2.8322542
       ]
      ]
     }
@@ -1995,25 +3965,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p46",
+     "name": "footpath near A3",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n54",
-     "target_node": "n64",
+     "length_m": 4,
+     "source_node": "n17",
+     "target_node": "n19",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8344
+       101.7036972,
+       2.8322542
       ],
       [
-       101.7066,
-       2.8353
+       101.7037289,
+       2.8322501
       ]
      ]
     }
@@ -2022,25 +3993,134 @@
     "type": "Feature",
     "properties": {
      "path_id": "p47",
+     "name": "footpath near A5",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 89,
-     "source_node": "n60",
-     "target_node": "n61",
+     "length_m": 301,
+     "source_node": "n19",
+     "target_node": "n21",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7032,
-       2.8353
+       101.7037289,
+       2.8322501
       ],
       [
-       101.704,
-       2.8353
+       101.7038825,
+       2.8321854
+      ],
+      [
+       101.7039606,
+       2.8321111
+      ],
+      [
+       101.7040764,
+       2.8320354
+      ],
+      [
+       101.7041583,
+       2.8319949
+      ],
+      [
+       101.7042294,
+       2.8319642
+      ],
+      [
+       101.70431,
+       2.831948
+      ],
+      [
+       101.7043976,
+       2.8319389
+      ],
+      [
+       101.7047668,
+       2.8319168
+      ],
+      [
+       101.7048123,
+       2.8319095
+      ],
+      [
+       101.7048987,
+       2.8318742
+      ],
+      [
+       101.7049964,
+       2.8318418
+      ],
+      [
+       101.7050517,
+       2.8318325
+      ],
+      [
+       101.7051612,
+       2.8318388
+      ],
+      [
+       101.7052824,
+       2.8318655
+      ],
+      [
+       101.7053924,
+       2.8318922
+      ],
+      [
+       101.705467,
+       2.8318756
+      ],
+      [
+       101.7055248,
+       2.8318562
+      ],
+      [
+       101.7056563,
+       2.8317865
+      ],
+      [
+       101.7057322,
+       2.8317596
+      ],
+      [
+       101.7058199,
+       2.8317424
+      ],
+      [
+       101.7058936,
+       2.8317419
+      ],
+      [
+       101.7059594,
+       2.8317645
+      ],
+      [
+       101.7059985,
+       2.8317955
+      ],
+      [
+       101.7060237,
+       2.8318327
+      ],
+      [
+       101.7060396,
+       2.8319081
+      ],
+      [
+       101.7060451,
+       2.8319736
+      ],
+      [
+       101.7060401,
+       2.8320312
+      ],
+      [
+       101.7060353,
+       2.8320709
       ]
      ]
     }
@@ -2049,25 +4129,98 @@
     "type": "Feature",
     "properties": {
      "path_id": "p48",
+     "name": "footpath near D3",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 89,
-     "source_node": "n61",
-     "target_node": "n62",
+     "length_m": 108,
+     "source_node": "n21",
+     "target_node": "n22",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8353
+       101.7060353,
+       2.8320709
       ],
       [
-       101.7048,
-       2.8353
+       101.7060339,
+       2.8321305
+      ],
+      [
+       101.7060305,
+       2.8321918
+      ],
+      [
+       101.7060096,
+       2.8322684
+      ],
+      [
+       101.7060035,
+       2.8323123
+      ],
+      [
+       101.7060036,
+       2.8323769
+      ],
+      [
+       101.7060015,
+       2.8324312
+      ],
+      [
+       101.7059902,
+       2.8324772
+      ],
+      [
+       101.7059753,
+       2.8325076
+      ],
+      [
+       101.7059606,
+       2.8325342
+      ],
+      [
+       101.705939,
+       2.8325623
+      ],
+      [
+       101.7058812,
+       2.8326008
+      ],
+      [
+       101.7058392,
+       2.8326225
+      ],
+      [
+       101.7057897,
+       2.8326516
+      ],
+      [
+       101.7057602,
+       2.832683
+      ],
+      [
+       101.705731,
+       2.8327258
+      ],
+      [
+       101.7057206,
+       2.8327744
+      ],
+      [
+       101.705717,
+       2.8328195
+      ],
+      [
+       101.7057108,
+       2.8328679
+      ],
+      [
+       101.7057045,
+       2.8329148
       ]
      ]
     }
@@ -2076,25 +4229,34 @@
     "type": "Feature",
     "properties": {
      "path_id": "p49",
+     "name": "footpath near D3",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n62",
-     "target_node": "n63",
+     "length_m": 19,
+     "source_node": "n22",
+     "target_node": "n25",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7048,
-       2.8353
+       101.7057045,
+       2.8329148
       ],
       [
-       101.7057,
-       2.8353
+       101.7056888,
+       2.8329576
+      ],
+      [
+       101.7056536,
+       2.8330133
+      ],
+      [
+       101.7056107,
+       2.8330517
       ]
      ]
     }
@@ -2103,25 +4265,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p50",
+     "name": "footpath near D4",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 100,
-     "source_node": "n63",
-     "target_node": "n64",
+     "length_m": 8,
+     "source_node": "n25",
+     "target_node": "n29",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7057,
-       2.8353
+       101.7056107,
+       2.8330517
       ],
       [
-       101.7066,
-       2.8353
+       101.705548,
+       2.8330782
       ]
      ]
     }
@@ -2130,25 +4293,50 @@
     "type": "Feature",
     "properties": {
      "path_id": "p51",
+     "name": "footpath near D4",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 33,
-     "source_node": "n41",
-     "target_node": "ea",
+     "length_m": 77,
+     "source_node": "n29",
+     "target_node": "n31",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.704,
-       2.8336
+       101.705548,
+       2.8330782
       ],
       [
-       101.7043,
-       2.8336
+       101.7054627,
+       2.8331169
+      ],
+      [
+       101.7053338,
+       2.8331674
+      ],
+      [
+       101.7052032,
+       2.8331889
+      ],
+      [
+       101.7050932,
+       2.8332181
+      ],
+      [
+       101.7050299,
+       2.8332363
+      ],
+      [
+       101.7049382,
+       2.8332766
+      ],
+      [
+       101.7049002,
+       2.8332946
       ]
      ]
     }
@@ -2157,25 +4345,42 @@
     "type": "Feature",
     "properties": {
      "path_id": "p52",
+     "name": "footpath near LY5",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 56,
-     "source_node": "ea",
-     "target_node": "n42",
+     "length_m": 60,
+     "source_node": "n31",
+     "target_node": "n73",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7043,
-       2.8336
+       101.7049002,
+       2.8332946
       ],
       [
-       101.7048,
-       2.8336
+       101.7047855,
+       2.8334246
+      ],
+      [
+       101.7047366,
+       2.833481
+      ],
+      [
+       101.704696,
+       2.8335067
+      ],
+      [
+       101.704639,
+       2.8335308
+      ],
+      [
+       101.7044597,
+       2.8335582
       ]
      ]
     }
@@ -2184,25 +4389,74 @@
     "type": "Feature",
     "properties": {
      "path_id": "p53",
+     "name": "footpath near LY4",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 68,
-     "source_node": "n44",
-     "target_node": "eb",
+     "length_m": 137,
+     "source_node": "n73",
+     "target_node": "n71",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8336
+       101.7044597,
+       2.8335582
       ],
       [
-       101.7065,
-       2.8342
+       101.7044346,
+       2.833551
+      ],
+      [
+       101.7043848,
+       2.8335425
+      ],
+      [
+       101.7043141,
+       2.8335331
+      ],
+      [
+       101.7041963,
+       2.8335544
+      ],
+      [
+       101.7040858,
+       2.8335699
+      ],
+      [
+       101.7040327,
+       2.8335614
+      ],
+      [
+       101.7039794,
+       2.8335394
+      ],
+      [
+       101.7039041,
+       2.833477
+      ],
+      [
+       101.7037583,
+       2.8334101
+      ],
+      [
+       101.7036515,
+       2.8333671
+      ],
+      [
+       101.7035418,
+       2.8333629
+      ],
+      [
+       101.7034378,
+       2.8333589
+      ],
+      [
+       101.7032903,
+       2.8333828
       ]
      ]
     }
@@ -2211,25 +4465,26 @@
     "type": "Feature",
     "properties": {
      "path_id": "p54",
+     "name": "footpath near Musical Island",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 25,
-     "source_node": "eb",
-     "target_node": "n54",
+     "length_m": 20,
+     "source_node": "n71",
+     "target_node": "n70",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7065,
-       2.8342
+       101.7032903,
+       2.8333828
       ],
       [
-       101.7066,
-       2.8344
+       101.7031337,
+       2.8334552
       ]
      ]
     }
@@ -2238,25 +4493,66 @@
     "type": "Feature",
     "properties": {
      "path_id": "p55",
+     "name": "footpath near Musical Island",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 33,
-     "source_node": "n14",
-     "target_node": "ee",
+     "length_m": 90,
+     "source_node": "n70",
+     "target_node": "n61",
      "is_closed": false
     },
     "geometry": {
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8315
+       101.7031337,
+       2.8334552
       ],
       [
-       101.7066,
-       2.8318
+       101.7030795,
+       2.8334741
+      ],
+      [
+       101.7029995,
+       2.8334855
+      ],
+      [
+       101.702945,
+       2.8334704
+      ],
+      [
+       101.702898,
+       2.8334494
+      ],
+      [
+       101.7028596,
+       2.8334186
+      ],
+      [
+       101.7028101,
+       2.8333718
+      ],
+      [
+       101.7027552,
+       2.8333103
+      ],
+      [
+       101.702721,
+       2.8332396
+      ],
+      [
+       101.7027016,
+       2.8331717
+      ],
+      [
+       101.7026961,
+       2.8331016
+      ],
+      [
+       101.7027182,
+       2.8329616
       ]
      ]
     }
@@ -2265,12 +4561,5593 @@
     "type": "Feature",
     "properties": {
      "path_id": "p56",
+     "name": "footpath near Musical Island",
      "type": "footpath",
      "covered": false,
      "accessible": true,
      "width": 2.5,
-     "length_m": 33,
-     "source_node": "ee",
+     "length_m": 92,
+     "source_node": "n61",
+     "target_node": "n18",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7027182,
+       2.8329616
+      ],
+      [
+       101.7027751,
+       2.8328628
+      ],
+      [
+       101.702833,
+       2.8328128
+      ],
+      [
+       101.7028928,
+       2.832756
+      ],
+      [
+       101.7029608,
+       2.8327027
+      ],
+      [
+       101.7030311,
+       2.8326549
+      ],
+      [
+       101.7030958,
+       2.8325842
+      ],
+      [
+       101.703159,
+       2.832498
+      ],
+      [
+       101.7032835,
+       2.8323773
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p57",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 20,
+     "source_node": "n156",
+     "target_node": "n31",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704808,
+       2.8331467
+      ],
+      [
+       101.7049002,
+       2.8332946
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p58",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 31,
+     "source_node": "n31",
+     "target_node": "n30",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7049002,
+       2.8332946
+      ],
+      [
+       101.7049788,
+       2.8334171
+      ],
+      [
+       101.7050122,
+       2.8335461
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p59",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 55,
+     "source_node": "n156",
+     "target_node": "n157",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.704808,
+       2.8331467
+      ],
+      [
+       101.7044512,
+       2.8328065
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p60",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 69,
+     "source_node": "n157",
+     "target_node": "n158",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044512,
+       2.8328065
+      ],
+      [
+       101.7043441,
+       2.8327306
+      ],
+      [
+       101.7042949,
+       2.8327003
+      ],
+      [
+       101.7040944,
+       2.832613
+      ],
+      [
+       101.703925,
+       2.8325771
+      ],
+      [
+       101.7038883,
+       2.8325858
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p61",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 76,
+     "source_node": "n158",
+     "target_node": "n18",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7038883,
+       2.8325858
+      ],
+      [
+       101.7036881,
+       2.8325865
+      ],
+      [
+       101.7035882,
+       2.8325589
+      ],
+      [
+       101.7035276,
+       2.8325382
+      ],
+      [
+       101.7034923,
+       2.8325258
+      ],
+      [
+       101.7034565,
+       2.8325095
+      ],
+      [
+       101.703394,
+       2.8324968
+      ],
+      [
+       101.7033616,
+       2.8324835
+      ],
+      [
+       101.7033378,
+       2.8324621
+      ],
+      [
+       101.7032835,
+       2.8323773
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p62",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 46,
+     "source_node": "n18",
+     "target_node": "n16",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032835,
+       2.8323773
+      ],
+      [
+       101.7032518,
+       2.8323218
+      ],
+      [
+       101.7030173,
+       2.8320657
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p63",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 16,
+     "source_node": "n16",
+     "target_node": "n64",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7030173,
+       2.8320657
+      ],
+      [
+       101.7029005,
+       2.8321482
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p64",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 17,
+     "source_node": "n93",
+     "target_node": "n96",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7067009,
+       2.8343889
+      ],
+      [
+       101.7067617,
+       2.8342529
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p65",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 43,
+     "source_node": "n96",
+     "target_node": "n97",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7067617,
+       2.8342529
+      ],
+      [
+       101.7067498,
+       2.8340405
+      ],
+      [
+       101.7066666,
+       2.8338951
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p66",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 56,
+     "source_node": "n97",
+     "target_node": "n99",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7066666,
+       2.8338951
+      ],
+      [
+       101.7065534,
+       2.8338028
+      ],
+      [
+       101.7064101,
+       2.8337335
+      ],
+      [
+       101.7062197,
+       2.8337674
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p67",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 10,
+     "source_node": "n99",
+     "target_node": "n91",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7062197,
+       2.8337674
+      ],
+      [
+       101.7061513,
+       2.8338189
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p68",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 38,
+     "source_node": "n91",
+     "target_node": "n90",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7061513,
+       2.8338189
+      ],
+      [
+       101.7060866,
+       2.8339597
+      ],
+      [
+       101.7060866,
+       2.834142
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p69",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 57,
+     "source_node": "n90",
+     "target_node": "n92",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7060866,
+       2.834142
+      ],
+      [
+       101.7061652,
+       2.8342574
+      ],
+      [
+       101.7063038,
+       2.8343866
+      ],
+      [
+       101.7064771,
+       2.8344328
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p70",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 26,
+     "source_node": "n92",
+     "target_node": "n93",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7064771,
+       2.8344328
+      ],
+      [
+       101.7067009,
+       2.8343889
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p71",
+     "name": "footpath near D2",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 37,
+     "source_node": "n104",
+     "target_node": "n107",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7072615,
+       2.8334539
+      ],
+      [
+       101.7071561,
+       2.8337679
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p72",
+     "name": "steps near Musical Island",
+     "type": "steps",
+     "covered": false,
+     "accessible": false,
+     "width": 2.5,
+     "length_m": 61,
+     "source_node": "n61",
+     "target_node": "n60",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7027182,
+       2.8329616
+      ],
+      [
+       101.702551,
+       2.8328418
+      ],
+      [
+       101.7024782,
+       2.8327761
+      ],
+      [
+       101.7024136,
+       2.8327281
+      ],
+      [
+       101.7023678,
+       2.8326651
+      ],
+      [
+       101.7022962,
+       2.8326246
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p73",
+     "name": "shared road near D3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 20,
+     "source_node": "n99",
+     "target_node": "n100",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7062197,
+       2.8337674
+      ],
+      [
+       101.7061079,
+       2.8336347
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p74",
+     "name": "shared road near D3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 55,
+     "source_node": "n100",
+     "target_node": "n26",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7061079,
+       2.8336347
+      ],
+      [
+       101.7058013,
+       2.8332478
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p75",
+     "name": "footpath near D4",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 26,
+     "source_node": "n88",
+     "target_node": "n89",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.705787,
+       2.834146
+      ],
+      [
+       101.7059192,
+       2.8339568
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p76",
+     "name": "footpath near D3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 32,
+     "source_node": "n89",
+     "target_node": "n150",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7059192,
+       2.8339568
+      ],
+      [
+       101.7060768,
+       2.833726
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p77",
+     "name": "footpath near D4",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 5,
+     "source_node": "n89",
+     "target_node": "n153",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7059192,
+       2.8339568
+      ],
+      [
+       101.7059563,
+       2.8339766
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p78",
+     "name": "shared road near A5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 51,
+     "source_node": "n137",
+     "target_node": "n138",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7058217,
+       2.8294713
+      ],
+      [
+       101.7059389,
+       2.8299138
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p79",
+     "name": "shared road near A5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 35,
+     "source_node": "n138",
+     "target_node": "n140",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7059389,
+       2.8299138
+      ],
+      [
+       101.7059799,
+       2.830076
+      ],
+      [
+       101.7059723,
+       2.8301587
+      ],
+      [
+       101.7059541,
+       2.8302176
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p80",
+     "name": "shared road near A5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 93,
+     "source_node": "n140",
+     "target_node": "n142",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7059541,
+       2.8302176
+      ],
+      [
+       101.705916,
+       2.830251
+      ],
+      [
+       101.7058488,
+       2.830282
+      ],
+      [
+       101.7056644,
+       2.8303488
+      ],
+      [
+       101.705468,
+       2.8304011
+      ],
+      [
+       101.7051643,
+       2.8304744
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p81",
+     "name": "shared road near A5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 63,
+     "source_node": "n142",
+     "target_node": "n144",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7051643,
+       2.8304744
+      ],
+      [
+       101.704871,
+       2.8305407
+      ],
+      [
+       101.7046064,
+       2.8305718
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p82",
+     "name": "shared road near A4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 71,
+     "source_node": "n144",
+     "target_node": "n145",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7046064,
+       2.8305718
+      ],
+      [
+       101.7042683,
+       2.8305877
+      ],
+      [
+       101.7039731,
+       2.830571
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p83",
+     "name": "shared road near A3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 16,
+     "source_node": "n145",
+     "target_node": "n4",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7039731,
+       2.830571
+      ],
+      [
+       101.7039015,
+       2.8305681
+      ],
+      [
+       101.7038355,
+       2.8305643
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p84",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 217,
+     "source_node": "n4",
+     "target_node": "n8",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7038355,
+       2.8305643
+      ],
+      [
+       101.7036706,
+       2.8305463
+      ],
+      [
+       101.703513,
+       2.8305162
+      ],
+      [
+       101.7033711,
+       2.8304811
+      ],
+      [
+       101.7032193,
+       2.8304331
+      ],
+      [
+       101.7029493,
+       2.8303306
+      ],
+      [
+       101.7026954,
+       2.8302308
+      ],
+      [
+       101.7025274,
+       2.8301554
+      ],
+      [
+       101.7024011,
+       2.8300856
+      ],
+      [
+       101.7023132,
+       2.8300201
+      ],
+      [
+       101.7022374,
+       2.8299472
+      ],
+      [
+       101.7021946,
+       2.829882
+      ],
+      [
+       101.7021694,
+       2.8297944
+      ],
+      [
+       101.7021641,
+       2.8297542
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p85",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 16,
+     "source_node": "n8",
+     "target_node": "n7",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7021641,
+       2.8297542
+      ],
+      [
+       101.7021459,
+       2.8296722
+      ],
+      [
+       101.7021425,
+       2.8296173
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p86",
+     "name": "shared road near A3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 24,
+     "source_node": "n160",
+     "target_node": "n6",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7040431,
+       2.8294401
+      ],
+      [
+       101.7040215,
+       2.8296542
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p87",
+     "name": "footpath near A3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 15,
+     "source_node": "n146",
+     "target_node": "n145",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7039583,
+       2.8307015
+      ],
+      [
+       101.7039731,
+       2.830571
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p88",
+     "name": "footpath near A3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 24,
+     "source_node": "n145",
+     "target_node": "n3",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7039731,
+       2.830571
+      ],
+      [
+       101.7040024,
+       2.830362
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p89",
+     "name": "footpath near A3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 79,
+     "source_node": "n3",
+     "target_node": "n139",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7040024,
+       2.830362
+      ],
+      [
+       101.7040819,
+       2.8296605
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p90",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 369,
+     "source_node": "n68",
+     "target_node": "n66",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.697657,
+       2.8328553
+      ],
+      [
+       101.6977778,
+       2.8326797
+      ],
+      [
+       101.6978213,
+       2.8326102
+      ],
+      [
+       101.6978401,
+       2.8325074
+      ],
+      [
+       101.6978517,
+       2.8323511
+      ],
+      [
+       101.6978474,
+       2.8321513
+      ],
+      [
+       101.697859,
+       2.8319138
+      ],
+      [
+       101.6979227,
+       2.8317415
+      ],
+      [
+       101.6979735,
+       2.8316547
+      ],
+      [
+       101.6980851,
+       2.8315721
+      ],
+      [
+       101.6983095,
+       2.8314197
+      ],
+      [
+       101.6986315,
+       2.8312326
+      ],
+      [
+       101.6989797,
+       2.8310093
+      ],
+      [
+       101.699262,
+       2.8308352
+      ],
+      [
+       101.6994578,
+       2.8307642
+      ],
+      [
+       101.6997609,
+       2.8307428
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p91",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 21,
+     "source_node": "n66",
+     "target_node": "n69",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.6997609,
+       2.8307428
+      ],
+      [
+       101.6999472,
+       2.830732
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p92",
+     "name": "shared road near D5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 18,
+     "source_node": "n81",
+     "target_node": "n79",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7058809,
+       2.8348865
+      ],
+      [
+       101.7058886,
+       2.8350457
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p93",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 19,
+     "source_node": "n110",
+     "target_node": "n111",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7072463,
+       2.8339984
+      ],
+      [
+       101.7074068,
+       2.8340463
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p94",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 44,
+     "source_node": "n109",
+     "target_node": "n106",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075944,
+       2.8331427
+      ],
+      [
+       101.7075033,
+       2.8331558
+      ],
+      [
+       101.707464,
+       2.8331704
+      ],
+      [
+       101.707448,
+       2.8331951
+      ],
+      [
+       101.7074364,
+       2.8332358
+      ],
+      [
+       101.7074353,
+       2.8334255
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p95",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 68,
+     "source_node": "n106",
+     "target_node": "n110",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7074353,
+       2.8334255
+      ],
+      [
+       101.7073708,
+       2.8336925
+      ],
+      [
+       101.7072733,
+       2.8339426
+      ],
+      [
+       101.7072463,
+       2.8339984
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p96",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 77,
+     "source_node": "n110",
+     "target_node": "n95",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7072463,
+       2.8339984
+      ],
+      [
+       101.7072325,
+       2.8340269
+      ],
+      [
+       101.7071218,
+       2.8341855
+      ],
+      [
+       101.7070039,
+       2.8343149
+      ],
+      [
+       101.7068816,
+       2.8344225
+      ],
+      [
+       101.7067826,
+       2.8344947
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p97",
+     "name": "shared road near D5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 171,
+     "source_node": "n95",
+     "target_node": "n82",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7067826,
+       2.8344947
+      ],
+      [
+       101.7066035,
+       2.8345912
+      ],
+      [
+       101.7064229,
+       2.8346537
+      ],
+      [
+       101.7062904,
+       2.834693
+      ],
+      [
+       101.7061521,
+       2.834709
+      ],
+      [
+       101.7057852,
+       2.8347497
+      ],
+      [
+       101.7054925,
+       2.8347686
+      ],
+      [
+       101.7053862,
+       2.8347701
+      ],
+      [
+       101.7053382,
+       2.834773
+      ],
+      [
+       101.7053178,
+       2.8347832
+      ],
+      [
+       101.7053091,
+       2.8348093
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p98",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 13,
+     "source_node": "n82",
+     "target_node": "n80",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7053091,
+       2.8348093
+      ],
+      [
+       101.7053184,
+       2.8349191
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p99",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 66,
+     "source_node": "n116",
+     "target_node": "n114",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7064233,
+       2.8349661
+      ],
+      [
+       101.7067024,
+       2.8348656
+      ],
+      [
+       101.7069629,
+       2.8347229
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p100",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 18,
+     "source_node": "n115",
+     "target_node": "n116",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7063661,
+       2.8348181
+      ],
+      [
+       101.7064233,
+       2.8349661
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p101",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 10,
+     "source_node": "n116",
+     "target_node": "n117",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7064233,
+       2.8349661
+      ],
+      [
+       101.7064525,
+       2.8350417
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p102",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 52,
+     "source_node": "n119",
+     "target_node": "n118",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7072238,
+       2.8350362
+      ],
+      [
+       101.7067644,
+       2.8350395
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p103",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 35,
+     "source_node": "n118",
+     "target_node": "n117",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7067644,
+       2.8350395
+      ],
+      [
+       101.7064525,
+       2.8350417
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p104",
+     "name": "shared road near D5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 63,
+     "source_node": "n117",
+     "target_node": "n79",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7064525,
+       2.8350417
+      ],
+      [
+       101.7058886,
+       2.8350457
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p105",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 63,
+     "source_node": "n79",
+     "target_node": "n78",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7058886,
+       2.8350457
+      ],
+      [
+       101.7053458,
+       2.8350532
+      ],
+      [
+       101.7053311,
+       2.8350434
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p106",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 14,
+     "source_node": "n78",
+     "target_node": "n80",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7053311,
+       2.8350434
+      ],
+      [
+       101.7053251,
+       2.8349799
+      ],
+      [
+       101.7053184,
+       2.8349191
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p107",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 94,
+     "source_node": "n114",
+     "target_node": "n112",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7069629,
+       2.8347229
+      ],
+      [
+       101.707238,
+       2.8345232
+      ],
+      [
+       101.7072958,
+       2.8344539
+      ],
+      [
+       101.7073836,
+       2.8343523
+      ],
+      [
+       101.7075408,
+       2.8341215
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p108",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 41,
+     "source_node": "n118",
+     "target_node": "n120",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7067644,
+       2.8350395
+      ],
+      [
+       101.7070212,
+       2.8348908
+      ],
+      [
+       101.7070844,
+       2.8348612
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p109",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 95,
+     "source_node": "n120",
+     "target_node": "n122",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7070844,
+       2.8348612
+      ],
+      [
+       101.7072287,
+       2.8347493
+      ],
+      [
+       101.7073443,
+       2.8346478
+      ],
+      [
+       101.7073906,
+       2.8345901
+      ],
+      [
+       101.7074738,
+       2.8344701
+      ],
+      [
+       101.7076471,
+       2.8342323
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p110",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 77,
+     "source_node": "n121",
+     "target_node": "n123",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7071682,
+       2.8349691
+      ],
+      [
+       101.7073495,
+       2.8348432
+      ],
+      [
+       101.7076797,
+       2.8345165
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p111",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 50,
+     "source_node": "n125",
+     "target_node": "n124",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7073764,
+       2.8350406
+      ],
+      [
+       101.7077057,
+       2.8347439
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p112",
+     "name": "shared road near B1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 142,
+     "source_node": "n131",
+     "target_node": "n136",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075849,
+       2.8321197
+      ],
+      [
+       101.7063137,
+       2.8321058
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p113",
+     "name": "shared road near B1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 11,
+     "source_node": "n136",
+     "target_node": "n143",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7063137,
+       2.8321058
+      ],
+      [
+       101.7062613,
+       2.832116
+      ],
+      [
+       101.7062386,
+       2.8321512
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p114",
+     "name": "shared road near B1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 80,
+     "source_node": "n143",
+     "target_node": "n129",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7062386,
+       2.8321512
+      ],
+      [
+       101.7062191,
+       2.832196
+      ],
+      [
+       101.7060667,
+       2.8328404
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p115",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 97,
+     "source_node": "n8",
+     "target_node": "n159",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7021641,
+       2.8297542
+      ],
+      [
+       101.7020354,
+       2.8298292
+      ],
+      [
+       101.7018342,
+       2.8299926
+      ],
+      [
+       101.701625,
+       2.8301507
+      ],
+      [
+       101.7015613,
+       2.8302049
+      ],
+      [
+       101.7015496,
+       2.8302244
+      ],
+      [
+       101.7015536,
+       2.8302468
+      ],
+      [
+       101.7016022,
+       2.8302967
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p116",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 24,
+     "source_node": "n80",
+     "target_node": "n83",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7053184,
+       2.8349191
+      ],
+      [
+       101.7051038,
+       2.8349084
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p117",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 80,
+     "source_node": "n83",
+     "target_node": "n77",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7051038,
+       2.8349084
+      ],
+      [
+       101.7043836,
+       2.8349125
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p118",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 12,
+     "source_node": "n77",
+     "target_node": "n43",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043836,
+       2.8349125
+      ],
+      [
+       101.7042804,
+       2.8349111
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p119",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 66,
+     "source_node": "n43",
+     "target_node": "n42",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7042804,
+       2.8349111
+      ],
+      [
+       101.7036863,
+       2.8349032
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p120",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 67,
+     "source_node": "n42",
+     "target_node": "n44",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7036863,
+       2.8349032
+      ],
+      [
+       101.7031766,
+       2.8348964
+      ],
+      [
+       101.7031324,
+       2.8348978
+      ],
+      [
+       101.7030922,
+       2.8348871
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p121",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 43,
+     "source_node": "n44",
+     "target_node": "n74",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7030922,
+       2.8348871
+      ],
+      [
+       101.7030754,
+       2.8348596
+      ],
+      [
+       101.7030707,
+       2.8348274
+      ],
+      [
+       101.7030881,
+       2.834737
+      ],
+      [
+       101.7031183,
+       2.8345163
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p122",
+     "name": "shared road near LY3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 25,
+     "source_node": "n74",
+     "target_node": "n56",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7031183,
+       2.8345163
+      ],
+      [
+       101.7031478,
+       2.8343003
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p123",
+     "name": "shared road near LY3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 15,
+     "source_node": "n56",
+     "target_node": "n75",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7031478,
+       2.8343003
+      ],
+      [
+       101.7031655,
+       2.8341714
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p124",
+     "name": "shared road near LY2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 42,
+     "source_node": "n75",
+     "target_node": "n76",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7031655,
+       2.8341714
+      ],
+      [
+       101.703216,
+       2.8338021
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p125",
+     "name": "shared road near LY2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 12,
+     "source_node": "n76",
+     "target_node": "n39",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.703216,
+       2.8338021
+      ],
+      [
+       101.7032303,
+       2.8336976
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p126",
+     "name": "shared road near D2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 31,
+     "source_node": "n96",
+     "target_node": "n98",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7067617,
+       2.8342529
+      ],
+      [
+       101.7068526,
+       2.834212
+      ],
+      [
+       101.7069787,
+       2.8340887
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p127",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 77,
+     "source_node": "n92",
+     "target_node": "n94",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7064771,
+       2.8344328
+      ],
+      [
+       101.706351,
+       2.8344852
+      ],
+      [
+       101.7058039,
+       2.8345656
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p128",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 91,
+     "source_node": "n9",
+     "target_node": "n10",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.701163,
+       2.8297275
+      ],
+      [
+       101.7014262,
+       2.8305001
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p129",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 154,
+     "source_node": "n10",
+     "target_node": "n11",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7014262,
+       2.8305001
+      ],
+      [
+       101.7013983,
+       2.8305199
+      ],
+      [
+       101.7012072,
+       2.8304446
+      ],
+      [
+       101.7010362,
+       2.8304345
+      ],
+      [
+       101.7008501,
+       2.8304396
+      ],
+      [
+       101.7006138,
+       2.8304496
+      ],
+      [
+       101.7004026,
+       2.8304898
+      ],
+      [
+       101.7000854,
+       2.830594
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p130",
+     "name": "shared road near A5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 75,
+     "source_node": "n138",
+     "target_node": "n141",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7059389,
+       2.8299138
+      ],
+      [
+       101.7059013,
+       2.8300434
+      ],
+      [
+       101.7058709,
+       2.8300954
+      ],
+      [
+       101.7058414,
+       2.8301421
+      ],
+      [
+       101.7057835,
+       2.8301865
+      ],
+      [
+       101.7057136,
+       2.8302229
+      ],
+      [
+       101.7054613,
+       2.830306
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p131",
+     "name": "footpath near A2",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 60,
+     "source_node": "n16",
+     "target_node": "n15",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7030173,
+       2.8320657
+      ],
+      [
+       101.7030662,
+       2.832024
+      ],
+      [
+       101.7031391,
+       2.8319251
+      ],
+      [
+       101.7032003,
+       2.8318042
+      ],
+      [
+       101.7032221,
+       2.8317082
+      ],
+      [
+       101.7032469,
+       2.8316004
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p132",
+     "name": "footpath near A3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 92,
+     "source_node": "n15",
+     "target_node": "n17",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032469,
+       2.8316004
+      ],
+      [
+       101.7033416,
+       2.8316252
+      ],
+      [
+       101.703475,
+       2.8319106
+      ],
+      [
+       101.7036031,
+       2.8321377
+      ],
+      [
+       101.7036972,
+       2.8322542
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p133",
+     "name": "main road near Guard House",
+     "type": "main_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 28,
+     "source_node": "n134",
+     "target_node": "n133",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7079155,
+       2.8326301
+      ],
+      [
+       101.7078746,
+       2.8326582
+      ],
+      [
+       101.7078068,
+       2.8327057
+      ],
+      [
+       101.7077807,
+       2.8327265
+      ],
+      [
+       101.707712,
+       2.8327709
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p134",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 23,
+     "source_node": "n135",
+     "target_node": "n133",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7079117,
+       2.8327721
+      ],
+      [
+       101.7077633,
+       2.8327712
+      ],
+      [
+       101.707712,
+       2.8327709
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p135",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 73,
+     "source_node": "n130",
+     "target_node": "n131",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075888,
+       2.8327702
+      ],
+      [
+       101.7075849,
+       2.8321197
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p136",
+     "name": "shared road near A5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 477,
+     "source_node": "n131",
+     "target_node": "n137",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075849,
+       2.8321197
+      ],
+      [
+       101.7075964,
+       2.8316607
+      ],
+      [
+       101.7076674,
+       2.8299601
+      ],
+      [
+       101.7076599,
+       2.8298168
+      ],
+      [
+       101.7076403,
+       2.8297521
+      ],
+      [
+       101.7076028,
+       2.8296809
+      ],
+      [
+       101.7075636,
+       2.8296298
+      ],
+      [
+       101.707519,
+       2.8295931
+      ],
+      [
+       101.7074381,
+       2.8295485
+      ],
+      [
+       101.7073384,
+       2.829522
+      ],
+      [
+       101.7070935,
+       2.8294879
+      ],
+      [
+       101.7068472,
+       2.8294643
+      ],
+      [
+       101.7060921,
+       2.8294696
+      ],
+      [
+       101.7058217,
+       2.8294713
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p137",
+     "name": "shared road near A4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 197,
+     "source_node": "n137",
+     "target_node": "n139",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7058217,
+       2.8294713
+      ],
+      [
+       101.7057269,
+       2.8294722
+      ],
+      [
+       101.7046561,
+       2.8295178
+      ],
+      [
+       101.7045693,
+       2.8295322
+      ],
+      [
+       101.7044241,
+       2.8295692
+      ],
+      [
+       101.7042496,
+       2.8296528
+      ],
+      [
+       101.7041826,
+       2.82967
+      ],
+      [
+       101.7040819,
+       2.8296605
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p138",
+     "name": "shared road near A3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 7,
+     "source_node": "n139",
+     "target_node": "n6",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7040819,
+       2.8296605
+      ],
+      [
+       101.7040215,
+       2.8296542
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p139",
+     "name": "shared road near A3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 8,
+     "source_node": "n6",
+     "target_node": "n5",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7040215,
+       2.8296542
+      ],
+      [
+       101.7039567,
+       2.8296462
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p140",
+     "name": "shared road near A2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 205,
+     "source_node": "n5",
+     "target_node": "n7",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7039567,
+       2.8296462
+      ],
+      [
+       101.7037758,
+       2.8296026
+      ],
+      [
+       101.7036088,
+       2.8295459
+      ],
+      [
+       101.7034844,
+       2.8295226
+      ],
+      [
+       101.7033754,
+       2.8295054
+      ],
+      [
+       101.7032576,
+       2.8294959
+      ],
+      [
+       101.7030572,
+       2.8295034
+      ],
+      [
+       101.7028514,
+       2.8295091
+      ],
+      [
+       101.7021425,
+       2.8296173
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p141",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 110,
+     "source_node": "n7",
+     "target_node": "n9",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7021425,
+       2.8296173
+      ],
+      [
+       101.701163,
+       2.8297275
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p142",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 212,
+     "source_node": "n9",
+     "target_node": "n11",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.701163,
+       2.8297275
+      ],
+      [
+       101.700013,
+       2.8298868
+      ],
+      [
+       101.6999835,
+       2.8298989
+      ],
+      [
+       101.6999741,
+       2.8299283
+      ],
+      [
+       101.6999714,
+       2.8299645
+      ],
+      [
+       101.7000854,
+       2.830594
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p143",
+     "name": "shared road near A1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 27,
+     "source_node": "n11",
+     "target_node": "n12",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7000854,
+       2.830594
+      ],
+      [
+       101.7001283,
+       2.8308311
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p144",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 8,
+     "source_node": "n128",
+     "target_node": "n130",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075899,
+       2.83284
+      ],
+      [
+       101.7075888,
+       2.8327702
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p145",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 6,
+     "source_node": "n126",
+     "target_node": "n128",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075906,
+       2.8328915
+      ],
+      [
+       101.7075899,
+       2.83284
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p146",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 4,
+     "source_node": "n133",
+     "target_node": "n132",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.707712,
+       2.8327709
+      ],
+      [
+       101.7076831,
+       2.8327708
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p147",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 16,
+     "source_node": "n77",
+     "target_node": "n46",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043836,
+       2.8349125
+      ],
+      [
+       101.7043931,
+       2.8350497
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p148",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 105,
+     "source_node": "n78",
+     "target_node": "n46",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7053311,
+       2.8350434
+      ],
+      [
+       101.7043931,
+       2.8350497
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p149",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 79,
+     "source_node": "n46",
+     "target_node": "n45",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043931,
+       2.8350497
+      ],
+      [
+       101.7036849,
+       2.8350558
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p150",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 67,
+     "source_node": "n45",
+     "target_node": "n47",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7036849,
+       2.8350558
+      ],
+      [
+       101.7030868,
+       2.8350585
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p151",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 20,
+     "source_node": "n47",
+     "target_node": "n44",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7030868,
+       2.8350585
+      ],
+      [
+       101.7030922,
+       2.8348871
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p152",
+     "name": "shared road near LY6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 92,
+     "source_node": "n49",
+     "target_node": "n48",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.701735,
+       2.834879
+      ],
+      [
+       101.7017289,
+       2.8349346
+      ],
+      [
+       101.701735,
+       2.8350009
+      ],
+      [
+       101.7017685,
+       2.8350552
+      ],
+      [
+       101.7024095,
+       2.8350585
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p153",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 76,
+     "source_node": "n48",
+     "target_node": "n47",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024095,
+       2.8350585
+      ],
+      [
+       101.7030868,
+       2.8350585
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p154",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 21,
+     "source_node": "n44",
+     "target_node": "n51",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7030922,
+       2.8348871
+      ],
+      [
+       101.7029071,
+       2.834886
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p155",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 56,
+     "source_node": "n51",
+     "target_node": "n50",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7029071,
+       2.834886
+      ],
+      [
+       101.7024095,
+       2.834883
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p156",
+     "name": "shared road near LY6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 21,
+     "source_node": "n50",
+     "target_node": "n52",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024095,
+       2.834883
+      ],
+      [
+       101.7022245,
+       2.8348819
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p157",
+     "name": "shared road near LY6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 55,
+     "source_node": "n52",
+     "target_node": "n49",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7022245,
+       2.8348819
+      ],
+      [
+       101.701735,
+       2.834879
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p158",
+     "name": "shared road near LY6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 86,
+     "source_node": "n49",
+     "target_node": "n55",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.701735,
+       2.834879
+      ],
+      [
+       101.7017175,
+       2.8346459
+      ],
+      [
+       101.7017215,
+       2.8345093
+      ],
+      [
+       101.7017792,
+       2.8343178
+      ],
+      [
+       101.7018461,
+       2.8341337
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p159",
+     "name": "shared road near LY1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 84,
+     "source_node": "n55",
+     "target_node": "n58",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7018461,
+       2.8341337
+      ],
+      [
+       101.7019013,
+       2.8339816
+      ],
+      [
+       101.7020152,
+       2.8336548
+      ],
+      [
+       101.702081,
+       2.8334538
+      ],
+      [
+       101.7021085,
+       2.8334364
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p160",
+     "name": "shared road near LY1",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 60,
+     "source_node": "n58",
+     "target_node": "n57",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7021085,
+       2.8334364
+      ],
+      [
+       101.7021414,
+       2.8334283
+      ],
+      [
+       101.7026268,
+       2.8335583
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p161",
+     "name": "shared road near LY2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 69,
+     "source_node": "n57",
+     "target_node": "n39",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7026268,
+       2.8335583
+      ],
+      [
+       101.7032303,
+       2.8336976
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p162",
+     "name": "footpath near A1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 204,
+     "source_node": "n62",
+     "target_node": "n63",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024145,
+       2.8324542
+      ],
+      [
+       101.7024417,
+       2.8321746
+      ],
+      [
+       101.7024424,
+       2.8321117
+      ],
+      [
+       101.7024209,
+       2.8320594
+      ],
+      [
+       101.7023753,
+       2.8320206
+      ],
+      [
+       101.7022982,
+       2.8319831
+      ],
+      [
+       101.7021406,
+       2.8319777
+      ],
+      [
+       101.7015727,
+       2.8319804
+      ],
+      [
+       101.7013286,
+       2.8319858
+      ],
+      [
+       101.7011838,
+       2.8319617
+      ],
+      [
+       101.7010993,
+       2.8319242
+      ],
+      [
+       101.7010349,
+       2.831888
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p163",
+     "name": "footpath near LY1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 186,
+     "source_node": "n63",
+     "target_node": "n65",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7010349,
+       2.831888
+      ],
+      [
+       101.7008029,
+       2.8318076
+      ],
+      [
+       101.7006406,
+       2.8317875
+      ],
+      [
+       101.7005052,
+       2.8318197
+      ],
+      [
+       101.7004421,
+       2.8318933
+      ],
+      [
+       101.7004046,
+       2.8320246
+      ],
+      [
+       101.7003456,
+       2.8325966
+      ],
+      [
+       101.7003429,
+       2.8326344
+      ],
+      [
+       101.7003489,
+       2.8326522
+      ],
+      [
+       101.7003654,
+       2.8326595
+      ],
+      [
+       101.7003882,
+       2.8326582
+      ],
+      [
+       101.700419,
+       2.8326448
+      ],
+      [
+       101.7005719,
+       2.832546
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p164",
+     "name": "footpath near A1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 263,
+     "source_node": "n66",
+     "target_node": "n63",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.6997609,
+       2.8307428
+      ],
+      [
+       101.6997354,
+       2.8308713
+      ],
+      [
+       101.6997025,
+       2.8309443
+      ],
+      [
+       101.699671,
+       2.8310214
+      ],
+      [
+       101.6996703,
+       2.8310602
+      ],
+      [
+       101.6996998,
+       2.8310964
+      ],
+      [
+       101.6997528,
+       2.8311131
+      ],
+      [
+       101.699899,
+       2.8311339
+      ],
+      [
+       101.7000774,
+       2.8311573
+      ],
+      [
+       101.7001632,
+       2.8311473
+      ],
+      [
+       101.7003261,
+       2.8311138
+      ],
+      [
+       101.7005608,
+       2.8310622
+      ],
+      [
+       101.7006353,
+       2.8310629
+      ],
+      [
+       101.7006969,
+       2.8310789
+      ],
+      [
+       101.7007834,
+       2.8311319
+      ],
+      [
+       101.7009987,
+       2.8313214
+      ],
+      [
+       101.7010329,
+       2.8313931
+      ],
+      [
+       101.7010456,
+       2.8314714
+      ],
+      [
+       101.7010349,
+       2.831888
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p165",
+     "name": "footpath near LY1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 70,
+     "source_node": "n63",
+     "target_node": "n67",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7010349,
+       2.831888
+      ],
+      [
+       101.7010859,
+       2.8325068
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p166",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 28,
+     "source_node": "n109",
+     "target_node": "n126",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7075944,
+       2.8331427
+      ],
+      [
+       101.7075906,
+       2.8328915
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p167",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 60,
+     "source_node": "n86",
+     "target_node": "n34",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.705114,
+       2.8341367
+      ],
+      [
+       101.7050784,
+       2.8341416
+      ],
+      [
+       101.7050495,
+       2.8341262
+      ],
+      [
+       101.7050227,
+       2.8341041
+      ],
+      [
+       101.7049972,
+       2.8340813
+      ],
+      [
+       101.7049798,
+       2.8340445
+      ],
+      [
+       101.7049684,
+       2.8340064
+      ],
+      [
+       101.704955,
+       2.8339354
+      ],
+      [
+       101.7049576,
+       2.8338885
+      ],
+      [
+       101.7049757,
+       2.8338095
+      ],
+      [
+       101.7050383,
+       2.8337129
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p168",
+     "name": "shared road near LY4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 54,
+     "source_node": "n155",
+     "target_node": "n37",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043862,
+       2.8342509
+      ],
+      [
+       101.70433,
+       2.8342133
+      ],
+      [
+       101.7043005,
+       2.8341624
+      ],
+      [
+       101.7042857,
+       2.8341061
+      ],
+      [
+       101.7042857,
+       2.8340606
+      ],
+      [
+       101.7043059,
+       2.8339749
+      ],
+      [
+       101.7043246,
+       2.8339327
+      ],
+      [
+       101.7043555,
+       2.8338891
+      ],
+      [
+       101.704381,
+       2.8338637
+      ],
+      [
+       101.7044036,
+       2.8338519
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p169",
+     "name": "shared road near LY2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 59,
+     "source_node": "n75",
+     "target_node": "n76",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7031655,
+       2.8341714
+      ],
+      [
+       101.7031217,
+       2.8341343
+      ],
+      [
+       101.7031056,
+       2.8341195
+      ],
+      [
+       101.7030814,
+       2.8340861
+      ],
+      [
+       101.7030707,
+       2.8340552
+      ],
+      [
+       101.7030519,
+       2.8340043
+      ],
+      [
+       101.7030627,
+       2.8339427
+      ],
+      [
+       101.7030814,
+       2.833857
+      ],
+      [
+       101.7030962,
+       2.8338195
+      ],
+      [
+       101.7031243,
+       2.8338034
+      ],
+      [
+       101.7031914,
+       2.8337954
+      ],
+      [
+       101.703216,
+       2.8338021
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p170",
+     "name": "shared road near LY6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 67,
+     "source_node": "n53",
+     "target_node": "n52",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024488,
+       2.8345226
+      ],
+      [
+       101.7024162,
+       2.8344678
+      ],
+      [
+       101.7023854,
+       2.834445
+      ],
+      [
+       101.7023559,
+       2.8344477
+      ],
+      [
+       101.7023304,
+       2.8344651
+      ],
+      [
+       101.7023063,
+       2.8344973
+      ],
+      [
+       101.7022875,
+       2.8345361
+      ],
+      [
+       101.7022245,
+       2.8348819
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p171",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 61,
+     "source_node": "n74",
+     "target_node": "n51",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7031183,
+       2.8345163
+      ],
+      [
+       101.7030868,
+       2.8344812
+      ],
+      [
+       101.7030519,
+       2.8344785
+      ],
+      [
+       101.7030157,
+       2.8344825
+      ],
+      [
+       101.7029808,
+       2.834516
+      ],
+      [
+       101.7029071,
+       2.834886
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p172",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 56,
+     "source_node": "n154",
+     "target_node": "n43",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043836,
+       2.8344624
+      ],
+      [
+       101.70433,
+       2.8344785
+      ],
+      [
+       101.7043099,
+       2.834504
+      ],
+      [
+       101.7042992,
+       2.8345401
+      ],
+      [
+       101.7042804,
+       2.8349111
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p173",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 56,
+     "source_node": "n84",
+     "target_node": "n83",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7052057,
+       2.8344477
+      ],
+      [
+       101.7051749,
+       2.8344638
+      ],
+      [
+       101.7051481,
+       2.8344892
+      ],
+      [
+       101.7051253,
+       2.8345241
+      ],
+      [
+       101.7051172,
+       2.834591
+      ],
+      [
+       101.7051159,
+       2.8346406
+      ],
+      [
+       101.7051038,
+       2.8349084
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p174",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 69,
+     "source_node": "n40",
+     "target_node": "n41",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.703764,
+       2.8343178
+      ],
+      [
+       101.7043836,
+       2.8343084
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p175",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 87,
+     "source_node": "n41",
+     "target_node": "n85",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043836,
+       2.8343084
+      ],
+      [
+       101.7051581,
+       2.8342756
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p176",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 72,
+     "source_node": "n55",
+     "target_node": "n54",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7018461,
+       2.8341337
+      ],
+      [
+       101.702482,
+       2.8342187
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p177",
+     "name": "shared road near LY3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 75,
+     "source_node": "n54",
+     "target_node": "n56",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.702482,
+       2.8342187
+      ],
+      [
+       101.7031478,
+       2.8343003
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p178",
+     "name": "shared road near LY4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 15,
+     "source_node": "n36",
+     "target_node": "n37",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044091,
+       2.8337244
+      ],
+      [
+       101.7044036,
+       2.8338519
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p179",
+     "name": "shared road near LY4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 45,
+     "source_node": "n37",
+     "target_node": "n155",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044036,
+       2.8338519
+      ],
+      [
+       101.7043862,
+       2.8342509
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p180",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 7,
+     "source_node": "n155",
+     "target_node": "n41",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043862,
+       2.8342509
+      ],
+      [
+       101.7043836,
+       2.8343084
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p181",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 18,
+     "source_node": "n41",
+     "target_node": "n154",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043836,
+       2.8343084
+      ],
+      [
+       101.7043836,
+       2.8344624
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p182",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 51,
+     "source_node": "n154",
+     "target_node": "n77",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7043836,
+       2.8344624
+      ],
+      [
+       101.7043836,
+       2.8349125
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p183",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 42,
+     "source_node": "n82",
+     "target_node": "n84",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7053091,
+       2.8348093
+      ],
+      [
+       101.7052057,
+       2.8344477
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p184",
+     "name": "shared road near LY9",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 20,
+     "source_node": "n84",
+     "target_node": "n85",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7052057,
+       2.8344477
+      ],
+      [
+       101.7051581,
+       2.8342756
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p185",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 17,
+     "source_node": "n85",
+     "target_node": "n86",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7051581,
+       2.8342756
+      ],
+      [
+       101.705114,
+       2.8341367
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p186",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 6,
+     "source_node": "n86",
+     "target_node": "n87",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.705114,
+       2.8341367
+      ],
+      [
+       101.7051073,
+       2.8340902
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p187",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 43,
+     "source_node": "n87",
+     "target_node": "n34",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7051073,
+       2.8340902
+      ],
+      [
+       101.7050383,
+       2.8337129
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p188",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 8,
+     "source_node": "n34",
+     "target_node": "n33",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7050383,
+       2.8337129
+      ],
+      [
+       101.7050249,
+       2.8336457
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p189",
+     "name": "shared road near LY4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 70,
+     "source_node": "n39",
+     "target_node": "n38",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032303,
+       2.8336976
+      ],
+      [
+       101.7033175,
+       2.8337284
+      ],
+      [
+       101.703418,
+       2.8337552
+      ],
+      [
+       101.7034864,
+       2.8337726
+      ],
+      [
+       101.7036045,
+       2.8337753
+      ],
+      [
+       101.7037158,
+       2.8337606
+      ],
+      [
+       101.7038405,
+       2.8337539
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p190",
+     "name": "shared road near LY8",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 17,
+     "source_node": "n45",
+     "target_node": "n42",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7036849,
+       2.8350558
+      ],
+      [
+       101.7036863,
+       2.8349032
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p191",
+     "name": "shared road near LY3",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 66,
+     "source_node": "n42",
+     "target_node": "n40",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7036863,
+       2.8349032
+      ],
+      [
+       101.703764,
+       2.8343178
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p192",
+     "name": "shared road near LY4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 64,
+     "source_node": "n40",
+     "target_node": "n38",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.703764,
+       2.8343178
+      ],
+      [
+       101.7038311,
+       2.833778
+      ],
+      [
+       101.7038405,
+       2.8337539
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p193",
+     "name": "shared road near LY4",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 64,
+     "source_node": "n38",
+     "target_node": "n36",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7038405,
+       2.8337539
+      ],
+      [
+       101.7039344,
+       2.8337405
+      ],
+      [
+       101.7044091,
+       2.8337244
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p194",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 4,
+     "source_node": "n36",
+     "target_node": "n35",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044091,
+       2.8337244
+      ],
+      [
+       101.7044403,
+       2.8337216
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p195",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 66,
+     "source_node": "n35",
+     "target_node": "n33",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044403,
+       2.8337216
+      ],
+      [
+       101.7050249,
+       2.8336457
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p196",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 20,
+     "source_node": "n48",
+     "target_node": "n50",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024095,
+       2.8350585
+      ],
+      [
+       101.7024095,
+       2.834883
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p197",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 41,
+     "source_node": "n50",
+     "target_node": "n53",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024095,
+       2.834883
+      ],
+      [
+       101.7024488,
+       2.8345226
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p198",
+     "name": "shared road near LY7",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 34,
+     "source_node": "n53",
+     "target_node": "n54",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024488,
+       2.8345226
+      ],
+      [
+       101.702482,
+       2.8342187
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p199",
+     "name": "shared road near LY2",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 76,
+     "source_node": "n54",
+     "target_node": "n57",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.702482,
+       2.8342187
+      ],
+      [
+       101.7026268,
+       2.8335583
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p200",
+     "name": "footpath near A5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 223,
+     "source_node": "n140",
+     "target_node": "n143",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7059541,
+       2.8302176
+      ],
+      [
+       101.7060319,
+       2.8302766
+      ],
+      [
+       101.7060882,
+       2.8303918
+      ],
+      [
+       101.7061445,
+       2.8305284
+      ],
+      [
+       101.706225,
+       2.8312651
+      ],
+      [
+       101.7062303,
+       2.8319027
+      ],
+      [
+       101.7062386,
+       2.8321512
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p201",
+     "name": "shared road near Canteen D6",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 34,
+     "source_node": "n90",
+     "target_node": "n88",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7060866,
+       2.834142
+      ],
+      [
+       101.7060084,
+       2.8341549
+      ],
+      [
+       101.705787,
+       2.834146
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p202",
+     "name": "shared road near LY5",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 76,
+     "source_node": "n88",
+     "target_node": "n87",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.705787,
+       2.834146
+      ],
+      [
+       101.7051073,
+       2.8340902
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p203",
+     "name": "footpath near LY4",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 134,
+     "source_node": "n72",
+     "target_node": "n32",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032569,
+       2.8334998
+      ],
+      [
+       101.7033121,
+       2.8335074
+      ],
+      [
+       101.7035389,
+       2.8335364
+      ],
+      [
+       101.7038693,
+       2.8335776
+      ],
+      [
+       101.7041643,
+       2.8335946
+      ],
+      [
+       101.7043485,
+       2.8335955
+      ],
+      [
+       101.7044523,
+       2.8335959
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p204",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 63,
+     "source_node": "n32",
+     "target_node": "n30",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044523,
+       2.8335959
+      ],
+      [
+       101.7047221,
+       2.8335851
+      ],
+      [
+       101.7048343,
+       2.8335704
+      ],
+      [
+       101.7049243,
+       2.8335608
+      ],
+      [
+       101.7050122,
+       2.8335461
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p205",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 64,
+     "source_node": "n64",
+     "target_node": "n62",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7029005,
+       2.8321482
+      ],
+      [
+       101.7027035,
+       2.8322515
+      ],
+      [
+       101.7024145,
+       2.8324542
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p206",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 24,
+     "source_node": "n62",
+     "target_node": "n60",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7024145,
+       2.8324542
+      ],
+      [
+       101.702395,
+       2.8325002
+      ],
+      [
+       101.7023581,
+       2.8325609
+      ],
+      [
+       101.7022962,
+       2.8326246
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p207",
+     "name": "footpath near LY1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 63,
+     "source_node": "n60",
+     "target_node": "n59",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7022962,
+       2.8326246
+      ],
+      [
+       101.7022213,
+       2.8327984
+      ],
+      [
+       101.7021385,
+       2.8331578
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p208",
+     "name": "footpath near Musical Island",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 15,
+     "source_node": "n70",
+     "target_node": "n72",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7031337,
+       2.8334552
+      ],
+      [
+       101.7032569,
+       2.8334998
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p209",
+     "name": "footpath near LY2",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 23,
+     "source_node": "n72",
+     "target_node": "n39",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032569,
+       2.8334998
+      ],
+      [
+       101.7032303,
+       2.8336976
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p210",
+     "name": "footpath near LY1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 32,
+     "source_node": "n59",
+     "target_node": "n58",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7021385,
+       2.8331578
+      ],
+      [
+       101.7021085,
+       2.8334364
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p211",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 5,
+     "source_node": "n73",
+     "target_node": "n32",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044597,
+       2.8335582
+      ],
+      [
+       101.7044523,
+       2.8335959
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p212",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 15,
+     "source_node": "n32",
+     "target_node": "n35",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7044523,
+       2.8335959
+      ],
+      [
+       101.7044403,
+       2.8337216
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p213",
+     "name": "footpath near D4",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 10,
+     "source_node": "n28",
+     "target_node": "n27",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057351,
+       2.8333092
+      ],
+      [
+       101.7056827,
+       2.8332445
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p214",
+     "name": "footpath near D4",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 24,
+     "source_node": "n27",
+     "target_node": "n29",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7056827,
+       2.8332445
+      ],
+      [
+       101.705548,
+       2.8330782
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p215",
+     "name": "footpath near D3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 22,
+     "source_node": "n25",
      "target_node": "n24",
      "is_closed": false
     },
@@ -2278,12 +10155,372 @@
      "type": "LineString",
      "coordinates": [
       [
-       101.7066,
-       2.8318
+       101.7056107,
+       2.8330517
       ],
       [
-       101.7066,
-       2.8321
+       101.7057483,
+       2.8331932
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p216",
+     "name": "footpath near D3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 9,
+     "source_node": "n24",
+     "target_node": "n26",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057483,
+       2.8331932
+      ],
+      [
+       101.7058013,
+       2.8332478
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p217",
+     "name": "footpath near LY5",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 12,
+     "source_node": "n30",
+     "target_node": "n33",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7050122,
+       2.8335461
+      ],
+      [
+       101.7050249,
+       2.8336457
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p218",
+     "name": "footpath near B1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 15,
+     "source_node": "n21",
+     "target_node": "n23",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7060353,
+       2.8320709
+      ],
+      [
+       101.7061432,
+       2.8320742
+      ],
+      [
+       101.7061606,
+       2.8320829
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p219",
+     "name": "footpath near D4",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 83,
+     "source_node": "n30",
+     "target_node": "n27",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7050122,
+       2.8335461
+      ],
+      [
+       101.7052379,
+       2.8334806
+      ],
+      [
+       101.7054217,
+       2.8334029
+      ],
+      [
+       101.7055853,
+       2.8333118
+      ],
+      [
+       101.7056827,
+       2.8332445
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p220",
+     "name": "footpath near D3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 10,
+     "source_node": "n27",
+     "target_node": "n24",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7056827,
+       2.8332445
+      ],
+      [
+       101.7057483,
+       2.8331932
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p221",
+     "name": "footpath near D3",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 136,
+     "source_node": "n24",
+     "target_node": "n23",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7057483,
+       2.8331932
+      ],
+      [
+       101.7058696,
+       2.8330654
+      ],
+      [
+       101.7059635,
+       2.8329087
+      ],
+      [
+       101.7060211,
+       2.8328042
+      ],
+      [
+       101.7060681,
+       2.8326461
+      ],
+      [
+       101.7061096,
+       2.8325135
+      ],
+      [
+       101.7061653,
+       2.8321023
+      ],
+      [
+       101.7061606,
+       2.8320829
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p222",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 11,
+     "source_node": "n132",
+     "target_node": "n130",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7076831,
+       2.8327708
+      ],
+      [
+       101.7075888,
+       2.8327702
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p223",
+     "name": "shared road near Guard House",
+     "type": "shared_road",
+     "covered": false,
+     "accessible": true,
+     "width": 6,
+     "length_m": 7,
+     "source_node": "n127",
+     "target_node": "n149",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7076793,
+       2.8328897
+      ],
+      [
+       101.7077361,
+       2.8328886
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p224",
+     "name": "footpath near A2",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 60,
+     "source_node": "n15",
+     "target_node": "n14",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7032469,
+       2.8316004
+      ],
+      [
+       101.7027569,
+       2.8313937
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p225",
+     "name": "footpath near A2",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 68,
+     "source_node": "n14",
+     "target_node": "n13",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7027569,
+       2.8313937
+      ],
+      [
+       101.702655,
+       2.8313482
+      ],
+      [
+       101.7022057,
+       2.8311432
+      ]
+     ]
+    }
+   },
+   {
+    "type": "Feature",
+    "properties": {
+     "path_id": "p226",
+     "name": "footpath near A1",
+     "type": "footpath",
+     "covered": false,
+     "accessible": true,
+     "width": 2.5,
+     "length_m": 113,
+     "source_node": "n13",
+     "target_node": "n10",
+     "is_closed": false
+    },
+    "geometry": {
+     "type": "LineString",
+     "coordinates": [
+      [
+       101.7022057,
+       2.8311432
+      ],
+      [
+       101.702152,
+       2.8311138
+      ],
+      [
+       101.7017913,
+       2.8308365
+      ],
+      [
+       101.7014262,
+       2.8305001
       ]
      ]
     }
