@@ -127,9 +127,7 @@ export default function MapPage({ campus }) {
                   </button>)}
                 </div>
               </>}
-            </div>
-            <p className="map-credit">Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</p>
-          </div>
+            </div>          </div>
         </CampusMap>
       </div>
     </div>

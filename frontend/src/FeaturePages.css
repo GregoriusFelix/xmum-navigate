@@ -141,8 +141,7 @@ legend { padding: 0; margin-bottom: 8px; font-size: var(--text-sm); font-weight:
 .explore-cards button > svg { box-sizing: content-box; padding: 8px; border-radius: 12px; background: var(--color-paper-2); }
 .explore-cards strong { font-size: 14px; line-height: 1.3; }
 .explore-cards small { color: var(--color-muted); font-size: 12px; }
-.map-credit { margin-top: 8px; font-size: 11px; color: var(--color-muted); }
-.map-credit a { text-decoration: underline; }
+
 
 .splash { position: fixed; inset: 0; z-index: 5000; display: grid; place-content: center; justify-items: center; gap: 12px; background: var(--color-dark-paper); color: var(--color-dark-ink); }
 .splash img { border-radius: 28px; }
@@ -209,7 +208,6 @@ legend { padding: 0; margin-bottom: 8px; font-size: var(--text-sm); font-weight:
   .map-shell .sheet-handle { display: none; }
   .map-shell .route-sheet-content { display: block; }
   .map-shell .route-sheet-top { padding: 4px 4px 0; }
-  .map-shell .map-credit { padding-inline: 4px; }
   .map-chips { top: 20px; left: calc(var(--panel) + 32px); right: 16px; padding: 0 0 6px; mask: none; }
   .map-layers { top: auto; bottom: 24px; right: auto; left: calc(var(--panel) + 32px); flex-direction: row; }
   .map-shell .map-page .map-controls { top: auto; bottom: 24px; right: 16px; }
