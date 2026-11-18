@@ -99,7 +99,7 @@ legend { padding: 0; margin-bottom: 8px; font-size: var(--text-sm); font-weight:
 .admin-paths li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 8px; border-bottom: 1px solid var(--color-rule); font-size: var(--text-sm); }
 .admin-paths .button { flex-shrink: 0; min-height: 44px; }
 
-.page-head { position: relative; margin: 8px 0 56px; padding: 28px 24px 32px; border-radius: 32px 32px 32px 0; background: var(--color-dark-paper); color: var(--color-dark-ink); --color-focus: var(--color-accent-gold); }
+.page-head { position: relative; margin: 8px 0 80px; padding: 28px 24px 32px; border-radius: 32px 32px 32px 0; background: var(--color-dark-paper); color: var(--color-dark-ink); --color-focus: var(--color-accent-gold); }
 .page-head > p { margin-top: 12px; max-width: 52ch; color: var(--color-dark-muted); }
 .page-head .view-toggle { margin-bottom: 20px; }
 .view-toggle { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: rgb(255 255 255 / 14%); }
